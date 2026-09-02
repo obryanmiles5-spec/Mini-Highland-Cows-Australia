@@ -1,21 +1,16 @@
 const fs = require('fs');
-let code = fs.readFileSync('src/app/reserve/page.tsx', 'utf8');
 
-// Add import
-if (!code.includes('CALVES_DATA')) {
-  code = code.replace(
-    "import Link from 'next/link';",
-    "import Link from 'next/link';\nimport { CALVES_DATA } from '@/data/calves';"
-  );
+let file = 'src/app/reserve/page.tsx';
+let content = fs.readFileSync(file, 'utf8');
+
+// replace form
+const formRegex = /<form className="space-y-6">[\s\S]*?<\/form>/;
+content = content.replace(formRegex, '<ReserveForm />');
+
+// add import
+if (!content.includes('ReserveForm')) {
+  content = `import ReserveForm from '@/components/ReserveForm';\n` + content;
 }
 
-// Replace the hardcoded options
-const optionsRegex = /<option value="hamish">[\s\S]*?<option value="fiona">[^<]*<\/option>/;
-const dynamicOptions = `{CALVES_DATA.filter((calf) => calf.status === 'Available').map((calf) => (
-                  <option key={calf.id} value={calf.ear_tag}>
-                    {calf.name} ({calf.ear_tag}) - $\\{calf.price\\}
-                  </option>
-                ))}`;
-
-code = code.replace(optionsRegex, dynamicOptions);
-fs.writeFileSync('src/app/reserve/page.tsx', code);
+fs.writeFileSync(file, content);
+console.log('Patched reserve page');

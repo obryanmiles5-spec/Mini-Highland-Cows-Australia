@@ -1,3 +1,12 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Page Not Found | Dunblane Highlands',
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 

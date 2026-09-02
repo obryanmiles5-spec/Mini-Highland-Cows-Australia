@@ -37,8 +37,11 @@ export default function HeroSlider() {
       
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="font-serif text-5xl md:text-7xl text-white font-bold mb-6 drop-shadow-lg leading-tight">
-          Premium Mini Highland Cows for Sale
+          Miniature Highland Cows for Sale Australia
         </h1>
+        <h2 className="text-xl md:text-2xl text-white/90 font-medium mb-8 drop-shadow-md max-w-2xl mx-auto">
+          Premium DNA Verified Micro, Teacup & Mini Calves
+        </h2>
         <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light drop-shadow-md">
           Discover docile, DNA-verified miniature highland calves bred for the Australian lifestyle. 
           Queensland-based with Australia-wide delivery.

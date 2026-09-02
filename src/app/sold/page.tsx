@@ -2,8 +2,59 @@ import Image from 'next/image';
 import { CALVES_DATA } from '@/data/calves';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Miniature Highland Cows | Dunblane Pastoral',
+  description: 'Discover our beautiful miniature highland calves.',
+  alternates: {
+    canonical: 'https://dunblane.com.au/sold',
+  },
+  openGraph: {
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    url: 'https://dunblane.com.au/sold',
+    siteName: 'Dunblane Highlands',
+    images: [
+      {
+        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        width: 1200,
+        height: 630,
+        alt: 'Miniature Highland Cows | Dunblane Pastoral',
+      },
+    ],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    images: ['https://dunblane.com.au/images/hero.jpg'],
+  },
+};
+
+
 export default function SoldPage() {
   const soldCalves = CALVES_DATA.filter(calf => calf.status !== 'Available');
+
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dunblane.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sold Calves",
+        "item": "https://dunblane.com.au/sold"
+      }
+    ]
+  };
 
   return (
     <div className="bg-[#FDFBF7] py-16">
@@ -27,12 +78,12 @@ export default function SoldPage() {
               <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group opacity-80 hover:opacity-100 transition-opacity">
                 <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                   <Image
-                    src={calf.images[0]}
+                    src="/blank.png"
                     alt={calf.name}
                     fill
                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
-                  <span className="absolute top-4 right-4 bg-[#C2673F] text-white text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10">
+                  <span className={`absolute top-4 right-4 text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10 ${calf.status === 'Sold' ? 'text-red-600 bg-white border border-red-600' : 'bg-[#C2673F] text-white'}`}>
                     {calf.status}
                   </span>
                 </Link>

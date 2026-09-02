@@ -2,11 +2,76 @@ import Image from 'next/image';
 import { CALVES_DATA } from '@/data/calves';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Miniature Highland Cows | Dunblane Pastoral',
+  description: 'Discover our beautiful miniature highland calves.',
+  alternates: {
+    canonical: 'https://dunblane.com.au/calves',
+  },
+  openGraph: {
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    url: 'https://dunblane.com.au/calves',
+    siteName: 'Dunblane Highlands',
+    images: [
+      {
+        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        width: 1200,
+        height: 630,
+        alt: 'Miniature Highland Cows | Dunblane Pastoral',
+      },
+    ],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    images: ['https://dunblane.com.au/images/hero.jpg'],
+  },
+};
+
+
 export default function CalvesPage() {
   const availableCalves = CALVES_DATA.filter(calf => calf.status === 'Available');
 
+  const breadcrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dunblane.com.au"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Available Calves",
+        "item": "https://dunblane.com.au/calves"
+      }
+    ]
+  };
+
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": CALVES_DATA.filter(c => c.status === 'Available').map((calf, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": `https://dunblane.com.au/calves/${calf.id}`
+    }))
+  };
+
+
   return (
     <div className="bg-[#FDFBF7] py-16">
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-12">
           <h1 className="font-serif text-5xl font-bold text-[#1C3B2B] mb-4">Available Calves</h1>

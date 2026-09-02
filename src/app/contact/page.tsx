@@ -1,6 +1,58 @@
+import ContactForm from '@/components/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
+export const metadata = {
+  title: 'Miniature Highland Cows | Dunblane Pastoral',
+  description: 'Discover our beautiful miniature highland calves.',
+  alternates: {
+    canonical: 'https://dunblane.com.au/contact',
+  },
+  openGraph: {
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    url: 'https://dunblane.com.au/contact',
+    siteName: 'Dunblane Highlands',
+    images: [
+      {
+        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        width: 1200,
+        height: 630,
+        alt: 'Miniature Highland Cows | Dunblane Pastoral',
+      },
+    ],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    images: ['https://dunblane.com.au/images/hero.jpg'],
+  },
+};
+
+
 export default function ContactPage() {
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dunblane.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://dunblane.com.au/contact"
+      }
+    ]
+  };
+
   return (
     <div className="bg-[#FDFBF7] py-16">
       <div className="max-w-7xl mx-auto px-4">
@@ -52,29 +104,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-sm shadow-sm border border-[#1E293B]/5">
             <h2 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-6">Send an Inquiry</h2>
-            <form className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-[#1E293B] mb-1">First Name</label>
-                  <input type="text" className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-[#1E293B] mb-1">Last Name</label>
-                  <input type="text" className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-[#1E293B] mb-1">Email Address</label>
-                <input type="email" className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-[#1E293B] mb-1">Message</label>
-                <textarea rows={4} className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors resize-none"></textarea>
-              </div>
-              <button type="submit" className="w-full py-3 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors mt-4">
-                Send Message
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>

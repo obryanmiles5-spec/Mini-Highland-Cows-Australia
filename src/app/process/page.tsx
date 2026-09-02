@@ -1,6 +1,57 @@
 import { CheckCircle2, FileText, Truck, ShieldCheck } from 'lucide-react';
 
+export const metadata = {
+  title: 'Miniature Highland Cows | Dunblane Pastoral',
+  description: 'Discover our beautiful miniature highland calves.',
+  alternates: {
+    canonical: 'https://dunblane.com.au/process',
+  },
+  openGraph: {
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    url: 'https://dunblane.com.au/process',
+    siteName: 'Dunblane Highlands',
+    images: [
+      {
+        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        width: 1200,
+        height: 630,
+        alt: 'Miniature Highland Cows | Dunblane Pastoral',
+      },
+    ],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    images: ['https://dunblane.com.au/images/hero.jpg'],
+  },
+};
+
+
 export default function ProcessPage() {
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dunblane.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Our Process",
+        "item": "https://dunblane.com.au/process"
+      }
+    ]
+  };
+
   return (
     <div className="bg-[#FDFBF7] py-16">
       <div className="max-w-4xl mx-auto px-4">
@@ -73,7 +124,7 @@ export default function ProcessPage() {
                 Transport & Handover <Truck className="w-5 h-5 text-[#C2673F]" />
               </h3>
               <p className="text-[#1E293B]/70 leading-relaxed mb-4">
-                The remaining balance must be cleared prior to transport. We accept Bank Transfer, Escrow, and Cryptocurrency (which attracts a 10% discount). 
+                The remaining balance must be cleared prior to transport. We accept Pay ID, Bank Transfer, Credit Card, and Crypto (USDT, BTC). 
                 You can arrange to float the calf yourself from our Queensland property, or we can recommend trusted, 
                 climate-controlled livestock transport services that operate nationwide. We offer <strong>free delivery to the same city as our address (QLD 4725)</strong>. We provide a customized feeding and care guide upon handover.
               </p>

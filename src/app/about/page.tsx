@@ -1,6 +1,57 @@
 import Image from 'next/image';
 
+export const metadata = {
+  title: 'Miniature Highland Cows | Dunblane Pastoral',
+  description: 'Discover our beautiful miniature highland calves.',
+  alternates: {
+    canonical: 'https://dunblane.com.au/about',
+  },
+  openGraph: {
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    url: 'https://dunblane.com.au/about',
+    siteName: 'Dunblane Highlands',
+    images: [
+      {
+        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        width: 1200,
+        height: 630,
+        alt: 'Miniature Highland Cows | Dunblane Pastoral',
+      },
+    ],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Miniature Highland Cows | Dunblane Pastoral',
+    description: 'Discover our beautiful miniature highland calves.',
+    images: ['https://dunblane.com.au/images/hero.jpg'],
+  },
+};
+
+
 export default function AboutPage() {
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dunblane.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://dunblane.com.au/about"
+      }
+    ]
+  };
+
   return (
     <div className="bg-[#FDFBF7] py-16">
       <div className="max-w-4xl mx-auto px-4">

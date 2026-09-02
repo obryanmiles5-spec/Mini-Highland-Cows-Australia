@@ -6,20 +6,44 @@ import { ArrowLeft, Check, Ruler, Info, ChevronDown } from 'lucide-react';
 
 const FAQS = [
   {
-    question: "How much space do miniature highlands need?",
-    answer: "Generally, we recommend 1 to 2 acres per pair of miniature highlands, depending on the quality of your pasture and whether you plan to supplement with hay year-round. They are herd animals and must be kept with at least one other bovine companion."
+    question: "How big do mini cows get? (Full grown micro teacup mini highland cow size)",
+    answer: "A full grown mini highland cow typically reaches 36 to 42 inches at the hip. If you are looking at a micro mini highland cow or 'micro teacup mini highland cow', they will mature under 36 inches. They are genetically small cattle breeds, ensuring they do stay small their entire lives."
   },
   {
-    question: "Do they require special fencing?",
-    answer: "Standard cattle fencing (like 5-strand wire or woven wire cattle panels) is completely sufficient. Miniature highlands are typically very respectful of fences and are not known to be escape artists."
+    question: "How much land do you need for a miniature cow?",
+    answer: "Many people ask 'can I have a mini cow in my backyard?' The truth is, to properly care for a mini cow, you need at least 1 to 2 acres. How much space does a mini cow need depends on pasture quality, but as herd animals, you must adopt a mini cow with a companion, meaning you need room for at least two fluffy mini cows."
   },
   {
-    question: "Are they good with children and other pets?",
-    answer: "Yes! Our miniature highlands are specifically bred for their docile, gentle temperaments. Because we halter-train and socialize them from a young age, they make wonderful paddock pets and are great around respectful children and farm dogs."
+    question: "How much does a miniature cow cost in Australia?",
+    answer: "When wondering 'how much are mini cows' or 'how much is a mini fluffy cow', prices range from $4,000 to $10,000+ AUD depending on if it's a micro miniature highland cow, its sex, and color. The miniature cow price reflects the cost to breed healthy, DNA-verified, fluffy miniature cows for sale."
   },
   {
-    question: "How do you manage their long coats in the Australian summer?",
-    answer: "Highland cattle naturally shed their thick winter undercoat in the warmer months. Providing them with ample shade (like large trees or a shelter) and constant access to fresh, cool drinking water is all they need to stay comfortable."
+    question: "Are miniature cows good pets?",
+    answer: "Yes, mini cows make excellent pets! Are mini cows good pets? Absolutely. Because they are docile, halter-trained, and friendly, miniature highland cows are great for small acreage. Many people love them for mini cow cuddles and photoshoots."
+  },
+  {
+    question: "Can you milk mini highland cows?",
+    answer: "Yes, you can milk miniature highland cows! Do miniature highland cows produce milk? Yes, they do. While not a commercial dairy cow, a mini cow can produce 1 to 2 gallons of rich milk daily, perfect for a family wanting a family milk cow."
+  },
+  {
+    question: "Do miniature cows stay small?",
+    answer: "Yes, true miniature highland cattle genetics mean that do mini cows stay mini? Yes. Unlike standard cattle, they are genetically predisposed to be small cow breeds. A full grown miniature cow will retain its compact, cute size."
+  },
+  {
+    question: "Are teacup mini cows real?",
+    answer: "Are teacup cows real or is there such thing as a mini cow? Yes, they exist, but 'teacup' is often a marketing term for micro miniature cows. We breed healthy micro mini highland cows without lethal dwarfism genes, ensuring our little cows for sale are healthy and proportionate."
+  },
+  {
+    question: "Where can you buy a mini cow?",
+    answer: "If you're asking 'where can I buy a miniature cow' or 'where to buy mini highland cows', you should look for registered breeders. We offer miniature cows for sale QLD, miniature cows for sale NSW, and transport our mini calves for sale across Australia."
+  },
+  {
+    question: "How long does a miniature highland cow live?",
+    answer: "With proper mini cow care, a miniature highland cow adult can live 15 to 20 years. They are hardy, resilient animals. The average lifespan of a mini highland cow is similar to standard cattle, provided they have good feed, shelter, and vet care."
+  },
+  {
+    question: "What are miniature cows good for?",
+    answer: "What are mini cows used for? Aside from being adorable pets, miniature cattle are great for clearing brush, providing family milk, and producing high-quality miniature highland cow beef. They are sustainable, require less feed, and are gentle on the land."
   }
 ];
 
@@ -37,8 +61,86 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
     notFound();
   }
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": calf.name,
+    "image": calf.images,
+    "description": calf.desc,
+    "sku": calf.id.toString(),
+    "brand": {
+      "@type": "Brand",
+      "name": "Dunblane Pastoral Holdings"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": `https://dunblane.com.au/calves/${calf.id}`,
+      "priceCurrency": "AUD",
+      "price": calf.price.toString().replace(/[^0-9.]/g, ''),
+      "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": calf.status === 'Available' ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
+      "seller": {
+        "@type": "Organization",
+        "name": "Dunblane Pastoral Holdings Pty Ltd"
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "AU",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 14,
+        "returnMethod": "https://schema.org/ReturnByMail"
+      }
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dunblane.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Available Calves",
+        "item": "https://dunblane.com.au/calves"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": calf.name,
+        "item": `https://dunblane.com.au/calves/${calf.id}`
+      }
+    ]
+  };
+
   return (
     <div className="bg-[#FDFBF7] min-h-screen py-16">
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      
+
       <div className="max-w-7xl mx-auto px-4">
         <Link href="/calves" className="inline-flex items-center gap-2 text-[#1E293B]/70 hover:text-[#1C3B2B] transition-colors mb-8 text-sm font-medium">
           <ArrowLeft className="w-4 h-4" /> Back to all calves
@@ -62,7 +164,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                     Available
                   </span>
                 ) : (
-                  <span className="absolute top-4 right-4 bg-[#C2673F] text-white text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10">
+                  <span className={`absolute top-4 right-4 text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10 ${calf.status === 'Sold' ? 'text-red-600 bg-white border border-red-600' : 'bg-[#C2673F] text-white'}`}>
                     {calf.status}
                   </span>
                 )}
@@ -136,7 +238,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                     </div>
                   </div>
                   <div className="text-xs text-[#1E293B]/70 mb-6 bg-[#1C3B2B]/5 p-3 rounded-sm border border-[#1C3B2B]/10">
-                    <span className="font-bold text-[#1C3B2B]">10% Discount</span> when paying with Cryptocurrency. Free delivery to QLD 4725.
+                    Secure Payments via <span className="font-bold text-[#1C3B2B]">Pay ID, Bank Transfer, Credit Card & Crypto (USDT, BTC)</span>. Free delivery to QLD 4725.
                   </div>
                   
                   <Link href="/reserve" className="block w-full py-4 text-center bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors">
@@ -145,6 +247,24 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                 </div>
               )}
             </div>
+          </div>
+        </div>
+        
+        {/* Related Calves */}
+        <div className="mt-16 mb-16">
+          <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-8 text-center">Related Calves</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {CALVES_DATA.filter(c => c.id !== calf.id).slice(0, 3).map((related) => (
+              <Link href={`/calves/${related.id}`} key={related.id} className="group bg-white rounded-sm shadow-sm border border-[#1E293B]/5 overflow-hidden block hover:border-[#1C3B2B]/20 transition-colors">
+                <div className="aspect-[4/3] relative bg-[#F4EFE6]">
+                  <Image src={related.images[0]} alt={related.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-serif text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">{related.name}</h3>
+                  <p className="text-sm text-[#1E293B]/70">{related.sex} • {related.coat}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
         

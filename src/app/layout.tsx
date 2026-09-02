@@ -16,8 +16,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Dunblane Highlands Australia | Pedigree Miniature Highland Cattle',
-  description: "Australia's Premier Pedigree Miniature Highland Cattle Breeder. NLIS tagged, DNA verified, and halter trained calves.",
+  title: 'Miniature Highland Cows for Sale Australia | Micro, Teacup & Mini Calves | Dunblane Highlands',
+  description: "Looking for a miniature highland cow for sale in Australia? We breed premium, DNA-verified, halter-trained micro miniature and teacup highland calves.",
   openGraph: {
     images: [
       {
@@ -56,7 +56,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                       <span className="text-[#C2673F]">•</span>
                       <span className="px-4 sm:px-8">Main business location: QLD 4725</span>
                       <span className="text-[#C2673F]">•</span>
-                      <span className="px-4 sm:px-8">10% on crypto</span>
+                      <span className="px-4 sm:px-8">Secure Payments via Pay ID, Bank Transfer, Credit Card & Crypto (USDT, BTC)</span>
                       <span className="text-[#C2673F]">•</span>
                       <span className="px-4 sm:px-8">Free delivery to same city as address</span>
                       <span className="text-[#C2673F] mr-4 sm:mr-8">•</span>
@@ -71,7 +71,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               <Link href="/" className="flex items-center gap-3">
               <CowLogo className="w-8 h-8 text-[#1C3B2B]" />
               <div>
-                <h1 className="font-serif text-2xl font-bold text-[#1C3B2B] leading-none">Dunblane</h1>
+                <span className="font-serif text-2xl font-bold text-[#1C3B2B] leading-none block">Dunblane</span>
                 <p className="text-[10px] tracking-widest text-[#C2673F] font-semibold uppercase mt-1">Highlands Australia</p>
               </div>
             </Link>
@@ -79,6 +79,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               <Link href="/" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Home</Link>
               <Link href="/calves" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Available Calves</Link>
               <Link href="/sold" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Sold</Link>
+              <Link href="/blog" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Blog</Link>
+              <Link href="/faq" className="text-sm font-bold hover:text-[#C2673F] transition-colors">FAQ</Link>
               <Link href="/about" className="text-sm font-bold hover:text-[#C2673F] transition-colors">About</Link>
               <Link href="/contact" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Contact</Link>
               <Link href="/process" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Adoption/Sales Process</Link>
@@ -109,6 +111,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                 <li><Link href="/" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Home</Link></li>
                 <li><Link href="/calves" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Available Calves</Link></li>
                 <li><Link href="/sold" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Sold</Link></li>
+                <li><Link href="/blog" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Blog</Link></li>
+                <li><Link href="/faq" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">FAQ</Link></li>
                 <li><Link href="/process" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Adoption Process</Link></li>
               </ul>
             </div>
@@ -131,7 +135,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                 <li>PIC: 3ABCD123</li>
                 <li>NLIS Registered Breeder</li>
                 <li>100% DNA Parentage Verified</li>
-                <li className="pt-2"><strong>Secure Payments:</strong><br/>Bank Transfer, Escrow & Crypto (10% Off)</li>
+                <li className="pt-2"><strong>Secure Payments:</strong><br/>Pay ID, Bank Transfer, Credit Card & Crypto (USDT, BTC)</li>
               </ul>
             </div>
           </div>

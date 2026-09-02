@@ -5,11 +5,82 @@ import { CALVES_DATA } from '@/data/calves';
 import ReviewsSlider from '@/components/ReviewsSlider';
 import HeroSlider from '@/components/HeroSlider';
 
+
+export const metadata = {
+  title: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
+  description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
+  alternates: {
+    canonical: 'https://dunblane.com.au',
+  },
+  openGraph: {
+    title: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
+    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
+    url: 'https://dunblane.com.au',
+    siteName: 'Dunblane Highlands',
+    images: [
+      {
+        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        width: 1200,
+        height: 630,
+        alt: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
+      },
+    ],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
+    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
+    images: ['https://dunblane.com.au/images/hero.jpg'],
+  },
+};
+
 export default function Home() {
   const featuredCalves = CALVES_DATA.slice(0, 4);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["Store", "Organization", "WebSite"],
+    "name": "Dunblane Pastoral Holdings Pty Ltd",
+    "description": "Premium breeder of miniature highland cows, micro miniature cattle, and fluffy mini cows in Australia.",
+    "url": "https://dunblane.com.au",
+    "logo": "https://dunblane.com.au/favicon.ico",
+    "image": "https://dunblane.com.au/images/hero.jpg",
+    "foundingDate": "2010",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AU",
+      "postalCode": "4725",
+      "addressRegion": "QLD"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@dunblane.com.au",
+      "availableLanguage": "en-AU"
+    },
+    "sameAs": [
+      "https://www.facebook.com/dunblanepastoral"
+    ],
+    "makesOffer": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "AUD",
+      "lowPrice": "4000",
+      "highPrice": "10000",
+      "offerCount": featuredCalves.length
+    }
+  };
+
+
   return (
     <div className="bg-[#FDFBF7]">
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Section */}
       <HeroSlider />
 
