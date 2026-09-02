@@ -56,21 +56,21 @@ export default function ContactForm() {
       )}
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-[#1E293B] mb-1">First Name</label>
-          <input type="text" name="firstName" required className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" />
+          <label htmlFor="firstName" className="block text-sm font-medium text-[#1E293B] mb-1">First Name</label>
+          <input id="firstName" type="text" name="firstName" required className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-[#1E293B] mb-1">Last Name</label>
-          <input type="text" name="lastName" required className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" />
+          <label htmlFor="lastName" className="block text-sm font-medium text-[#1E293B] mb-1">Last Name</label>
+          <input id="lastName" type="text" name="lastName" required className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" />
         </div>
       </div>
       <div>
-        <label className="block text-sm font-medium text-[#1E293B] mb-1">Email Address</label>
-        <input type="email" name="email" required className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" />
+        <label htmlFor="email" className="block text-sm font-medium text-[#1E293B] mb-1">Email Address</label>
+        <input id="email" type="email" name="email" required className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" />
       </div>
       <div>
-        <label className="block text-sm font-medium text-[#1E293B] mb-1">Message</label>
-        <textarea name="message" required rows={4} className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors resize-none"></textarea>
+        <label htmlFor="message" className="block text-sm font-medium text-[#1E293B] mb-1">Message</label>
+        <textarea id="message" name="message" required rows={4} className="w-full px-4 py-2 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors resize-none"></textarea>
       </div>
       <button type="submit" disabled={loading} className="w-full py-3 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors mt-4 disabled:opacity-70 disabled:cursor-not-allowed">
         {loading ? 'Sending...' : 'Send Message'}

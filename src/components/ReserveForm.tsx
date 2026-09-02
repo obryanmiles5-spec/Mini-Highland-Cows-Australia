@@ -61,31 +61,31 @@ export default function ReserveForm() {
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-[#1E293B] mb-1">First Name</label>
-          <input type="text" name="firstName" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required />
+          <label htmlFor="r_firstName" className="block text-sm font-medium text-[#1E293B] mb-1">First Name</label>
+          <input id="r_firstName" type="text" name="firstName" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required />
         </div>
         <div>
-          <label className="block text-sm font-medium text-[#1E293B] mb-1">Last Name</label>
-          <input type="text" name="lastName" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required />
+          <label htmlFor="r_lastName" className="block text-sm font-medium text-[#1E293B] mb-1">Last Name</label>
+          <input id="r_lastName" type="text" name="lastName" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-[#1E293B] mb-1">Email Address</label>
-          <input type="email" name="email" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required />
+          <label htmlFor="r_email" className="block text-sm font-medium text-[#1E293B] mb-1">Email Address</label>
+          <input id="r_email" type="email" name="email" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required />
         </div>
         <div>
-          <label className="block text-sm font-medium text-[#1E293B] mb-1">Phone Number</label>
-          <input type="tel" name="phone" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required />
+          <label htmlFor="r_phone" className="block text-sm font-medium text-[#1E293B] mb-1">Phone Number</label>
+          <input id="r_phone" type="tel" name="phone" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required />
         </div>
       </div>
       <div>
-        <label className="block text-sm font-medium text-[#1E293B] mb-1">Property Identification Code (PIC)</label>
-        <input type="text" name="pic" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required placeholder="Required for Australian buyers" />
+        <label htmlFor="r_pic" className="block text-sm font-medium text-[#1E293B] mb-1">Property Identification Code (PIC)</label>
+        <input id="r_pic" type="text" name="pic" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required placeholder="Required for Australian buyers" />
       </div>
       <div>
-        <label className="block text-sm font-medium text-[#1E293B] mb-1">Calf of Interest</label>
-        <select name="calfOfInterest" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required>
+        <label htmlFor="r_calf" className="block text-sm font-medium text-[#1E293B] mb-1">Calf of Interest</label>
+        <select id="r_calf" name="calfOfInterest" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required>
           <option value="">Select a calf...</option>
           {CALVES_DATA.filter((calf) => calf.status === 'Available').map((calf) => (
             <option key={calf.id} value={calf.ear_tag}>
@@ -95,8 +95,8 @@ export default function ReserveForm() {
         </select>
       </div>
       <div>
-        <label className="block text-sm font-medium text-[#1E293B] mb-1">Message or Additional Details</label>
-        <textarea name="message" rows={4} className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors resize-none" placeholder="Tell us a bit about your property, existing herd, and experience..."></textarea>
+        <label htmlFor="r_message" className="block text-sm font-medium text-[#1E293B] mb-1">Message or Additional Details</label>
+        <textarea id="r_message" name="message" rows={4} className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors resize-none" placeholder="Tell us a bit about your property, existing herd, and experience..."></textarea>
       </div>
       <div className="pt-4 border-t border-[#1E293B]/10">
         <button type="submit" disabled={loading} className="w-full py-4 bg-[#1C3B2B] text-white font-medium text-lg rounded-sm hover:bg-[#152C20] transition-colors disabled:opacity-70 disabled:cursor-not-allowed">

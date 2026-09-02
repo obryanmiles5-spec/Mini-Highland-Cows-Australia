@@ -3,19 +3,19 @@ import { CALVES_DATA } from '@/data/calves';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Miniature Highland Cows | Dunblane Pastoral',
-  description: 'Discover our beautiful miniature highland calves.',
+  title: 'Available Miniature Highland Cows For Sale | Micro & Teacup Calves',
+  description: 'View our current selection of available miniature, micro, and teacup highland calves for sale in Australia. All calves are DNA verified and halter trained.',
   alternates: {
-    canonical: 'https://dunblane.com.au/calves',
+    canonical: 'https://minihighlandcows.store/calves',
   },
   openGraph: {
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    url: 'https://dunblane.com.au/calves',
+    title: 'Available Miniature Highland Cows For Sale | Micro & Teacup Calves',
+    description: 'View our current selection of available miniature, micro, and teacup highland calves for sale in Australia. All calves are DNA verified and halter trained.',
+    url: 'https://minihighlandcows.store/calves',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
         alt: 'Miniature Highland Cows | Dunblane Pastoral',
@@ -26,9 +26,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    images: ['https://dunblane.com.au/images/hero.jpg'],
+    title: 'Available Miniature Highland Cows For Sale | Micro & Teacup Calves',
+    description: 'View our current selection of available miniature, micro, and teacup highland calves for sale in Australia. All calves are DNA verified and halter trained.',
+    images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
@@ -44,13 +44,13 @@ export default function CalvesPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au"
+        "item": "https://minihighlandcows.store"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Available Calves",
-        "item": "https://dunblane.com.au/calves"
+        "item": "https://minihighlandcows.store/calves"
       }
     ]
   };
@@ -61,7 +61,7 @@ export default function CalvesPage() {
     "itemListElement": CALVES_DATA.filter(c => c.status === 'Available').map((calf, index) => ({
       "@type": "ListItem",
       "position": index + 1,
-      "url": `https://dunblane.com.au/calves/${calf.id}`
+      "url": `https://minihighlandcows.store/calves/${calf.id}`
     }))
   };
 

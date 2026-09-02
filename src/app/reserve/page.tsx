@@ -3,19 +3,19 @@ import Link from 'next/link';
 import { CALVES_DATA } from '@/data/calves';
 
 export const metadata = {
-  title: 'Miniature Highland Cows | Dunblane Pastoral',
-  description: 'Discover our beautiful miniature highland calves.',
+  title: 'Reserve a Miniature Highland Calf | Dunblane Highlands',
+  description: 'Secure your miniature highland calf with a formal reservation. Fill out our adoption form to start the process of bringing home your new fluffy companion.',
   alternates: {
-    canonical: 'https://dunblane.com.au/reserve',
+    canonical: 'https://minihighlandcows.store/reserve',
   },
   openGraph: {
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    url: 'https://dunblane.com.au/reserve',
+    title: 'Reserve a Miniature Highland Calf | Dunblane Highlands',
+    description: 'Secure your miniature highland calf with a formal reservation. Fill out our adoption form to start the process of bringing home your new fluffy companion.',
+    url: 'https://minihighlandcows.store/reserve',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
         alt: 'Miniature Highland Cows | Dunblane Pastoral',
@@ -26,9 +26,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    images: ['https://dunblane.com.au/images/hero.jpg'],
+    title: 'Reserve a Miniature Highland Calf | Dunblane Highlands',
+    description: 'Secure your miniature highland calf with a formal reservation. Fill out our adoption form to start the process of bringing home your new fluffy companion.',
+    images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
@@ -43,13 +43,13 @@ export default function ReservePage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au/"
+        "item": "https://minihighlandcows.store/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Reserve",
-        "item": "https://dunblane.com.au/reserve"
+        "item": "https://minihighlandcows.store/reserve"
       }
     ]
   };

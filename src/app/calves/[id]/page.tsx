@@ -1,4 +1,31 @@
 import { CALVES_DATA } from '@/data/calves';
+
+import { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const calf = CALVES_DATA.find((c) => c.id.toString() === id);
+  if (!calf) return {};
+  
+  return {
+    title: `${calf.name} | ${calf.type} For Sale | Dunblane Highlands`,
+    description: calf.desc.substring(0, 160) + (calf.desc.length > 160 ? '...' : ''),
+    alternates: {
+      canonical: `https://minihighlandcows.store/calves/${calf.id}`,
+    },
+    openGraph: {
+      images: [
+        {
+          url: calf.images[0],
+          width: 800,
+          height: 600,
+          alt: calf.name,
+        }
+      ]
+    }
+  };
+}
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -74,7 +101,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
     },
     "offers": {
       "@type": "Offer",
-      "url": `https://dunblane.com.au/calves/${calf.id}`,
+      "url": `https://minihighlandcows.store/calves/${calf.id}`,
       "priceCurrency": "AUD",
       "price": calf.price.toString().replace(/[^0-9.]/g, ''),
       "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
@@ -117,19 +144,19 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au/"
+        "item": "https://minihighlandcows.store/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Available Calves",
-        "item": "https://dunblane.com.au/calves"
+        "item": "https://minihighlandcows.store/calves"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": calf.name,
-        "item": `https://dunblane.com.au/calves/${calf.id}`
+        "item": `https://minihighlandcows.store/calves/${calf.id}`
       }
     ]
   };

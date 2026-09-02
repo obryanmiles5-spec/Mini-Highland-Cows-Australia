@@ -1,19 +1,19 @@
 import { CheckCircle2, FileText, Truck, ShieldCheck } from 'lucide-react';
 
 export const metadata = {
-  title: 'Miniature Highland Cows | Dunblane Pastoral',
-  description: 'Discover our beautiful miniature highland calves.',
+  title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
+  description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
   alternates: {
-    canonical: 'https://dunblane.com.au/process',
+    canonical: 'https://minihighlandcows.store/process',
   },
   openGraph: {
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    url: 'https://dunblane.com.au/process',
+    title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
+    description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
+    url: 'https://minihighlandcows.store/process',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
         alt: 'Miniature Highland Cows | Dunblane Pastoral',
@@ -24,9 +24,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    images: ['https://dunblane.com.au/images/hero.jpg'],
+    title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
+    description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
+    images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
@@ -41,13 +41,13 @@ export default function ProcessPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au/"
+        "item": "https://minihighlandcows.store/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Our Process",
-        "item": "https://dunblane.com.au/process"
+        "item": "https://minihighlandcows.store/process"
       }
     ]
   };

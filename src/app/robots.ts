@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://dunblane.com.au/sitemap.xml',
+    sitemap: 'https://minihighlandcows.store/sitemap.xml',
   };
 }

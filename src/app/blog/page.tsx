@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Miniature Highland Cow Blog & Guides | Dunblane Pastoral',
   description: 'Learn everything about micro, teacup, and miniature highland cows. Guides on size, price, care, and adopting a mini highland cow in Australia.',
   alternates: {
-    canonical: 'https://dunblane.com.au/blog',
+    canonical: 'https://minihighlandcows.store/blog',
   }
 };
 
@@ -17,11 +17,11 @@ export default function BlogIndex() {
     "@type": "Blog",
     "name": "Miniature Highland Cow Blog",
     "description": "Guides and articles about miniature highland cows for sale, care, and breeding in Australia.",
-    "url": "https://dunblane.com.au/blog",
+    "url": "https://minihighlandcows.store/blog",
     "blogPost": BLOG_POSTS.map(post => ({
       "@type": "BlogPosting",
       "headline": post.title,
-      "url": `https://dunblane.com.au/blog/${post.slug}`,
+      "url": `https://minihighlandcows.store/blog/${post.slug}`,
       "datePublished": post.date,
       "description": post.excerpt
     }))
@@ -36,13 +36,13 @@ export default function BlogIndex() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au/"
+        "item": "https://minihighlandcows.store/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://dunblane.com.au/blog"
+        "item": "https://minihighlandcows.store/blog"
       }
     ]
   };

@@ -6,16 +6,16 @@ export const metadata = {
   title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
   description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
   alternates: {
-    canonical: 'https://dunblane.com.au/faq',
+    canonical: 'https://minihighlandcows.store/faq',
   },
   openGraph: {
     title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
     description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
-    url: 'https://dunblane.com.au/faq',
+    url: 'https://minihighlandcows.store/faq',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
         alt: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
@@ -28,7 +28,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
     description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
-    images: ['https://dunblane.com.au/images/hero.jpg'],
+    images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
@@ -85,7 +85,7 @@ export default function FAQPage() {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": faq.answer,
-        "url": `https://dunblane.com.au/faq#faq-${idx}`
+        "url": `https://minihighlandcows.store/faq#faq-${idx}`
       }
     }))
   };
@@ -99,13 +99,13 @@ export default function FAQPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au/"
+        "item": "https://minihighlandcows.store/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "FAQ",
-        "item": "https://dunblane.com.au/faq"
+        "item": "https://minihighlandcows.store/faq"
       }
     ]
   };

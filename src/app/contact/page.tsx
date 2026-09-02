@@ -2,19 +2,19 @@ import ContactForm from '@/components/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export const metadata = {
-  title: 'Miniature Highland Cows | Dunblane Pastoral',
-  description: 'Discover our beautiful miniature highland calves.',
+  title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders',
+  description: 'Get in touch with Dunblane Highlands in Queensland. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
   alternates: {
-    canonical: 'https://dunblane.com.au/contact',
+    canonical: 'https://minihighlandcows.store/contact',
   },
   openGraph: {
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    url: 'https://dunblane.com.au/contact',
+    title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders',
+    description: 'Get in touch with Dunblane Highlands in Queensland. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
+    url: 'https://minihighlandcows.store/contact',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
         alt: 'Miniature Highland Cows | Dunblane Pastoral',
@@ -25,9 +25,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    images: ['https://dunblane.com.au/images/hero.jpg'],
+    title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders',
+    description: 'Get in touch with Dunblane Highlands in Queensland. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
+    images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
@@ -42,13 +42,13 @@ export default function ContactPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au/"
+        "item": "https://minihighlandcows.store/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Contact",
-        "item": "https://dunblane.com.au/contact"
+        "item": "https://minihighlandcows.store/contact"
       }
     ]
   };

@@ -1,19 +1,19 @@
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Miniature Highland Cows | Dunblane Pastoral',
-  description: 'Discover our beautiful miniature highland calves.',
+  title: 'About Dunblane Highlands | Miniature Highland Cow Breeder Australia',
+  description: 'Learn about Dunblane Highlands, a premier breeder of DNA-verified, halter-trained micro miniature and teacup highland cattle in Queensland, Australia.',
   alternates: {
-    canonical: 'https://dunblane.com.au/about',
+    canonical: 'https://minihighlandcows.store/about',
   },
   openGraph: {
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    url: 'https://dunblane.com.au/about',
+    title: 'About Dunblane Highlands | Miniature Highland Cow Breeder Australia',
+    description: 'Learn about Dunblane Highlands, a premier breeder of DNA-verified, halter-trained micro miniature and teacup highland cattle in Queensland, Australia.',
+    url: 'https://minihighlandcows.store/about',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
         alt: 'Miniature Highland Cows | Dunblane Pastoral',
@@ -24,9 +24,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    images: ['https://dunblane.com.au/images/hero.jpg'],
+    title: 'About Dunblane Highlands | Miniature Highland Cow Breeder Australia',
+    description: 'Learn about Dunblane Highlands, a premier breeder of DNA-verified, halter-trained micro miniature and teacup highland cattle in Queensland, Australia.',
+    images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
@@ -41,13 +41,13 @@ export default function AboutPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au/"
+        "item": "https://minihighlandcows.store/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About Us",
-        "item": "https://dunblane.com.au/about"
+        "item": "https://minihighlandcows.store/about"
       }
     ]
   };

@@ -15,10 +15,22 @@ const playfairDisplay = Playfair_Display({
   display: 'swap',
 });
 
+export const viewport = { themeColor: '#1C3B2B', width: 'device-width', initialScale: 1 };
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://minihighlandcows.store'),
   title: 'Miniature Highland Cows for Sale Australia | Micro, Teacup & Mini Calves | Dunblane Highlands',
   description: "Looking for a miniature highland cow for sale in Australia? We breed premium, DNA-verified, halter-trained micro miniature and teacup highland calves.",
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Miniature Highland Cows for Sale Australia | Micro, Teacup & Mini Calves | Dunblane Highlands',
+    description: 'Looking for a miniature highland cow for sale in Australia? We breed premium, DNA-verified, halter-trained micro miniature and teacup highland calves.',
+    images: ['https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=1200&q=80'],
+  },
   openGraph: {
+    type: 'website',
+    locale: 'en_AU',
+    siteName: 'Dunblane Highlands',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=1200&q=80',

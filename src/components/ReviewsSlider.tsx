@@ -93,10 +93,10 @@ export default function ReviewsSlider() {
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
+            aria-label={`Go to slide ${idx + 1}`}
             className={`w-2.5 h-2.5 rounded-full transition-colors ${
               idx === currentIndex ? 'bg-[#C2673F]' : 'bg-[#1E293B]/20'
             }`}
-            aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
       </div>

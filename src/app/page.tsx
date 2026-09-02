@@ -10,16 +10,16 @@ export const metadata = {
   title: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
   description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
   alternates: {
-    canonical: 'https://dunblane.com.au',
+    canonical: 'https://minihighlandcows.store',
   },
   openGraph: {
     title: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
     description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
-    url: 'https://dunblane.com.au',
+    url: 'https://minihighlandcows.store',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
         alt: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
@@ -32,7 +32,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
     description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
-    images: ['https://dunblane.com.au/images/hero.jpg'],
+    images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
@@ -44,9 +44,9 @@ export default function Home() {
     "@type": ["Store", "Organization", "WebSite"],
     "name": "Dunblane Pastoral Holdings Pty Ltd",
     "description": "Premium breeder of miniature highland cows, micro miniature cattle, and fluffy mini cows in Australia.",
-    "url": "https://dunblane.com.au",
-    "logo": "https://dunblane.com.au/favicon.ico",
-    "image": "https://dunblane.com.au/images/hero.jpg",
+    "url": "https://minihighlandcows.store",
+    "logo": "https://minihighlandcows.store/favicon.ico",
+    "image": "https://minihighlandcows.store/images/hero.jpg",
     "foundingDate": "2010",
     "address": {
       "@type": "PostalAddress",
@@ -57,7 +57,7 @@ export default function Home() {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer support",
-      "email": "info@dunblane.com.au",
+      "email": "info@minihighlandcows.store",
       "availableLanguage": "en-AU"
     },
     "sameAs": [

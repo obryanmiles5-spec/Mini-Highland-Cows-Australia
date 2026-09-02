@@ -7,7 +7,7 @@ export async function generateSitemaps() {
 }
 
 export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
-  const baseUrl = 'https://dunblane.com.au';
+  const baseUrl = 'https://minihighlandcows.store';
 
   if (id === 1) { // Calves
     return CALVES_DATA.map((calf) => ({

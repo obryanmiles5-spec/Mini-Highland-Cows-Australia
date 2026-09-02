@@ -14,12 +14,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return {};
-
+  
   return {
     title: `${post.title} | Miniature Highland Cows`,
     description: post.excerpt,
     alternates: {
-      canonical: `https://dunblane.com.au/blog/${slug}`,
+      canonical: `https://minihighlandcows.store/blog/${slug}`,
+    },
+    openGraph: {
+      images: post.image ? [
+        {
+          url: post.image,
+          width: 800,
+          height: 600,
+          alt: post.title,
+        }
+      ] : []
     }
   };
 }
@@ -37,26 +47,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://dunblane.com.au/blog/${post.slug}`
+      "@id": `https://minihighlandcows.store/blog/${post.slug}`
     },
     "headline": post.title,
     "description": post.excerpt,
     "image": [
-      "https://dunblane.com.au" + post.image
+      "https://minihighlandcows.store" + post.image
     ],
     "datePublished": new Date(post.date).toISOString(),
     "dateModified": new Date(post.date).toISOString(),
     "author": {
       "@type": "Organization",
       "name": "Dunblane Pastoral Holdings Pty Ltd",
-      "url": "https://dunblane.com.au/about"
+      "url": "https://minihighlandcows.store/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Dunblane Pastoral Holdings Pty Ltd",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://dunblane.com.au/favicon.ico"
+        "url": "https://minihighlandcows.store/favicon.ico"
       }
     },
     "inLanguage": "en-AU",
@@ -74,19 +84,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au/"
+        "item": "https://minihighlandcows.store/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://dunblane.com.au/blog"
+        "item": "https://minihighlandcows.store/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": post.title,
-        "item": `https://dunblane.com.au/blog/${post.slug}`
+        "item": `https://minihighlandcows.store/blog/${post.slug}`
       }
     ]
   };

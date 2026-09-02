@@ -3,19 +3,19 @@ import { CALVES_DATA } from '@/data/calves';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Miniature Highland Cows | Dunblane Pastoral',
-  description: 'Discover our beautiful miniature highland calves.',
+  title: 'Sold Miniature Highland Calves | Dunblane Highlands',
+  description: 'View our gallery of past sold miniature and micro highland calves that have found their forever homes across Australia.',
   alternates: {
-    canonical: 'https://dunblane.com.au/sold',
+    canonical: 'https://minihighlandcows.store/sold',
   },
   openGraph: {
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    url: 'https://dunblane.com.au/sold',
+    title: 'Sold Miniature Highland Calves | Dunblane Highlands',
+    description: 'View our gallery of past sold miniature and micro highland calves that have found their forever homes across Australia.',
+    url: 'https://minihighlandcows.store/sold',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://dunblane.com.au/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
         alt: 'Miniature Highland Cows | Dunblane Pastoral',
@@ -26,9 +26,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows | Dunblane Pastoral',
-    description: 'Discover our beautiful miniature highland calves.',
-    images: ['https://dunblane.com.au/images/hero.jpg'],
+    title: 'Sold Miniature Highland Calves | Dunblane Highlands',
+    description: 'View our gallery of past sold miniature and micro highland calves that have found their forever homes across Australia.',
+    images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
@@ -45,13 +45,13 @@ export default function SoldPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dunblane.com.au/"
+        "item": "https://minihighlandcows.store/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Sold Calves",
-        "item": "https://dunblane.com.au/sold"
+        "item": "https://minihighlandcows.store/sold"
       }
     ]
   };
