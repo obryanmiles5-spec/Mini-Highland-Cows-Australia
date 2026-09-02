@@ -37,7 +37,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  const featuredCalves = CALVES_DATA.slice(0, 4);
+  const featuredCalves = CALVES_DATA.slice(0, 8);
 
   const jsonLd = {
     "@context": "https://schema.org",

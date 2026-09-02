@@ -1,38 +1,10 @@
-import { Metadata } from 'next';
-import { ChevronDown } from 'lucide-react';
-import Link from 'next/link';
+const fs = require('fs');
 
-export const metadata = {
-  title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
-  description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
-  alternates: {
-    canonical: 'https://minihighlandcows.store/faq',
-  },
-  openGraph: {
-    title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
-    description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
-    url: 'https://minihighlandcows.store/faq',
-    siteName: 'Dunblane Highlands',
-    images: [
-      {
-        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
-        width: 1200,
-        height: 630,
-        alt: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
-      },
-    ],
-    locale: 'en_AU',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
-    description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
-    images: ['https://minihighlandcows.store/images/hero.jpg'],
-  },
-};
+let content = fs.readFileSync('src/app/faq/page.tsx', 'utf8');
 
-const FAQS = [
+const oldFaqs = content.slice(content.indexOf('const FAQS = ['), content.indexOf('];') + 2);
+
+const newFaqs = `const FAQS = [
   {
     question: "How big do mini cows get? (Full grown micro teacup mini highland cow size)",
     answer: "A full grown miniature highland cow typically reaches 36 to 42 inches measured at the hip. If you are specifically looking at a 'micro mini' or what some call a 'micro teacup mini highland cow', they will mature under 36 inches. They are genetically small cattle breeds, ensuring they do stay small their entire lives. Despite their small stature, they retain the stocky, robust build and thick coats characteristic of standard Scottish Highlands."
@@ -73,89 +45,7 @@ const FAQS = [
     question: "What are miniature cows good for?",
     answer: "Aside from being adorable and docile pets, miniature cattle are highly functional on a small farm. They are fantastic foragers and great for clearing brush and maintaining pasture. They can provide a family milk supply, produce high-quality organic beef, and produce rich manure for your gardens. Because they are smaller, they require less feed, are gentler on fences, and cause significantly less soil compaction than standard cattle."
   }
-];
+];`;
 
-export default function FAQPage() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": FAQS.map((faq, idx) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer,
-        "url": `https://minihighlandcows.store/faq#faq-${idx}`
-      }
-    }))
-  };
-
-  
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://minihighlandcows.store/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "FAQ",
-        "item": "https://minihighlandcows.store/faq"
-      }
-    ]
-  };
-
-  return (
-    <div className="min-h-screen bg-[#FDFBF7] pt-32 pb-20">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1C3B2B] mb-6">
-            Miniature Highland Cow FAQs
-          </h1>
-          <p className="text-[#1E293B]/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            Everything you need to know about adopting, raising, and caring for miniature highland cattle in Australia. We&apos;ve compiled the top search questions to help you understand our fluffy mini cows.
-          </p>
-        </div>
-        
-        <div className="space-y-6">
-          {FAQS.map((faq, idx) => (
-            <details key={idx} id={`faq-${idx}`} className="group bg-white rounded-sm shadow-sm border border-[#1E293B]/5 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex items-center justify-between cursor-pointer p-6 font-medium text-lg text-[#1C3B2B] hover:bg-[#FDFBF7] transition-colors">
-                {faq.question}
-                <span className="transition duration-300 group-open:-rotate-180 ml-4 flex-shrink-0">
-                  <ChevronDown className="w-6 h-6 text-[#1C3B2B]/50" />
-                </span>
-              </summary>
-              <div className="px-6 pb-6 pt-2 text-[#1E293B]/80 leading-relaxed text-base border-t border-[#1C3B2B]/5">
-                {faq.answer}
-              </div>
-            </details>
-          ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <h2 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-4">Ready to adopt your own?</h2>
-          <p className="text-[#1E293B]/80 mb-8">
-            Browse our currently available DNA-verified miniature highland calves for sale across Australia.
-          </p>
-          <Link href="/calves" className="inline-flex items-center px-8 py-4 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A95531] transition-colors">
-            View Available Calves
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+content = content.replace(oldFaqs, newFaqs);
+fs.writeFileSync('src/app/faq/page.tsx', content);

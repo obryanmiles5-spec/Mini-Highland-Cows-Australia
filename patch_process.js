@@ -1,58 +1,9 @@
-import { CheckCircle2, FileText, Truck, ShieldCheck } from 'lucide-react';
+const fs = require('fs');
 
-export const metadata = {
-  title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
-  description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
-  alternates: {
-    canonical: 'https://minihighlandcows.store/process',
-  },
-  openGraph: {
-    title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
-    description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
-    url: 'https://minihighlandcows.store/process',
-    siteName: 'Dunblane Highlands',
-    images: [
-      {
-        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
-        width: 1200,
-        height: 630,
-        alt: 'Miniature Highland Cows | Dunblane Pastoral',
-      },
-    ],
-    locale: 'en_AU',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
-    description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
-    images: ['https://minihighlandcows.store/images/hero.jpg'],
-  },
-};
+let content = fs.readFileSync('src/app/process/page.tsx', 'utf8');
 
-
-export default function ProcessPage() {
-  
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://minihighlandcows.store/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Our Process",
-        "item": "https://minihighlandcows.store/process"
-      }
-    ]
-  };
-
-  return (
+const oldReturn = content.slice(content.indexOf('return ('));
+const newReturn = `return (
     <div className="bg-[#FDFBF7] py-16">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="font-serif text-5xl font-bold text-[#1C3B2B] mb-8 text-center">Adoption & Sales Process</h1>
@@ -157,4 +108,7 @@ export default function ProcessPage() {
       </div>
     </div>
   );
-}
+}`;
+
+content = content.replace(oldReturn, newReturn);
+fs.writeFileSync('src/app/process/page.tsx', content);

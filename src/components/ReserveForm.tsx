@@ -22,7 +22,6 @@ export default function ReserveForm() {
       lastName: formData.get('lastName'),
       email: formData.get('email'),
       phone: formData.get('phone'),
-      pic: formData.get('pic'),
       calfOfInterest: formData.get('calfOfInterest'),
       message: formData.get('message'),
     };
@@ -79,10 +78,7 @@ export default function ReserveForm() {
           <input id="r_phone" type="tel" name="phone" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required />
         </div>
       </div>
-      <div>
-        <label htmlFor="r_pic" className="block text-sm font-medium text-[#1E293B] mb-1">Property Identification Code (PIC)</label>
-        <input id="r_pic" type="text" name="pic" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required placeholder="Required for Australian buyers" />
-      </div>
+      
       <div>
         <label htmlFor="r_calf" className="block text-sm font-medium text-[#1E293B] mb-1">Calf of Interest</label>
         <select id="r_calf" name="calfOfInterest" className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required>
