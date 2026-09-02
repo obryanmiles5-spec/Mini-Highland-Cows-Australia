@@ -2,7 +2,26 @@ import { CALVES_DATA } from '@/data/calves';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, Check, Ruler, Info } from 'lucide-react';
+import { ArrowLeft, Check, Ruler, Info, ChevronDown } from 'lucide-react';
+
+const FAQS = [
+  {
+    question: "How much space do miniature highlands need?",
+    answer: "Generally, we recommend 1 to 2 acres per pair of miniature highlands, depending on the quality of your pasture and whether you plan to supplement with hay year-round. They are herd animals and must be kept with at least one other bovine companion."
+  },
+  {
+    question: "Do they require special fencing?",
+    answer: "Standard cattle fencing (like 5-strand wire or woven wire cattle panels) is completely sufficient. Miniature highlands are typically very respectful of fences and are not known to be escape artists."
+  },
+  {
+    question: "Are they good with children and other pets?",
+    answer: "Yes! Our miniature highlands are specifically bred for their docile, gentle temperaments. Because we halter-train and socialize them from a young age, they make wonderful paddock pets and are great around respectful children and farm dogs."
+  },
+  {
+    question: "How do you manage their long coats in the Australian summer?",
+    answer: "Highland cattle naturally shed their thick winter undercoat in the warmer months. Providing them with ample shade (like large trees or a shelter) and constant access to fresh, cool drinking water is all they need to stay comfortable."
+  }
+];
 
 export async function generateStaticParams() {
   return CALVES_DATA.map((calf) => ({
@@ -106,7 +125,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
 
               {calf.status === 'Available' && (
                 <div className="mt-auto bg-[#F8F9FA] p-6 rounded-sm border border-[#1E293B]/10">
-                  <div className="flex items-end justify-between mb-6">
+                  <div className="flex items-end justify-between mb-4">
                     <div>
                       <span className="block text-[#1E293B]/50 uppercase tracking-wider text-[10px] font-bold mb-1">Total Price</span>
                       <span className="font-serif text-3xl font-bold text-[#1C3B2B]">${calf.price.toLocaleString()}</span>
@@ -116,6 +135,9 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                       <span className="font-medium text-[#1E293B]">${calf.deposit.toLocaleString()}</span>
                     </div>
                   </div>
+                  <div className="text-xs text-[#1E293B]/70 mb-6 bg-[#1C3B2B]/5 p-3 rounded-sm border border-[#1C3B2B]/10">
+                    <span className="font-bold text-[#1C3B2B]">10% Discount</span> when paying with Cryptocurrency. Free delivery to QLD 4725.
+                  </div>
                   
                   <Link href="/reserve" className="block w-full py-4 text-center bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors">
                     Inquire About {calf.name}
@@ -123,6 +145,29 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                 </div>
               )}
             </div>
+          </div>
+        </div>
+        
+        {/* FAQ Section */}
+        <div className="mt-16 max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-4">Frequently Asked Questions</h2>
+            <p className="text-[#1E293B]/70">Common questions about caring for miniature highlands.</p>
+          </div>
+          <div className="space-y-4">
+            {FAQS.map((faq, idx) => (
+              <details key={idx} className="group bg-white rounded-sm shadow-sm border border-[#1E293B]/5 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer p-6 font-medium text-[#1C3B2B]">
+                  {faq.question}
+                  <span className="transition duration-300 group-open:-rotate-180">
+                    <ChevronDown className="w-5 h-5 text-[#1C3B2B]/50" />
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-[#1E293B]/70 leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </div>

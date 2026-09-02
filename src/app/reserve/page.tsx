@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CALVES_DATA } from '@/data/calves';
 
 export default function ReservePage() {
   return (
@@ -49,15 +50,11 @@ export default function ReservePage() {
               <label className="block text-sm font-medium text-[#1E293B] mb-1">Calf of Interest</label>
               <select className="w-full px-4 py-3 bg-[#FDFBF7] border border-[#1E293B]/10 rounded-sm focus:outline-none focus:border-[#C2673F] transition-colors" required>
                 <option value="">Select a calf...</option>
-                <option value="hamish">Hamish of Dunblane</option>
-                <option value="bonnie">Bonnie Lass</option>
-                <option value="fergus">Fergus Silvercrest</option>
-                <option value="isla">Isla White Rose</option>
-                <option value="lachlan">Lachlan of Strathbogie</option>
-                <option value="maisie">Maisie Belle</option>
-                <option value="morag">Morag Honey</option>
-                <option value="callum">Callum Snow</option>
-                <option value="fiona">Fiona Silvermist</option>
+                {CALVES_DATA.filter((calf) => calf.status === 'Available').map((calf) => (
+                  <option key={calf.id} value={calf.ear_tag}>
+                    {calf.name} ({calf.ear_tag}) - ${calf.price}
+                  </option>
+                ))}
               </select>
             </div>
 

@@ -73,9 +73,9 @@ export default function ProcessPage() {
                 Transport & Handover <Truck className="w-5 h-5 text-[#C2673F]" />
               </h3>
               <p className="text-[#1E293B]/70 leading-relaxed mb-4">
-                The remaining balance must be cleared prior to transport. 
-                You can arrange to float the calf yourself from our Victorian property, or we can recommend trusted, 
-                climate-controlled livestock transport services that operate nationwide. We provide a customized feeding and care guide upon handover.
+                The remaining balance must be cleared prior to transport. We accept Bank Transfer, Escrow, and Cryptocurrency (which attracts a 10% discount). 
+                You can arrange to float the calf yourself from our Queensland property, or we can recommend trusted, 
+                climate-controlled livestock transport services that operate nationwide. We offer <strong>free delivery to the same city as our address (QLD 4725)</strong>. We provide a customized feeding and care guide upon handover.
               </p>
             </div>
           </div>

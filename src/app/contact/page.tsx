@@ -42,7 +42,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-[#1C3B2B] mb-1">Farm Location</h3>
-                  <p className="text-[#1E293B]/70">Victoria, Australia</p>
+                  <p className="text-[#1E293B]/70">QLD, Australia</p>
                   <p className="text-sm text-[#1E293B]/50 mt-1">Farm visits are strictly by appointment only for biosecurity reasons.</p>
                 </div>
               </div>

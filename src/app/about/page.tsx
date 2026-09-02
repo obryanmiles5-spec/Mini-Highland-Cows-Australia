@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div className="prose prose-lg prose-[#1E293B] max-w-none">
           <p className="text-xl leading-relaxed text-[#1E293B]/80 font-light mb-8">
             Dunblane Highlands Australia is a premier breeder of pedigree Miniature Highland Cattle, 
-            located in the picturesque rolling hills of Victoria. We are dedicated to preserving the 
+            located in the picturesque rolling hills of Queensland. We are dedicated to preserving the 
             rugged heritage of the Scottish Highland breed while selecting for smaller, more manageable 
             frames suited for Australian lifestyle properties.
           </p>

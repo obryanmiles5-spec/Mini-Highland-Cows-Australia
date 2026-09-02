@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
-import { Phone, Mail, Star, Dna } from 'lucide-react';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1549429282-59599553bb44?auto=format&fit=crop&w=1200&q=80',
+        url: 'https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=1200&q=80',
         width: 1200,
         height: 630,
         alt: 'Highland Cow in a field',
@@ -43,22 +42,26 @@ const CowLogo = ({ className }: { className?: string }) => (
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`scroll-smooth ${plusJakartaSans.variable} ${playfairDisplay.variable}`}>
-      <body suppressHydrationWarning className="antialiased bg-[#FDFBF7] text-[#1E293B] font-sans selection:bg-[#C2673F] selection:text-white flex flex-col min-h-screen">
+      <body suppressHydrationWarning className="antialiased bg-[#FDFBF7] text-[#1E293B] font-sans font-bold selection:bg-[#C2673F] selection:text-white flex flex-col min-h-screen">
         <header className="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md flex flex-col">
           <div className="w-full bg-[#1C3B2B] text-[#FDFBF7] overflow-hidden flex items-center h-10 text-xs sm:text-sm font-medium tracking-wide">
-            <div className="flex w-max animate-marquee">
+            <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
               {[...Array(2)].map((_, i) => (
-                <div key={i} className="flex items-center whitespace-nowrap">
-                  <span className="mx-6 sm:mx-12 flex items-center gap-2"><Phone className="text-[#D4A373] w-4 h-4" /> Call or Text: +61 468 187 340</span>
-                  <span className="mx-6 sm:mx-12 flex items-center gap-2"><Mail className="text-[#D4A373] w-4 h-4" /> Email: info@minihighlandcows.store</span>
-                  <span className="mx-6 sm:mx-12 flex items-center gap-2"><Star className="text-[#D4A373] w-4 h-4" /> Safe Australia-Wide Delivery</span>
-                  <span className="mx-6 sm:mx-12 flex items-center gap-2"><Dna className="text-[#D4A373] w-4 h-4" /> 100% DNA Verified & NLIS Registered</span>
-                  
-                  {/* Repeat the set to ensure the block is extremely wide for ultra-wide monitors */}
-                  <span className="mx-6 sm:mx-12 flex items-center gap-2"><Phone className="text-[#D4A373] w-4 h-4" /> Call or Text: +61 468 187 340</span>
-                  <span className="mx-6 sm:mx-12 flex items-center gap-2"><Mail className="text-[#D4A373] w-4 h-4" /> Email: info@minihighlandcows.store</span>
-                  <span className="mx-6 sm:mx-12 flex items-center gap-2"><Star className="text-[#D4A373] w-4 h-4" /> Safe Australia-Wide Delivery</span>
-                  <span className="mx-6 sm:mx-12 flex items-center gap-2"><Dna className="text-[#D4A373] w-4 h-4" /> 100% DNA Verified & NLIS Registered</span>
+                <div key={i} className="flex items-center whitespace-nowrap shrink-0">
+                  {[...Array(4)].map((_, j) => (
+                    <div key={j} className="flex items-center shrink-0">
+                      <span className="px-4 sm:px-8">Entity name: Dunblane Pastoral Holdings Pty Ltd</span>
+                      <span className="text-[#C2673F]">•</span>
+                      <span className="px-4 sm:px-8">ABN 81 131 156 922</span>
+                      <span className="text-[#C2673F]">•</span>
+                      <span className="px-4 sm:px-8">Main business location: QLD 4725</span>
+                      <span className="text-[#C2673F]">•</span>
+                      <span className="px-4 sm:px-8">10% on crypto</span>
+                      <span className="text-[#C2673F]">•</span>
+                      <span className="px-4 sm:px-8">Free delivery to same city as address</span>
+                      <span className="text-[#C2673F] mr-4 sm:mr-8">•</span>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
@@ -90,7 +93,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         </main>
 
         <footer className="bg-[#1C3B2B] text-[#FDFBF7] py-16 mt-auto">
-          <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 text-center md:text-left">
+          <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12 text-center md:text-left">
             <div>
               <div className="flex items-center gap-3 justify-center md:justify-start mb-6">
                 <CowLogo className="w-6 h-6 text-[#D4A373]" />
@@ -110,16 +113,30 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               </ul>
             </div>
             <div>
-              <h4 className="font-serif text-lg font-bold mb-6 text-[#D4A373]">Contact</h4>
+              <h4 className="font-serif text-lg font-bold mb-6 text-[#D4A373]">Contact & Hours</h4>
               <ul className="space-y-3 text-[#FDFBF7]/80 text-sm">
                 <li>info@minihighlandcows.store</li>
-                <li>+61 468 187 340</li>
-                <li>Victoria, Australia</li>
+                <li>0468 187 340</li>
+                <li>QLD 4725</li>
+                <li><strong>Free delivery to same city as address</strong></li>
+                <li className="pt-2 text-[#D4A373]">Farm Visits by Appointment</li>
+                <li>Mon-Sat: 8:00 AM - 5:00 PM</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-serif text-lg font-bold mb-6 text-[#D4A373]">Accreditations</h4>
+              <ul className="space-y-3 text-[#FDFBF7]/80 text-sm">
+                <li>Entity name: Dunblane Pastoral Holdings Pty Ltd</li>
+                <li>ABN 81 131 156 922</li>
+                <li>PIC: 3ABCD123</li>
+                <li>NLIS Registered Breeder</li>
+                <li>100% DNA Parentage Verified</li>
+                <li className="pt-2"><strong>Secure Payments:</strong><br/>Bank Transfer, Escrow & Crypto (10% Off)</li>
               </ul>
             </div>
           </div>
           <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-[#FDFBF7]/10 flex flex-col md:flex-row justify-between items-center text-[#FDFBF7]/60 text-sm gap-4">
-            <p>&copy; {new Date().getFullYear()} Dunblane Highlands Australia. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Dunblane Pastoral Holdings Pty Ltd. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="hover:text-[#D4A373] transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-[#D4A373] transition-colors">Terms of Service</Link>

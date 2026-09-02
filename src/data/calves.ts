@@ -30,8 +30,8 @@ export const CALVES_DATA: Calf[] = [
     price: 4500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=800&q=80'],
-    desc: 'Hamish is an exceptionally gentle, halter-trained steer with a bright yellow coat and classic conformation. Raised on open pasture and handled daily.',
+    images: ['https://drive.google.com/uc?export=view&id=12m1WrJ-MRmGEAPYCUZvgMEvP6i9HR6Kt'],
+    desc: 'Buy Hamish of Dunblane, a premium yellow miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Docile, loves brushing & chin scratches.',
   },
   {
@@ -47,8 +47,8 @@ export const CALVES_DATA: Calf[] = [
     price: 8500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80'],
-    desc: 'A stunning deep mahogany-red heifer from our award-winning foundation bloodline. Calm, curious, and ideal for breeding programs or estate pasture.',
+    images: ['https://drive.google.com/uc?export=view&id=1Vz0LXrKqADM0Yp1_NnKQPRG2zI30egsf'],
+    desc: 'Buy Bonnie Lass, a premium red miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Curious, peaceful, easy to lead.',
   },
   {
@@ -65,7 +65,7 @@ export const CALVES_DATA: Calf[] = [
     deposit: 1000,
     status: 'Reserved',
     images: ['https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80'],
-    desc: 'A robust intact bull calf with a rare silver/dun coat. Exceptional bone density, wide forehead, and deep heritage genetics.',
+    desc: 'Buy Fergus Silvercrest, a premium silver/dun miniature highland bull from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Confident, structurally sound, calm.',
   },
   {
@@ -82,7 +82,7 @@ export const CALVES_DATA: Calf[] = [
     deposit: 1000,
     status: 'Available',
     images: ['https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80'],
-    desc: 'Rare pure white miniature heifer with striking black points. Ultra-dense double coat, compact frame, and socialized extensively with farm visitors.',
+    desc: 'Buy Isla White Rose, a premium white miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Affectionate, loves human interaction.',
   },
   {
@@ -99,7 +99,7 @@ export const CALVES_DATA: Calf[] = [
     deposit: 1000,
     status: 'Available',
     images: ['https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=800&q=80'],
-    desc: 'Lachlan features a handsome tiger-stripe brindle coat. Sturdy, healthy, and halter broken. Makes a delightful lawn-mower and gentle farm companion.',
+    desc: 'Buy Lachlan of Strathbogie, a premium brindle miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Quiet, peaceful grazer, food-motivated.',
   },
   {
@@ -116,7 +116,7 @@ export const CALVES_DATA: Calf[] = [
     deposit: 1000,
     status: 'Available',
     images: ['https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=800&q=80'],
-    desc: 'An inky jet-black heifer with lustrous curly hair and gentle dark eyes. Sweet natured, well-proportioned, and registered with the breed society.',
+    desc: 'Buy Maisie Belle, a premium black miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Sweet-tempered, gentle with children.',
   },
   {
@@ -133,7 +133,7 @@ export const CALVES_DATA: Calf[] = [
     deposit: 1000,
     status: 'Under Offer',
     images: ['https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=800&q=80'],
-    desc: 'Classic rich red steer with long bangs and symmetric horns budding. Solid frame, excellent health checks, and halter trained.',
+    desc: 'Buy Angus of Glenfiddich, a premium red miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Gentle, food motivated, friendly.',
   },
   {
@@ -150,7 +150,7 @@ export const CALVES_DATA: Calf[] = [
     deposit: 1000,
     status: 'Available',
     images: ['https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80'],
-    desc: 'Petite blonde/yellow heifer with an adorable teddy-bear face. Fully vaccinated, drenched, and ready for her forever paddock.',
+    desc: 'Buy Morag Honey, a premium yellow miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Gentle, quiet, loves apples.',
   },
   {
@@ -167,7 +167,7 @@ export const CALVES_DATA: Calf[] = [
     deposit: 1000,
     status: 'Available',
     images: ['https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80'],
-    desc: 'Callum is a fluffy white steer with an inquisitive personality. Great for lifestyle acreages looking for docile companion stock.',
+    desc: 'Buy Callum Snow, a premium white miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Playful, responsive to halter cues.',
   },
   {
@@ -184,7 +184,7 @@ export const CALVES_DATA: Calf[] = [
     deposit: 1000,
     status: 'Available',
     images: ['https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80'],
-    desc: 'A pedigree show-quality silver dun heifer. Flawless structure, verified DNA parentage, and an exceptionally calm temperament.',
+    desc: 'Buy Fiona Silvermist, a premium silver/dun miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Regal, calm, top-tier show prospect.',
   },
   {
@@ -200,8 +200,8 @@ export const CALVES_DATA: Calf[] = [
     price: 8500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1TvqC-XrUxccOubGYg1W9j2K8mTsQ9A5a', 'https://drive.google.com/uc?export=view&id=1v22-iXqlncpg4zVA2iUVGM8TEwOshc95'],
-    desc: 'Ashley is a beautiful red heifer, friendly and gentle.',
+    images: ['https://drive.google.com/uc?export=view&id=1TvqC-XrUxccOubGYg1W9j2K8mTsQ9A5a'],
+    desc: 'Buy Ashley, a premium red miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Friendly, easy to handle.',
   },
   {
@@ -217,8 +217,8 @@ export const CALVES_DATA: Calf[] = [
     price: 4500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1QPXNwbwru31umIr-JfuWOLdwYViQV-i4', 'https://drive.google.com/uc?export=view&id=1AxO7PdhoAEZBHKReHl4b-vZvlNHupm87'],
-    desc: 'Bajjie is a sturdy, well-mannered steer with a classic yellow coat.',
+    images: ['https://drive.google.com/uc?export=view&id=1QPXNwbwru31umIr-JfuWOLdwYViQV-i4'],
+    desc: 'Buy Bajjie, a premium yellow miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Docile, great companion.',
   },
   {
@@ -234,8 +234,8 @@ export const CALVES_DATA: Calf[] = [
     price: 9000,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1MBKEie0hysldRVXe319bD-xRmNtubrgg', 'https://drive.google.com/uc?export=view&id=1zgg8-pjCCzLaOENa0tqGgPeBJ4z7dAib'],
-    desc: 'Breva is a rare silver dun heifer with excellent conformation.',
+    images: ['https://drive.google.com/uc?export=view&id=1MBKEie0hysldRVXe319bD-xRmNtubrgg'],
+    desc: 'Buy Breva, a premium silver/dun miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Curious, peaceful.',
   },
   {
@@ -251,8 +251,8 @@ export const CALVES_DATA: Calf[] = [
     price: 7500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1nSfEhBDfaGte3AmxrPy8R0E7acDii2Qd', 'https://drive.google.com/uc?export=view&id=18En9Y8J8ohCQdJ6-ARjcezQLzg8h1hSX'],
-    desc: 'Dante is an intact bull calf with a striking black coat, ideal for breeding.',
+    images: ['https://drive.google.com/uc?export=view&id=1nSfEhBDfaGte3AmxrPy8R0E7acDii2Qd'],
+    desc: 'Buy Dante, a premium black miniature highland bull from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Confident, calm.',
   },
   {
@@ -268,8 +268,8 @@ export const CALVES_DATA: Calf[] = [
     price: 4200,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1NjDZqVFR684-zFqO5ClSFy_IUfhb1PWL', 'https://drive.google.com/uc?export=view&id=1libGNHJnbsg3_gmwxYHpGSZAHt2lfaAL'],
-    desc: 'Den is a handsome brindle steer, haltered and well-behaved.',
+    images: ['https://drive.google.com/uc?export=view&id=1NjDZqVFR684-zFqO5ClSFy_IUfhb1PWL'],
+    desc: 'Buy Den, a premium brindle miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Quiet, food motivated.',
   },
   {
@@ -285,8 +285,8 @@ export const CALVES_DATA: Calf[] = [
     price: 9500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1T5802hHBXKkurmSi_-enGt9veXcXx-xO', 'https://drive.google.com/uc?export=view&id=1-xsm5Vr5xryf9Ql7X5wqPTZUlV-3g18V'],
-    desc: 'Dream is a pure white heifer, incredibly affectionate and sweet-natured.',
+    images: ['https://drive.google.com/uc?export=view&id=1T5802hHBXKkurmSi_-enGt9veXcXx-xO'],
+    desc: 'Buy Dream, a premium white miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Affectionate, loves brushing.',
   },
   {
@@ -302,8 +302,8 @@ export const CALVES_DATA: Calf[] = [
     price: 4500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1utGA_3gS6fXGftQMqAmSFt6AveYE0a2V', 'https://drive.google.com/uc?export=view&id=1utGA_3gS6fXGftQMqAmSFt6AveYE0a2V'],
-    desc: 'Erhm is a friendly, easy-going steer with a bright coat.',
+    images: ['https://drive.google.com/uc?export=view&id=1utGA_3gS6fXGftQMqAmSFt6AveYE0a2V'],
+    desc: 'Buy Erhm, a premium yellow miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Docile, loves chin scratches.',
   },
   {
@@ -319,8 +319,8 @@ export const CALVES_DATA: Calf[] = [
     price: 8800,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1utGA_3gS6fXGftQMqAmSFt6AveYE0a2V', 'https://drive.google.com/uc?export=view&id=1utGA_3gS6fXGftQMqAmSFt6AveYE0a2V'],
-    desc: 'Juanita and Mirose are a bonded pair (pricing reflects single registration base). Very sweet and socialized.',
+    images: ['https://drive.google.com/uc?export=view&id=13oqMfVAF_ghYciT3b8S4Nzrar8KDomJK'],
+    desc: 'Buy Juanita and Mirose, a premium red miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Bonded, social, curious.',
   },
   {
@@ -336,8 +336,8 @@ export const CALVES_DATA: Calf[] = [
     price: 4800,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=13oqMfVAF_ghYciT3b8S4Nzrar8KDomJK', 'https://drive.google.com/uc?export=view&id=13oqMfVAF_ghYciT3b8S4Nzrar8KDomJK'],
-    desc: 'Phina is a uniquely named, sweet-natured silver dun steer, ready for his forever home.',
+    images: ['https://drive.google.com/uc?export=view&id=1utGA_3gS6fXGftQMqAmSFt6AveYE0a2V'],
+    desc: 'Buy Phina, a premium silver/dun miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Gentle, easy to lead.',
   },
   {
@@ -353,8 +353,8 @@ export const CALVES_DATA: Calf[] = [
     price: 8200,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1Wu8X-0bw2AI7AbFVoQlTG8245aj35CxW', 'https://drive.google.com/uc?export=view&id=1WntcuXJw2iPuQEkCty8ZWWxAYjFQF_Xt'],
-    desc: 'Sophie is a beautiful black heifer, fully halter-trained and calm.',
+    images: ['https://drive.google.com/uc?export=view&id=1Wu8X-0bw2AI7AbFVoQlTG8245aj35CxW'],
+    desc: 'Buy Sophie, a premium black miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Calm, great with kids.',
   },
   {
@@ -370,8 +370,8 @@ export const CALVES_DATA: Calf[] = [
     price: 8500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1olK-TdLcwBpPV-dfbci_N0SEkOIlFBhX', 'https://drive.google.com/uc?export=view&id=1iD2YFSEEmdGWg0gyHGz1YdH_bSq-4lE0'],
-    desc: 'Suzy is a gentle, sweet-natured yellow heifer.',
+    images: ['https://drive.google.com/uc?export=view&id=1olK-TdLcwBpPV-dfbci_N0SEkOIlFBhX'],
+    desc: 'Buy Suzy, a premium yellow miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Sweet-tempered, peaceful.',
   },
   {
@@ -387,8 +387,8 @@ export const CALVES_DATA: Calf[] = [
     price: 5200,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1uzbyu4GHB4tKdQkMxdaSCiOQcrKlHzkR', 'https://drive.google.com/uc?export=view&id=14djebQw5aFbTL4khurJPHsV0QE4Ei7_3'],
-    desc: 'Theodore is an inquisitive, fluffy white steer with excellent conformation.',
+    images: ['https://drive.google.com/uc?export=view&id=1uzbyu4GHB4tKdQkMxdaSCiOQcrKlHzkR'],
+    desc: 'Buy Theodore, a premium white miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Playful, responsive.',
   },
   {
@@ -404,8 +404,8 @@ export const CALVES_DATA: Calf[] = [
     price: 8500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1JdmkhLuBuCin7mZqquFPCqd68FRdl3Y4', 'https://drive.google.com/uc?export=view&id=1JdmkhLuBuCin7mZqquFPCqd68FRdl3Y4'],
-    desc: 'Willow is a gorgeous brindle heifer, calm and easy to work with.',
+    images: ['https://drive.google.com/uc?export=view&id=1JdmkhLuBuCin7mZqquFPCqd68FRdl3Y4'],
+    desc: 'Buy Willow, a premium brindle miniature highland heifer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Gentle, curious.',
   },
   {
@@ -421,8 +421,8 @@ export const CALVES_DATA: Calf[] = [
     price: 4500,
     deposit: 1000,
     status: 'Available',
-    images: ['https://drive.google.com/uc?export=view&id=1mK_AJCtB8x0MD_5pJgrw15GGcebFkWBt', 'https://drive.google.com/uc?export=view&id=1mK_AJCtB8x0MD_5pJgrw15GGcebFkWBt'],
-    desc: 'Zaffy is a sturdy, red steer with a fantastic personality.',
+    images: ['https://drive.google.com/uc?export=view&id=1mK_AJCtB8x0MD_5pJgrw15GGcebFkWBt'],
+    desc: 'Buy Zaffy, a premium red miniature highland steer from Dunblane Pastoral Holdings Pty Ltd. DNA verified, halter-trained, and ideal for acreage living. Australia-wide delivery available.',
     temp: 'Confident, friendly.',
   }
 ];

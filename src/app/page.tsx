@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Leaf, ArrowRight, Star, Calendar } from 'lucide-react';
 import { CALVES_DATA } from '@/data/calves';
 import ReviewsSlider from '@/components/ReviewsSlider';
+import HeroSlider from '@/components/HeroSlider';
 
 export default function Home() {
   const featuredCalves = CALVES_DATA.slice(0, 4);
@@ -10,42 +11,7 @@ export default function Home() {
   return (
     <div className="bg-[#FDFBF7]">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&q=80"
-            alt="Highland cattle in mist"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-[#1C3B2B]/40 mix-blend-multiply" />
-        </div>
-        
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-7xl text-white font-bold mb-6 drop-shadow-lg leading-tight">
-            Premium Mini Highland Cows for Sale
-          </h1>
-          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light drop-shadow-md">
-            Discover docile, DNA-verified miniature highland calves bred for the Australian lifestyle. 
-            Victoria-based with Australia-wide delivery.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/calves" 
-              className="px-8 py-4 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A85532] transition-colors"
-            >
-              View Available Calves
-            </Link>
-            <Link 
-              href="/process" 
-              className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-medium rounded-sm border border-white/30 hover:bg-white/20 transition-colors"
-            >
-              Adoption Process
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       {/* Featured Products (4 Calves) */}
       <section className="py-24 max-w-7xl mx-auto px-4">
@@ -134,14 +100,14 @@ export default function Home() {
               Ethically Bred Miniature Highland Calves in Australia
             </h2>
             <p className="text-[#1E293B]/80 mb-6 leading-relaxed">
-              At Dunblane Highlands, we specialise in raising exceptional <strong>mini highland cows for sale</strong>. Based in Victoria, Australia, our focus is on breeding structurally sound, docile, and true-to-type miniature highland cattle. With over a decade of experience, we pride ourselves on transparency, ethical farming practices, and matching the right calf to the right family.
+              At Dunblane Highlands, we specialise in raising exceptional <strong>mini highland cows for sale</strong>. Based in Queensland, Australia, our focus is on breeding structurally sound, docile, and true-to-type miniature highland cattle. With over a decade of experience, we pride ourselves on transparency, ethical farming practices, and matching the right calf to the right family.
             </p>
             <p className="text-[#1E293B]/80 mb-8 leading-relaxed">
               Whether you are looking for a gentle paddock pet or a foundation breeding heifer, our miniature highlands are renowned for their incredible temperaments. Every calf leaves our property fully weaned, halter-trained, and acclimatised to human interaction. We provide complete genetic transparency, including DNA parentage verification and chondrodysplasia testing.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <h4 className="font-bold text-[#1C3B2B] mb-2 border-l-2 border-[#C2673F] pl-3">Victoria HQ</h4>
+                <h4 className="font-bold text-[#1C3B2B] mb-2 border-l-2 border-[#C2673F] pl-3">Queensland HQ</h4>
                 <p className="text-sm text-[#1E293B]/70 pl-3">Raised on premium pasture with Australia-wide transport available.</p>
               </div>
               <div>
@@ -152,7 +118,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-square md:aspect-[4/5] rounded-sm overflow-hidden shadow-sm">
             <Image
-              src="https://images.unsplash.com/photo-1541427468627-a89a96e5ca1d?auto=format&fit=crop&q=80"
+              src="https://drive.google.com/uc?export=view&id=1dVP0WPimbOub0myAQVRgBA0JrcHENgtB"
               alt="Miniature highland calf looking curiously at the camera"
               fill
               className="object-cover"
@@ -236,6 +202,35 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    
+      {/* Ranch Gallery Section */}
+      <section className="py-24 max-w-7xl mx-auto px-4">
+        <div className="flex flex-col items-center text-center mb-12">
+          <h2 className="font-serif text-4xl text-[#1C3B2B] font-bold mb-4">Ranch Gallery</h2>
+          <p className="text-lg text-[#1E293B]/70 max-w-2xl mx-auto">
+            A glimpse into the daily life on our Queensland property, showcasing our beautiful highland herd and premium pastures.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            'https://drive.google.com/uc?export=view&id=1l2DtI48M_2aok8S9eCzpyHCKUT9D365H',
+            'https://drive.google.com/uc?export=view&id=1nCt6xj9shFn9f-Uz_7YDD4SgOkFnVl4k',
+            'https://drive.google.com/uc?export=view&id=1DhPsT6edcCZa452IkqhX6IXAgO2pDbew',
+            'https://drive.google.com/uc?export=view&id=1Jj3rBhq6oav7vaMo0HkiDl_ZbRVQGcMZ',
+            'https://drive.google.com/uc?export=view&id=10PLbbX5Z_zIl0BwGoYMRXjnjlb-Fz6Ij',
+            'https://drive.google.com/uc?export=view&id=1b6JRarh929BTLZIV4HEhgomYEcPNg9k9'
+          ].map((src, i) => (
+            <div key={i} className="relative aspect-square rounded-sm overflow-hidden group">
+              <Image 
+                src={src} 
+                alt={`Dunblane Highlands Ranch Gallery Image ${i + 1}`} 
+                fill 
+                className="object-cover group-hover:scale-110 transition-transform duration-700" 
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+</div>
   );
 }
