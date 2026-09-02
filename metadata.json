@@ -1,0 +1,8 @@
+{
+  "name": "minihighlandcows.store",
+  "description": "Mini Highland Cows For Sale",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

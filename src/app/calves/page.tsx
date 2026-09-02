@@ -1,0 +1,87 @@
+import Image from 'next/image';
+import { CALVES_DATA } from '@/data/calves';
+import Link from 'next/link';
+
+export default function CalvesPage() {
+  const availableCalves = CALVES_DATA.filter(calf => calf.status === 'Available');
+
+  return (
+    <div className="bg-[#FDFBF7] py-16">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="mb-12">
+          <h1 className="font-serif text-5xl font-bold text-[#1C3B2B] mb-4">Available Calves</h1>
+          <p className="text-lg text-[#1E293B]/70 max-w-3xl">
+            Browse our current selection of pedigree miniature highland calves. 
+            All our calves are fully weaned, halter-trained, and structurally assessed before sale.
+          </p>
+        </div>
+
+        {availableCalves.length === 0 ? (
+          <div className="bg-white p-12 text-center rounded-sm shadow-sm border border-[#1E293B]/5">
+            <h3 className="font-serif text-2xl text-[#1C3B2B] font-bold mb-2">No calves currently available</h3>
+            <p className="text-[#1E293B]/70 mb-4">All of our calves have found their forever homes. Please check our sold gallery or contact us to join the waitlist.</p>
+            <Link href="/contact" className="inline-block px-6 py-3 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors">
+              Join Waitlist
+            </Link>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {availableCalves.map((calf) => (
+              <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group">
+                <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
+                  <Image
+                    src={calf.images[0]}
+                    alt={calf.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-4 right-4 bg-[#1C3B2B] text-[#FDFBF7] text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10">
+                    Available
+                  </span>
+                </Link>
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] leading-tight">{calf.name}</h3>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-[#1E293B]/80">
+                    <div>
+                      <span className="block text-[#1E293B]/50 uppercase tracking-wider text-[10px] font-bold mb-1">Sex</span>
+                      {calf.sex}
+                    </div>
+                    <div>
+                      <span className="block text-[#1E293B]/50 uppercase tracking-wider text-[10px] font-bold mb-1">Coat</span>
+                      {calf.coat}
+                    </div>
+                    <div>
+                      <span className="block text-[#1E293B]/50 uppercase tracking-wider text-[10px] font-bold mb-1">Proj. Height</span>
+                      {calf.height}
+                    </div>
+                    <div>
+                      <span className="block text-[#1E293B]/50 uppercase tracking-wider text-[10px] font-bold mb-1">Status</span>
+                      {calf.status}
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-[#1E293B]/70 mb-6 leading-relaxed">
+                    {calf.desc}
+                  </p>
+                  
+                  <div className="flex items-center justify-between pt-6 border-t border-[#1E293B]/10">
+                    <div>
+                      <span className="block text-[#1E293B]/50 uppercase tracking-wider text-[10px] font-bold mb-1">Price</span>
+                      <span className="font-serif text-xl font-bold text-[#1C3B2B]">${calf.price.toLocaleString()}</span>
+                    </div>
+                    <Link href="/reserve" className="px-6 py-2 border border-[#1C3B2B] text-[#1C3B2B] hover:bg-[#1C3B2B] hover:text-white transition-colors text-sm font-medium rounded-sm">
+                      Inquire
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
