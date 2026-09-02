@@ -77,12 +77,11 @@ export default function SoldPage() {
             {soldCalves.map((calf) => (
               <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group opacity-80 hover:opacity-100 transition-opacity">
                 <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
-                  <Image
-                    src="/blank.png"
+                  <Image src="/blank.png"
                     alt={calf.name}
                     fill
                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
+                   referrerPolicy="no-referrer" />
                   <span className={`absolute top-4 right-4 text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10 ${calf.status === 'Sold' ? 'text-red-600 bg-white border border-red-600' : 'bg-[#C2673F] text-white'}`}>
                     {calf.status}
                   </span>

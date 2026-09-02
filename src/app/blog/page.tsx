@@ -70,13 +70,12 @@ export default function BlogIndex() {
             <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col bg-white border border-[#1C3B2B]/10 rounded-sm overflow-hidden hover:border-[#1C3B2B]/30 transition-colors">
               {post.image && (
                 <div className="relative w-full aspect-video">
-                  <Image
-                    src={post.image}
+                  <Image src={post.image}
                     alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
+                   referrerPolicy="no-referrer" />
                 </div>
               )}
               <div className="p-8 flex flex-col flex-grow">

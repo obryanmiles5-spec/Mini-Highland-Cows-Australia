@@ -179,13 +179,12 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
             {/* Image Gallery Column */}
             <div className="flex flex-col border-b md:border-b-0 md:border-r border-[#1E293B]/5">
               <div className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6]">
-                <Image
-                  src={calf.images[0]}
+                <Image src={calf.images[0]}
                   alt={calf.name}
                   fill
                   priority
                   className="object-cover"
-                />
+                 referrerPolicy="no-referrer" />
                 {calf.status === 'Available' ? (
                   <span className="absolute top-4 right-4 bg-[#1C3B2B] text-[#FDFBF7] text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10">
                     Available
@@ -200,12 +199,11 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                 <div className="grid grid-cols-4 gap-2 p-4 bg-[#F8F9FA]">
                   {calf.images.slice(1).map((img, i) => (
                     <div key={i} className="aspect-[4/3] relative overflow-hidden rounded-sm cursor-pointer border-2 border-transparent hover:border-[#1C3B2B] transition-colors">
-                      <Image
-                        src={img}
+                      <Image src={img}
                         alt={`${calf.name} gallery image ${i + 1}`}
                         fill
                         className="object-cover"
-                      />
+                       referrerPolicy="no-referrer" />
                     </div>
                   ))}
                 </div>
@@ -284,7 +282,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
             {CALVES_DATA.filter(c => c.id !== calf.id).slice(0, 3).map((related) => (
               <Link href={`/calves/${related.id}`} key={related.id} className="group bg-white rounded-sm shadow-sm border border-[#1E293B]/5 overflow-hidden block hover:border-[#1C3B2B]/20 transition-colors">
                 <div className="aspect-[4/3] relative bg-[#F4EFE6]">
-                  <Image src={related.images[0]} alt={related.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={related.images[0]} alt={related.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500"  referrerPolicy="no-referrer" />
                 </div>
                 <div className="p-4">
                   <h3 className="font-serif text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">{related.name}</h3>

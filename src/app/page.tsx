@@ -102,12 +102,11 @@ export default function Home() {
           {featuredCalves.map((calf) => (
             <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group">
               <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
-                <Image
-                  src={calf.images[0]}
+                <Image src={calf.images[0]}
                   alt={calf.name}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                 referrerPolicy="no-referrer" />
                 {calf.status === 'Available' ? (
                   <span className="absolute top-4 right-4 bg-[#1C3B2B] text-[#FDFBF7] text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10">
                     Available
@@ -188,12 +187,11 @@ export default function Home() {
             </div>
           </div>
           <div className="relative aspect-square md:aspect-[4/5] rounded-sm overflow-hidden shadow-sm">
-            <Image
-              src="https://drive.google.com/uc?export=view&id=1dVP0WPimbOub0myAQVRgBA0JrcHENgtB"
+            <Image src="https://drive.google.com/uc?export=view&id=1dVP0WPimbOub0myAQVRgBA0JrcHENgtB"
               alt="Miniature highland calf looking curiously at the camera"
               fill
               className="object-cover"
-            />
+             referrerPolicy="no-referrer" />
           </div>
         </div>
       </section>
@@ -255,7 +253,7 @@ export default function Home() {
             ].map((post, i) => (
               <div key={i} className="bg-white rounded-sm overflow-hidden flex flex-col sm:flex-row shadow-sm border border-[#1E293B]/5 group">
                 <div className="sm:w-2/5 aspect-square sm:aspect-auto relative overflow-hidden">
-                  <Image src={post.img} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={post.img} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500"  referrerPolicy="no-referrer" />
                 </div>
                 <div className="p-8 sm:w-3/5 flex flex-col justify-center">
                   <div className="flex items-center gap-2 text-xs text-[#1E293B]/50 uppercase tracking-wider font-medium mb-3">
@@ -292,12 +290,11 @@ export default function Home() {
             'https://drive.google.com/uc?export=view&id=1b6JRarh929BTLZIV4HEhgomYEcPNg9k9'
           ].map((src, i) => (
             <div key={i} className="relative aspect-square rounded-sm overflow-hidden group">
-              <Image 
-                src={src} 
+              <Image src={src} 
                 alt={`Dunblane Highlands Ranch Gallery Image ${i + 1}`} 
                 fill 
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
-              />
+               referrerPolicy="no-referrer" />
             </div>
           ))}
         </div>

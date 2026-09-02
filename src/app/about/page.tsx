@@ -58,12 +58,11 @@ export default function AboutPage() {
         <h1 className="font-serif text-5xl font-bold text-[#1C3B2B] mb-8 text-center">About Dunblane Highlands</h1>
         
         <div className="relative aspect-[21/9] mb-12 w-full overflow-hidden rounded-sm">
-          <Image
-            src="https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&q=80"
+          <Image src="https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&q=80"
             alt="Dunblane Highlands Farm"
             fill
             className="object-cover"
-          />
+           referrerPolicy="no-referrer" />
         </div>
 
         <div className="prose prose-lg prose-[#1E293B] max-w-none">

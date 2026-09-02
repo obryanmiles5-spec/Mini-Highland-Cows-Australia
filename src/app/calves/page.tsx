@@ -94,12 +94,11 @@ export default function CalvesPage() {
             {availableCalves.map((calf) => (
               <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group">
                 <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
-                  <Image
-                    src={calf.images[0]}
+                  <Image src={calf.images[0]}
                     alt={calf.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                   referrerPolicy="no-referrer" />
                   <span className="absolute top-4 right-4 bg-[#1C3B2B] text-[#FDFBF7] text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10">
                     Available
                   </span>

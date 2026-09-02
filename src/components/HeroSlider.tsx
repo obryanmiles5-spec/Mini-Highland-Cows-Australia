@@ -23,14 +23,13 @@ export default function HeroSlider() {
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         {slides.map((slide, index) => (
-          <Image
-            key={index}
+          <Image key={index}
             src={slide}
             alt={`Highland cattle slide ${index + 1}`}
             fill
             className={`object-cover object-center transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
             priority={index === 0}
-          />
+           referrerPolicy="no-referrer" />
         ))}
         <div className="absolute inset-0 bg-[#1C3B2B]/40 mix-blend-multiply" />
       </div>
