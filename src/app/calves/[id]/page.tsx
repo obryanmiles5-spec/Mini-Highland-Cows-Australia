@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { CALVES_DATA } from '@/data/calves';
 
 import { Metadata } from 'next';

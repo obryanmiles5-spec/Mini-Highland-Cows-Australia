@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { BLOG_POSTS } from '@/data/blogs';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';

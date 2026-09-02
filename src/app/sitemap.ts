@@ -15,12 +15,7 @@ export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
-      images: [
-        {
-          url: baseUrl + calf.images[0],
-          title: calf.name,
-        }
-      ]
+      images: [baseUrl + calf.images[0]]
     }));
   }
 
@@ -30,12 +25,7 @@ export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
       lastModified: new Date(post.date),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
-      images: post.image ? [
-        {
-          url: baseUrl + post.image,
-          title: post.title,
-        }
-      ] : []
+      images: post.image ? [baseUrl + post.image] : []
     }));
   }
 

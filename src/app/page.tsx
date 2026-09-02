@@ -1,7 +1,9 @@
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Leaf, ArrowRight, Star, Calendar } from 'lucide-react';
 import { CALVES_DATA } from '@/data/calves';
+import { BLOG_POSTS } from '@/data/blogs';
 import ReviewsSlider from '@/components/ReviewsSlider';
 import HeroSlider from '@/components/HeroSlider';
 
@@ -37,7 +39,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  const featuredCalves = CALVES_DATA.slice(0, 8);
+  const featuredCalves = CALVES_DATA.filter(calf => calf.status === 'Available').slice(0, 8);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -99,7 +101,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuredCalves.map((calf) => (
+          {featuredCalves.map((calf, index) => (
             <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group">
               <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                 <Image src={calf.images[0]}
@@ -231,38 +233,24 @@ export default function Home() {
                 Updates from the pasture, cattle care tips, and stories from our highland family.
               </p>
             </div>
-            <Link href="#" className="hidden md:flex items-center gap-2 text-[#C2673F] font-medium hover:text-[#A85532] transition-colors">
+            <Link href="/blog" className="hidden md:flex items-center gap-2 text-[#C2673F] font-medium hover:text-[#A85532] transition-colors">
               Read all posts <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: 'Preparing Your Paddock for a Miniature Highland',
-                excerpt: 'Before bringing your new calf home, it is essential to ensure your fencing, shelter, and pasture are prepared. Here is our comprehensive checklist.',
-                date: 'Aug 24, 2026',
-                img: 'https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=800&q=80'
-              },
-              {
-                title: 'Understanding Chondrodysplasia in Miniature Cattle',
-                excerpt: 'We take breeding genetics seriously. Learn why testing for the chondrodysplasia gene is critical for the long-term health of miniature highland herds.',
-                date: 'Jul 15, 2026',
-                img: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80'
-              }
-            ].map((post, i) => (
+            {BLOG_POSTS.slice(0, 4).map((post, i) => (
               <div key={i} className="bg-white rounded-sm overflow-hidden flex flex-col sm:flex-row shadow-sm border border-[#1E293B]/5 group">
                 <div className="sm:w-2/5 aspect-square sm:aspect-auto relative overflow-hidden">
-                  <Image src={post.img} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500"  referrerPolicy="no-referrer" />
+                  <Image src={post.image || 'https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=800&q=80'} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500"  referrerPolicy="no-referrer" />
                 </div>
                 <div className="p-8 sm:w-3/5 flex flex-col justify-center">
                   <div className="flex items-center gap-2 text-xs text-[#1E293B]/50 uppercase tracking-wider font-medium mb-3">
                     <Calendar className="w-3 h-3" />
-                    {post.date}
+                    {new Date(post.date).toLocaleDateString('en-AU', { month: 'short', day: 'numeric', year: 'numeric' })}
                   </div>
                   <h3 className="font-serif text-xl font-bold text-[#1C3B2B] mb-3 leading-tight group-hover:text-[#C2673F] transition-colors">{post.title}</h3>
                   <p className="text-[#1E293B]/70 text-sm mb-6 line-clamp-3">{post.excerpt}</p>
-                  <Link href="#" className="inline-flex items-center gap-2 text-sm font-bold text-[#C2673F] hover:text-[#A85532]">
+                  <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-sm font-bold text-[#C2673F] hover:text-[#A85532]">
                     Read article &rarr;
                   </Link>
                 </div>
@@ -271,7 +259,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    
+      
       {/* Ranch Gallery Section */}
       <section className="py-24 max-w-7xl mx-auto px-4">
         <div className="flex flex-col items-center text-center mb-12">

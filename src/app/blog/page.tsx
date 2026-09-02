@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { BLOG_POSTS } from '@/data/blogs';
 import Link from 'next/link';
 import Image from 'next/image';

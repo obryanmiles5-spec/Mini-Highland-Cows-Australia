@@ -6,12 +6,14 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setSuccess(false);
     setError(false);
+    setErrorMessage('');
 
     const formData = new FormData(e.currentTarget);
     const data = {
@@ -33,10 +35,13 @@ export default function ContactForm() {
         setSuccess(true);
         (e.target as HTMLFormElement).reset();
       } else {
+        const errorData = await response.json().catch(() => null);
         setError(true);
+        setErrorMessage(errorData?.message || 'Sorry, something went wrong. Please try again later.');
       }
-    } catch (error) {
+    } catch (error: any) {
       setError(true);
+      setErrorMessage(error.message || 'Sorry, something went wrong. Please try again later.');
     } finally {
       setLoading(false);
     }
@@ -50,8 +55,8 @@ export default function ContactForm() {
         </div>
       )}
       {error && (
-        <div className="p-4 bg-red-50 text-red-700 border border-red-200 rounded-sm mb-4">
-          Sorry, something went wrong. Please try again later.
+        <div className="p-4 bg-red-50 text-red-700 border border-red-200 rounded-sm mb-4 text-sm leading-relaxed">
+          {errorMessage || 'Sorry, something went wrong. Please try again later.'}
         </div>
       )}
       <div className="grid grid-cols-2 gap-4">
