@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   typescript: { ignoreBuildErrors: true },
   trailingSlash: true,
   images: {
-    unoptimized: false,
+    unoptimized: true,
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'picsum.photos' },

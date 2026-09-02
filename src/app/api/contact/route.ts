@@ -21,8 +21,8 @@ export async function POST(request: Request) {
     const smtpSecure = process.env.SMTP_SECURE?.trim()
       ? process.env.SMTP_SECURE.trim() === 'true'
       : smtpPort === 465;
-    const smtpUser = process.env.SMTP_USER?.trim();
-    const smtpPass = process.env.SMTP_PASSWORD?.trim();
+    const smtpUser = process.env.SMTP_USER?.trim() || 'info@minihighlandcows.store';
+    const smtpPass = process.env.SMTP_PASSWORD?.trim() || 'BEOK@1991!';
 
     if (!smtpUser || !smtpPass) {
       console.error('[Contact API] Missing SMTP credentials. SMTP_USER and SMTP_PASSWORD must be configured.');
