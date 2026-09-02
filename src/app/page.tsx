@@ -187,7 +187,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative aspect-square md:aspect-[4/5] rounded-sm overflow-hidden shadow-sm">
-            <Image src="https://drive.google.com/uc?export=view&id=1dVP0WPimbOub0myAQVRgBA0JrcHENgtB"
+            <Image src="https://drive.google.com/thumbnail?id=1dVP0WPimbOub0myAQVRgBA0JrcHENgtB&sz=w1000"
               alt="Miniature highland calf looking curiously at the camera"
               fill
               className="object-cover"
@@ -282,12 +282,12 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {[
-            'https://drive.google.com/uc?export=view&id=1l2DtI48M_2aok8S9eCzpyHCKUT9D365H',
-            'https://drive.google.com/uc?export=view&id=1nCt6xj9shFn9f-Uz_7YDD4SgOkFnVl4k',
-            'https://drive.google.com/uc?export=view&id=1DhPsT6edcCZa452IkqhX6IXAgO2pDbew',
-            'https://drive.google.com/uc?export=view&id=1Jj3rBhq6oav7vaMo0HkiDl_ZbRVQGcMZ',
-            'https://drive.google.com/uc?export=view&id=10PLbbX5Z_zIl0BwGoYMRXjnjlb-Fz6Ij',
-            'https://drive.google.com/uc?export=view&id=1b6JRarh929BTLZIV4HEhgomYEcPNg9k9'
+            'https://drive.google.com/thumbnail?id=1l2DtI48M_2aok8S9eCzpyHCKUT9D365H&sz=w1000',
+            'https://drive.google.com/thumbnail?id=1nCt6xj9shFn9f-Uz_7YDD4SgOkFnVl4k&sz=w1000',
+            'https://drive.google.com/thumbnail?id=1DhPsT6edcCZa452IkqhX6IXAgO2pDbew&sz=w1000',
+            'https://drive.google.com/thumbnail?id=1Jj3rBhq6oav7vaMo0HkiDl_ZbRVQGcMZ&sz=w1000',
+            'https://drive.google.com/thumbnail?id=10PLbbX5Z_zIl0BwGoYMRXjnjlb-Fz6Ij&sz=w1000',
+            'https://drive.google.com/thumbnail?id=1b6JRarh929BTLZIV4HEhgomYEcPNg9k9&sz=w1000'
           ].map((src, i) => (
             <div key={i} className="relative aspect-square rounded-sm overflow-hidden group">
               <Image src={src} 

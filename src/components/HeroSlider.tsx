@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const slides = [
   "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&q=80",
-  "https://drive.google.com/uc?export=view&id=1DumkODs92AK33z6YOtBYGazdnw1EWZiO"
+  "https://drive.google.com/thumbnail?id=1DumkODs92AK33z6YOtBYGazdnw1EWZiO&sz=w1000"
 ];
 
 export default function HeroSlider() {
