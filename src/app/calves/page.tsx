@@ -1,13 +1,13 @@
 export const dynamic = 'force-dynamic';
 import Image from 'next/image';
-import { CALVES_DATA } from '@/data/calves';
+import { CALVES_DATA, getCalfSlug } from '@/data/calves';
 import Link from 'next/link';
 
 export const metadata = {
   title: 'Available Miniature Highland Cows For Sale | Micro & Teacup Calves',
   description: 'View our current selection of available miniature, micro, and teacup highland calves for sale in Australia. All calves are DNA verified and halter trained.',
   alternates: {
-    canonical: 'https://minihighlandcows.store/calves',
+    canonical: 'https://minihighlandcows.store/calves/',
   },
   openGraph: {
     title: 'Available Miniature Highland Cows For Sale | Micro & Teacup Calves',
@@ -92,21 +92,25 @@ export default function CalvesPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {availableCalves.map((calf) => (
+            {availableCalves.map((calf) => {
+              const slug = getCalfSlug(calf.name);
+              return (
               <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group">
-                <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
+                <Link href={`/calves/${slug}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                   <Image src={calf.images[0]}
-                    alt={calf.name}
+                    alt={`${calf.name} - Miniature Highland Calf for Sale in Australia`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                   referrerPolicy="no-referrer" />
+                    referrerPolicy="no-referrer" />
                   <span className="absolute top-4 right-4 bg-[#1C3B2B] text-[#FDFBF7] text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10">
                     Available
                   </span>
                 </Link>
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] leading-tight">{calf.name}</h3>
+                    <Link href={`/calves/${slug}`}>
+                      <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] leading-tight hover:text-[#C2673F] transition-colors">{calf.name}</h3>
+                    </Link>
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-[#1E293B]/80">
@@ -143,7 +147,8 @@ export default function CalvesPage() {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

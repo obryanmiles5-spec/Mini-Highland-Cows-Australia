@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Leaf, ArrowRight, Star, Calendar } from 'lucide-react';
-import { CALVES_DATA } from '@/data/calves';
+import { CALVES_DATA, getCalfSlug } from '@/data/calves';
 import { BLOG_POSTS } from '@/data/blogs';
 import ReviewsSlider from '@/components/ReviewsSlider';
 import HeroSlider from '@/components/HeroSlider';
@@ -123,9 +123,11 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuredCalves.map((calf, index) => (
+          {featuredCalves.map((calf) => {
+            const slug = getCalfSlug(calf.name);
+            return (
             <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group">
-              <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
+              <Link href={`/calves/${slug}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                 <Image src={calf.images[0]}
                   alt={`${calf.name} - Miniature Highland Calf for Sale in Australia`}
                   fill
@@ -143,19 +145,22 @@ export default function Home() {
               </Link>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-serif text-xl font-bold text-[#1C3B2B] leading-tight">{calf.name}</h3>
+                  <Link href={`/calves/${slug}`}>
+                    <h3 className="font-serif text-xl font-bold text-[#1C3B2B] leading-tight hover:text-[#C2673F] transition-colors">{calf.name}</h3>
+                  </Link>
                 </div>
                 <p className="text-sm text-[#1E293B]/60 mb-4">{calf.coat} {calf.sex} • {calf.height} projected</p>
                 
                 <div className="flex items-center justify-between mt-6 pt-6 border-t border-[#1E293B]/10">
                   <span className="font-medium text-[#1C3B2B]">${calf.price.toLocaleString()}</span>
-                  <Link href="/calves" className="text-sm font-medium text-[#C2673F] hover:text-[#A85532]">
+                  <Link href={`/calves/${slug}`} className="text-sm font-medium text-[#C2673F] hover:text-[#A85532]">
                     Details &rarr;
                   </Link>
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
         
         <div className="mt-12 text-center md:hidden">

@@ -477,3 +477,18 @@ export const CALVES_DATA: Calf[] = [
     temp: 'Confident and calm.',
   }
 ];
+
+export function getCalfSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+}
+
+export function getCalfByIdOrSlug(idOrSlug: string): Calf | undefined {
+  const clean = decodeURIComponent(idOrSlug).toLowerCase().trim();
+  return CALVES_DATA.find((calf) => {
+    return calf.id.toString() === clean || getCalfSlug(calf.name) === clean;
+  });
+}

@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
 import Script from 'next/script';
+import Navbar from '@/components/Navbar';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -100,84 +101,77 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               ))}
             </div>
           </div>
-          <div className="border-b border-[#1E293B]/10">
-            <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-              <Link href="/" className="flex items-center gap-3">
-              <CowLogo className="w-8 h-8 text-[#1C3B2B]" />
-              <div>
-                <span className="font-serif text-2xl font-bold text-[#1C3B2B] leading-none block">Dunblane</span>
-                <p className="text-[10px] tracking-widest text-[#C2673F] font-semibold uppercase mt-1">Highlands Australia</p>
-              </div>
-            </Link>
-            <nav className="hidden md:flex items-center gap-8">
-              <Link href="/" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Home</Link>
-              <Link href="/calves" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Available Calves</Link>
-              <Link href="/sold" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Sold</Link>
-              <Link href="/blog" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Blog</Link>
-              <Link href="/faq" className="text-sm font-bold hover:text-[#C2673F] transition-colors">FAQ</Link>
-              <Link href="/about" className="text-sm font-bold hover:text-[#C2673F] transition-colors">About</Link>
-              <Link href="/contact" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Contact</Link>
-              <Link href="/process" className="text-sm font-bold hover:text-[#C2673F] transition-colors">Adoption/Sales Process</Link>
-              <Link href="/reserve" className="text-sm font-bold px-4 py-2 bg-[#1C3B2B] text-white rounded-sm hover:bg-[#152C20] transition-colors">Reserve Now</Link>
-            </nav>
-          </div>
-          </div>
+          <Navbar />
         </header>
 
         <main id="main" className="flex-1">
           {children}
         </main>
 
-        <footer className="bg-[#1C3B2B] text-[#FDFBF7] py-10 mt-auto">
-          <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12 text-center md:text-left">
-            <div>
-              <div className="flex items-center gap-3 justify-center md:justify-start mb-6">
-                <CowLogo className="w-6 h-6 text-[#D4A373]" />
+        <footer className="bg-[#1C3B2B] text-[#FDFBF7] py-12 mt-auto">
+          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-left">
+            <div className="lg:col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <CowLogo className="w-7 h-7 text-[#D4A373]" />
                 <h3 className="font-serif text-xl font-bold">Dunblane Highlands</h3>
               </div>
-              <p className="text-[#FDFBF7]/80 leading-relaxed text-sm">
-                Preserving the heritage of Scottish Highland cattle in the Australian landscape. Registered, docile, and beautifully bred.
+              <p className="text-[#FDFBF7]/80 leading-relaxed text-sm mb-4">
+                Preserving the heritage of Scottish Highland cattle in the Australian landscape. Registered, docile, DNA-verified micro and teacup miniature calves bred with sound conformation.
               </p>
+              <div className="text-xs text-[#D4A373] space-y-1">
+                <p>Entity: Dunblane Pastoral Holdings Pty Ltd</p>
+                <p>ABN: 81 131 156 922 • PIC: 3ABCD123</p>
+                <p>NLIS Registered Breeder Australia</p>
+              </div>
             </div>
+
             <div>
-              <h4 className="font-serif text-lg font-bold mb-6 text-[#D4A373]">Quick Links</h4>
-              <ul className="space-y-3">
-                <li><Link href="/" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Home</Link></li>
-                <li><Link href="/calves" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Available Calves</Link></li>
-                <li><Link href="/sold" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Sold</Link></li>
-                <li><Link href="/blog" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Blog</Link></li>
-                <li><Link href="/faq" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">FAQ</Link></li>
-                <li><Link href="/process" className="text-[#FDFBF7]/80 hover:text-[#D4A373] transition-colors text-sm">Adoption Process</Link></li>
+              <h4 className="font-serif text-base font-bold mb-4 text-[#D4A373]">Our Cattle</h4>
+              <ul className="space-y-2 text-sm text-[#FDFBF7]/80">
+                <li><Link href="/calves" className="hover:text-[#D4A373] transition-colors">Available Calves</Link></li>
+                <li><Link href="/micro-highland-cows" className="hover:text-[#D4A373] transition-colors">Micro Highland Cows</Link></li>
+                <li><Link href="/teacup-highland-cows" className="hover:text-[#D4A373] transition-colors">Teacup / Pocket Cows</Link></li>
+                <li><Link href="/miniature-highland-cattle" className="hover:text-[#D4A373] transition-colors">Breed Standards Guide</Link></li>
+                <li><Link href="/prices" className="hover:text-[#D4A373] transition-colors">Price &amp; Cost Guide</Link></li>
+                <li><Link href="/sold" className="hover:text-[#D4A373] transition-colors">Sold Calves Gallery</Link></li>
               </ul>
             </div>
+
             <div>
-              <h4 className="font-serif text-lg font-bold mb-6 text-[#D4A373]">Contact & Hours</h4>
-              <ul className="space-y-3 text-[#FDFBF7]/80 text-sm">
+              <h4 className="font-serif text-base font-bold mb-4 text-[#D4A373]">Adoption &amp; Care</h4>
+              <ul className="space-y-2 text-sm text-[#FDFBF7]/80">
+                <li><Link href="/process" className="hover:text-[#D4A373] transition-colors">Adoption Process</Link></li>
+                <li><Link href="/delivery" className="hover:text-[#D4A373] transition-colors">Delivery &amp; Freight</Link></li>
+                <li><Link href="/reserve" className="hover:text-[#D4A373] transition-colors">Reserve a Calf</Link></li>
+                <li><Link href="/blog" className="hover:text-[#D4A373] transition-colors">Educational Blog</Link></li>
+                <li><Link href="/faq" className="hover:text-[#D4A373] transition-colors">FAQ</Link></li>
+                <li><Link href="/about" className="hover:text-[#D4A373] transition-colors">About Our Farm</Link></li>
+                <li><Link href="/contact" className="hover:text-[#D4A373] transition-colors">Contact Us</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-serif text-base font-bold mb-4 text-[#D4A373]">Contact &amp; Hours</h4>
+              <ul className="space-y-2 text-[#FDFBF7]/80 text-sm">
                 <li>info@minihighlandcows.store</li>
                 <li>0468 187 340</li>
-                <li>QLD 4725</li>
-                <li><strong>Free delivery to same city as address</strong></li>
-                <li className="pt-2 text-[#D4A373]">Farm Visits by Appointment</li>
-                <li>Mon-Sat: 8:00 AM - 5:00 PM</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-serif text-lg font-bold mb-6 text-[#D4A373]">Accreditations</h4>
-              <ul className="space-y-3 text-[#FDFBF7]/80 text-sm">
-                <li>Entity name: Dunblane Pastoral Holdings Pty Ltd</li>
-                <li>ABN 81 131 156 922</li>
-                <li>PIC: 3ABCD123</li>
-                <li>NLIS Registered Breeder</li>
-                <li>100% DNA Parentage Verified</li>
-                <li className="pt-2"><strong>Secure Payments:</strong><br/>Pay ID, Bank Transfer, Credit Card & Crypto (USDT, BTC)</li>
+                <li>Central Queensland, 4725</li>
+                <li className="text-[#D4A373] font-semibold text-xs pt-1">Free delivery to same city as address</li>
+                <li className="pt-2 text-xs">Farm Visits by Appointment</li>
+                <li className="text-xs">Mon-Sat: 8:00 AM - 5:00 PM</li>
+                <li className="pt-2 text-xs"><strong>Secure Payments:</strong><br/>Pay ID, Bank Transfer, Card &amp; Crypto</li>
               </ul>
             </div>
           </div>
-          <div className="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-[#FDFBF7]/10 flex flex-col md:flex-row justify-between items-center text-[#FDFBF7]/60 text-sm gap-4">
+
+          <div className="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-[#FDFBF7]/10 flex flex-col md:flex-row justify-between items-center text-[#FDFBF7]/60 text-xs gap-4">
             <p>&copy; {new Date().getFullYear()} Dunblane Pastoral Holdings Pty Ltd. All rights reserved.</p>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-6 items-center">
               <Link href="/privacy" className="hover:text-[#D4A373] transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-[#D4A373] transition-colors">Terms of Service</Link>
+              <Link href="/urls" className="text-[#D4A373] hover:underline font-semibold flex items-center gap-1">
+                Google Search Console URL Directory &rarr;
+              </Link>
             </div>
           </div>
         </footer>

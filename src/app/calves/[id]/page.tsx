@@ -1,26 +1,30 @@
 export const dynamic = 'force-dynamic';
-import { CALVES_DATA } from '@/data/calves';
+import { CALVES_DATA, getCalfByIdOrSlug, getCalfSlug } from '@/data/calves';
 
 import { Metadata } from 'next';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
-  const calf = CALVES_DATA.find((c) => c.id.toString() === id);
+  const calf = getCalfByIdOrSlug(id);
   if (!calf) return {};
   
+  const slug = getCalfSlug(calf.name);
   return {
-    title: `${calf.name} | ${calf.type} For Sale | Dunblane Highlands`,
+    title: `${calf.name} - Miniature Highland ${calf.sex} For Sale Australia | Dunblane`,
     description: calf.desc.substring(0, 160) + (calf.desc.length > 160 ? '...' : ''),
     alternates: {
-      canonical: `https://minihighlandcows.store/calves/${calf.id}`,
+      canonical: `https://minihighlandcows.store/calves/${slug}/`,
     },
     openGraph: {
+      title: `${calf.name} - Miniature Highland ${calf.sex} For Sale Australia | Dunblane`,
+      description: calf.desc.substring(0, 160),
+      url: `https://minihighlandcows.store/calves/${slug}/`,
       images: [
         {
           url: calf.images[0],
           width: 800,
           height: 600,
-          alt: calf.name,
+          alt: `${calf.name} - Miniature Highland ${calf.sex}`,
         }
       ]
     }
@@ -76,18 +80,24 @@ const FAQS = [
 ];
 
 export async function generateStaticParams() {
-  return CALVES_DATA.map((calf) => ({
+  const ids = CALVES_DATA.map((calf) => ({
     id: calf.id.toString(),
   }));
+  const slugs = CALVES_DATA.map((calf) => ({
+    id: getCalfSlug(calf.name),
+  }));
+  return [...ids, ...slugs];
 }
 
 export default async function CalfDetailsPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const calf = CALVES_DATA.find((c) => c.id.toString() === id);
+  const calf = getCalfByIdOrSlug(id);
 
   if (!calf) {
     notFound();
   }
+
+  const slug = getCalfSlug(calf.name);
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -95,14 +105,14 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
     "name": calf.name,
     "image": calf.images,
     "description": calf.desc,
-    "sku": calf.id.toString(),
+    "sku": calf.ear_tag || calf.id.toString(),
     "brand": {
       "@type": "Brand",
       "name": "Dunblane Pastoral Holdings"
     },
     "offers": {
       "@type": "Offer",
-      "url": `https://minihighlandcows.store/calves/${calf.id}`,
+      "url": `https://minihighlandcows.store/calves/${slug}/`,
       "priceCurrency": "AUD",
       "price": calf.price.toString().replace(/[^0-9.]/g, ''),
       "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
@@ -151,13 +161,13 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
         "@type": "ListItem",
         "position": 2,
         "name": "Available Calves",
-        "item": "https://minihighlandcows.store/calves"
+        "item": "https://minihighlandcows.store/calves/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": calf.name,
-        "item": `https://minihighlandcows.store/calves/${calf.id}`
+        "item": `https://minihighlandcows.store/calves/${slug}/`
       }
     ]
   };
