@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Leaf, ArrowRight, Star, Calendar } from 'lucide-react';
@@ -9,22 +8,25 @@ import HeroSlider from '@/components/HeroSlider';
 
 
 export const metadata = {
-  title: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
+  title: 'Miniature Highland Cows for Sale Australia | Dunblane',
   description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
   alternates: {
-    canonical: 'https://minihighlandcows.store',
+    canonical: 'https://minihighlandcows.store/',
+  },
+  verification: {
+    google: 'vWD42gGRYaftq6Ac4pjAznZgYM2nEjnJuMgItsVmh3o',
   },
   openGraph: {
-    title: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
+    title: 'Miniature Highland Cows for Sale Australia | Dunblane',
     description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
-    url: 'https://minihighlandcows.store',
+    url: 'https://minihighlandcows.store/',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
+        alt: 'Miniature Highland Cows for Sale Australia - Dunblane Highlands',
       },
     ],
     locale: 'en_AU',
@@ -32,7 +34,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows for Sale | Micro, Teacup & Mini Calves Australia',
+    title: 'Miniature Highland Cows for Sale Australia | Dunblane',
     description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
@@ -43,35 +45,55 @@ export default function Home() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": ["Store", "Organization", "WebSite"],
-    "name": "Dunblane Pastoral Holdings Pty Ltd",
-    "description": "Premium breeder of miniature highland cows, micro miniature cattle, and fluffy mini cows in Australia.",
-    "url": "https://minihighlandcows.store",
-    "logo": "https://minihighlandcows.store/favicon.ico",
-    "image": "https://minihighlandcows.store/images/hero.jpg",
-    "foundingDate": "2010",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "AU",
-      "postalCode": "4725",
-      "addressRegion": "QLD"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "info@minihighlandcows.store",
-      "availableLanguage": "en-AU"
-    },
-    "sameAs": [
-      "https://www.facebook.com/dunblanepastoral"
-    ],
-    "makesOffer": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "AUD",
-      "lowPrice": "4000",
-      "highPrice": "10000",
-      "offerCount": featuredCalves.length
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://minihighlandcows.store/#website",
+        "url": "https://minihighlandcows.store/",
+        "name": "Dunblane Highlands",
+        "description": "Australia's premier breeder of DNA-verified miniature highland cows, micro miniatures, and teacup calves.",
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": ["LocalBusiness", "AnimalShelter"],
+        "@id": "https://minihighlandcows.store/#organization",
+        "name": "Dunblane Pastoral Holdings Pty Ltd",
+        "alternateName": "Dunblane Highlands Australia",
+        "description": "Premium breeder of miniature highland cows, micro miniature cattle, and fluffy mini cows in Australia.",
+        "url": "https://minihighlandcows.store/",
+        "logo": "https://minihighlandcows.store/favicon.ico",
+        "image": "https://minihighlandcows.store/images/hero.jpg",
+        "telephone": "+61 468 187 340",
+        "email": "info@minihighlandcows.store",
+        "priceRange": "$$$$",
+        "currenciesAccepted": "AUD",
+        "paymentAccepted": "Bank Transfer, PayID, Credit Card, Cryptocurrency",
+        "foundingDate": "2010",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "AU",
+          "postalCode": "4725",
+          "addressRegion": "QLD"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "info@minihighlandcows.store",
+          "telephone": "+61 468 187 340",
+          "availableLanguage": "en-AU"
+        },
+        "sameAs": [
+          "https://www.facebook.com/dunblanepastoral"
+        ],
+        "makesOffer": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "AUD",
+          "lowPrice": "4000",
+          "highPrice": "10000",
+          "offerCount": featuredCalves.length
+        }
+      }
+    ]
   };
 
 
@@ -105,10 +127,10 @@ export default function Home() {
             <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group">
               <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                 <Image src={calf.images[0]}
-                  alt={calf.name}
+                  alt={`${calf.name} - Miniature Highland Calf for Sale in Australia`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                 referrerPolicy="no-referrer" />
+                  referrerPolicy="no-referrer" />
                 {calf.status === 'Available' ? (
                   <span className="absolute top-4 right-4 bg-[#1C3B2B] text-[#FDFBF7] text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10">
                     Available

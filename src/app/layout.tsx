@@ -20,24 +20,37 @@ export const viewport = { themeColor: '#1C3B2B', width: 'device-width', initialS
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://minihighlandcows.store'),
-  title: 'Miniature Highland Cows for Sale Australia | Micro, Teacup & Mini Calves | Dunblane Highlands',
-  description: "Looking for a miniature highland cow for sale in Australia? We breed premium, DNA-verified, halter-trained micro miniature and teacup highland calves.",
+  title: {
+    default: 'Miniature Highland Cows for Sale Australia | Dunblane',
+    template: '%s | Dunblane Highlands Australia',
+  },
+  description: "Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.",
+  verification: {
+    google: 'vWD42gGRYaftq6Ac4pjAznZgYM2nEjnJuMgItsVmh3o',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows for Sale Australia | Micro, Teacup & Mini Calves | Dunblane Highlands',
-    description: 'Looking for a miniature highland cow for sale in Australia? We breed premium, DNA-verified, halter-trained micro miniature and teacup highland calves.',
-    images: ['https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=1200&q=80'],
+    title: 'Miniature Highland Cows for Sale Australia | Dunblane',
+    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
+    images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
   openGraph: {
     type: 'website',
     locale: 'en_AU',
     siteName: 'Dunblane Highlands',
+    title: 'Miniature Highland Cows for Sale Australia | Dunblane',
+    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=1200&q=80',
+        url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Highland Cow in a field',
+        alt: 'Miniature Highland Cows for Sale Australia - Dunblane Highlands',
       }
     ]
   }
@@ -60,6 +73,9 @@ const CowLogo = ({ className }: { className?: string }) => (
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`scroll-smooth ${plusJakartaSans.variable} ${playfairDisplay.variable}`}>
+      <head>
+        <meta name="google-site-verification" content="vWD42gGRYaftq6Ac4pjAznZgYM2nEjnJuMgItsVmh3o" />
+      </head>
       <body suppressHydrationWarning className="antialiased bg-[#FDFBF7] text-[#1E293B] font-sans font-bold selection:bg-[#C2673F] selection:text-white flex flex-col min-h-screen">
         <header className="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md flex flex-col">
           <div className="w-full bg-[#1C3B2B] text-[#FDFBF7] overflow-hidden flex items-center h-10 text-xs sm:text-sm font-medium tracking-wide">
