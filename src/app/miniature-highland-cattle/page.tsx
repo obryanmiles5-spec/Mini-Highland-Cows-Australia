@@ -84,13 +84,13 @@ export default function MiniatureHighlandCattlePage() {
           </p>
           <div className="flex justify-center gap-4">
             <Link
-              href="/calves"
+              href="/calves/"
               className="px-8 py-3.5 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors shadow-sm"
             >
               See Available Calves
             </Link>
             <Link
-              href="/process"
+              href="/process/"
               className="px-8 py-3.5 border border-[#1C3B2B] text-[#1C3B2B] font-medium rounded-sm hover:bg-[#1C3B2B]/5 transition-colors"
             >
               Adoption Process
@@ -170,7 +170,7 @@ export default function MiniatureHighlandCattlePage() {
             <p className="text-sm text-[#1E293B]/70">Explore our current pedigree heifers, steers, and young bulls.</p>
           </div>
           <Link
-            href="/calves"
+            href="/calves/"
             className="px-8 py-3.5 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors whitespace-nowrap"
           >
             Browse Available Calves &rarr;

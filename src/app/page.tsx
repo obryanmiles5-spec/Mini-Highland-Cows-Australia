@@ -108,6 +108,57 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSlider />
 
+      {/* GEO & Search Intent Index Navigation */}
+      <section className="bg-white border-b border-[#1E293B]/10 py-8">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <Link
+              href="/fluffy-mini-cows/"
+              className="p-4 bg-[#FDFBF7] rounded-sm border border-[#1E293B]/5 hover:border-[#C2673F] transition-colors group"
+            >
+              <span className="text-xs uppercase tracking-wider text-[#C2673F] font-bold block mb-1">Breed Spotlight</span>
+              <h3 className="font-serif text-base sm:text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">
+                Fluffy Mini Cows
+              </h3>
+              <p className="text-xs text-[#1E293B]/60 mt-1">Coat care, genetics &amp; photos</p>
+            </Link>
+
+            <Link
+              href="/prices/"
+              className="p-4 bg-[#FDFBF7] rounded-sm border border-[#1E293B]/5 hover:border-[#C2673F] transition-colors group"
+            >
+              <span className="text-xs uppercase tracking-wider text-[#C2673F] font-bold block mb-1">Cost Guide</span>
+              <h3 className="font-serif text-base sm:text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">
+                Mini Highland Cow Cost
+              </h3>
+              <p className="text-xs text-[#1E293B]/60 mt-1">$4,000 – $10,000+ AUD matrix</p>
+            </Link>
+
+            <Link
+              href="/artificial-insemination-cattle/"
+              className="p-4 bg-[#FDFBF7] rounded-sm border border-[#1E293B]/5 hover:border-[#C2673F] transition-colors group"
+            >
+              <span className="text-xs uppercase tracking-wider text-[#C2673F] font-bold block mb-1">Genetics Hub</span>
+              <h3 className="font-serif text-base sm:text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">
+                Bovine AI &amp; Breeding
+              </h3>
+              <p className="text-xs text-[#1E293B]/60 mt-1">AI bulls, straws &amp; procedure</p>
+            </Link>
+
+            <Link
+              href="/mini-highland-cows-for-sale/"
+              className="p-4 bg-[#FDFBF7] rounded-sm border border-[#1E293B]/5 hover:border-[#C2673F] transition-colors group"
+            >
+              <span className="text-xs uppercase tracking-wider text-[#C2673F] font-bold block mb-1">Australia &amp; Worldwide</span>
+              <h3 className="font-serif text-base sm:text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">
+                Cows For Sale Near Me
+              </h3>
+              <p className="text-xs text-[#1E293B]/60 mt-1">Door-to-farm transport routes</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Products (4 Calves) */}
       <section className="py-24 max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-end mb-12">
@@ -117,7 +168,7 @@ export default function Home() {
               Meet our latest available miniature highland calves, each with exceptional temperament and verified genetics.
             </p>
           </div>
-          <Link href="/calves" className="hidden md:flex items-center gap-2 text-[#C2673F] font-medium hover:text-[#A85532] transition-colors">
+          <Link href="/calves/" className="hidden md:flex items-center gap-2 text-[#C2673F] font-medium hover:text-[#A85532] transition-colors">
             View all <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -127,7 +178,7 @@ export default function Home() {
             const slug = getCalfSlug(calf.name);
             return (
             <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group">
-              <Link href={`/calves/${slug}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
+              <Link href={`/calves/${slug}/`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                 <Image src={calf.images[0]}
                   alt={`${calf.name} - Miniature Highland Calf for Sale in Australia`}
                   fill
@@ -145,7 +196,7 @@ export default function Home() {
               </Link>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <Link href={`/calves/${slug}`}>
+                  <Link href={`/calves/${slug}/`}>
                     <h3 className="font-serif text-xl font-bold text-[#1C3B2B] leading-tight hover:text-[#C2673F] transition-colors">{calf.name}</h3>
                   </Link>
                 </div>
@@ -153,7 +204,7 @@ export default function Home() {
                 
                 <div className="flex items-center justify-between mt-6 pt-6 border-t border-[#1E293B]/10">
                   <span className="font-medium text-[#1C3B2B]">${calf.price.toLocaleString()}</span>
-                  <Link href={`/calves/${slug}`} className="text-sm font-medium text-[#C2673F] hover:text-[#A85532]">
+                  <Link href={`/calves/${slug}/`} className="text-sm font-medium text-[#C2673F] hover:text-[#A85532]">
                     Details &rarr;
                   </Link>
                 </div>
@@ -164,7 +215,7 @@ export default function Home() {
         </div>
         
         <div className="mt-12 text-center md:hidden">
-          <Link href="/calves" className="inline-flex items-center gap-2 text-[#C2673F] font-medium hover:text-[#A85532] transition-colors">
+          <Link href="/calves/" className="inline-flex items-center gap-2 text-[#C2673F] font-medium hover:text-[#A85532] transition-colors">
             View all calves <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -195,14 +246,22 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
           <div>
+            <span className="text-xs font-bold text-[#C2673F] uppercase tracking-wider block mb-2">Australia&apos;s Premier Stud</span>
             <h2 className="font-serif text-4xl text-[#1C3B2B] font-bold mb-6">
-              Ethically Bred Miniature Highland Calves in Australia
+              Mini Highland Cow Breeder &amp; Australian Cattle Genetics
             </h2>
             <p className="text-[#1E293B]/80 mb-6 leading-relaxed">
-              At Dunblane Highlands, we specialise in raising exceptional <strong>mini highland cows for sale</strong>. Based in Queensland, Australia, our focus is on breeding structurally sound, docile, and true-to-type miniature highland cattle. With over a decade of experience, we pride ourselves on transparency, ethical farming practices, and matching the right calf to the right family.
+              At Dunblane Highlands, we specialise in breeding the authentic <strong>mini highland cow</strong>. 
+              Based in Queensland, Australia, our focus is on producing structurally sound, docile, and genetically verified 
+              <strong> fluffy mini cows</strong>, <strong>micro miniature cattle</strong>, and registered herd sires. 
+              With over a decade of pedigree selection, we pride ourselves on genetic transparency, ethical farming practices, 
+              and matching halter-trained calves to lifestyle acreage families nationwide.
             </p>
             <p className="text-[#1E293B]/80 mb-8 leading-relaxed">
-              Whether you are looking for a gentle paddock pet or a foundation breeding heifer, our miniature highlands are renowned for their incredible temperaments. Every calf leaves our property fully weaned, halter-trained, and acclimatised to human interaction. We provide complete genetic transparency, including DNA parentage verification and chondrodysplasia testing.
+              Whether you are researching <strong>mini highland cow cost</strong>, seeking foundation breeding stock via 
+              <strong> bovine artificial insemination</strong> and semen straws, or looking for 
+              <strong> miniature highland cows for sale near me</strong>, our animals are 100% DNA parentage verified, 
+              Chondrodysplasia dwarfism free, and NLIS registered with safe, stress-free road delivery across QLD, NSW, VIC, SA, WA, and TAS.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div>
@@ -260,7 +319,7 @@ export default function Home() {
                 Updates from the pasture, cattle care tips, and stories from our highland family.
               </p>
             </div>
-            <Link href="/blog" className="hidden md:flex items-center gap-2 text-[#C2673F] font-medium hover:text-[#A85532] transition-colors">
+            <Link href="/blog/" className="hidden md:flex items-center gap-2 text-[#C2673F] font-medium hover:text-[#A85532] transition-colors">
               Read all posts <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -277,7 +336,7 @@ export default function Home() {
                   </div>
                   <h3 className="font-serif text-xl font-bold text-[#1C3B2B] mb-3 leading-tight group-hover:text-[#C2673F] transition-colors">{post.title}</h3>
                   <p className="text-[#1E293B]/70 text-sm mb-6 line-clamp-3">{post.excerpt}</p>
-                  <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-sm font-bold text-[#C2673F] hover:text-[#A85532]">
+                  <Link href={`/blog/${post.slug}/`} className="inline-flex items-center gap-2 text-sm font-bold text-[#C2673F] hover:text-[#A85532]">
                     Read article &rarr;
                   </Link>
                 </div>

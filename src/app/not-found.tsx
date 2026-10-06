@@ -19,7 +19,7 @@ export default function NotFound() {
         <p className="text-[#1E293B]/70 mb-8 max-w-md mx-auto">
           We couldn&apos;t find the calf you were looking for. It may have been sold or the link might be incorrect.
         </p>
-        <Link href="/calves" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors">
+        <Link href="/calves/" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors">
           <ArrowLeft className="w-4 h-4" /> View Available Calves
         </Link>
       </div>

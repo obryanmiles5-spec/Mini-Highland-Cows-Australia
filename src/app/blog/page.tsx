@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import { BLOG_POSTS } from '@/data/blogs';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,7 +7,13 @@ export const metadata: Metadata = {
   title: 'Miniature Highland Cow Blog & Guides | Dunblane Pastoral',
   description: 'Learn everything about micro, teacup, and miniature highland cows. Guides on size, price, care, and adopting a mini highland cow in Australia.',
   alternates: {
-    canonical: 'https://minihighlandcows.store/blog',
+    canonical: 'https://minihighlandcows.store/blog/',
+  },
+  openGraph: {
+    title: 'Miniature Highland Cow Blog & Guides | Dunblane Pastoral',
+    description: 'Learn everything about micro, teacup, and miniature highland cows. Guides on size, price, care, and adopting a mini highland cow in Australia.',
+    url: 'https://minihighlandcows.store/blog/',
+    siteName: 'Dunblane Highlands',
   }
 };
 
@@ -18,11 +23,11 @@ export default function BlogIndex() {
     "@type": "Blog",
     "name": "Miniature Highland Cow Blog",
     "description": "Guides and articles about miniature highland cows for sale, care, and breeding in Australia.",
-    "url": "https://minihighlandcows.store/blog",
+    "url": "https://minihighlandcows.store/blog/",
     "blogPost": BLOG_POSTS.map(post => ({
       "@type": "BlogPosting",
       "headline": post.title,
-      "url": `https://minihighlandcows.store/blog/${post.slug}`,
+      "url": `https://minihighlandcows.store/blog/${post.slug}/`,
       "datePublished": post.date,
       "description": post.excerpt
     }))
@@ -76,7 +81,7 @@ export default function BlogIndex() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {BLOG_POSTS.map((post) => (
-            <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col bg-white border border-[#1C3B2B]/10 rounded-sm overflow-hidden hover:border-[#1C3B2B]/30 transition-colors shadow-sm hover:shadow-md">
+            <Link href={`/blog/${post.slug}/`} key={post.slug} className="group flex flex-col bg-white border border-[#1C3B2B]/10 rounded-sm overflow-hidden hover:border-[#1C3B2B]/30 transition-colors shadow-sm hover:shadow-md">
               {post.image && (
                 <div className="relative w-full aspect-video">
                   <Image src={post.image}

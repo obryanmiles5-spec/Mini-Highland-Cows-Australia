@@ -4,12 +4,12 @@ export const metadata = {
   title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
   description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
   alternates: {
-    canonical: 'https://minihighlandcows.store/process',
+    canonical: 'https://minihighlandcows.store/process/',
   },
   openGraph: {
     title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
     description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
-    url: 'https://minihighlandcows.store/process',
+    url: 'https://minihighlandcows.store/process/',
     siteName: 'Dunblane Highlands',
     images: [
       {

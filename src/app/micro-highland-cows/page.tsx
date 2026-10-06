@@ -108,13 +108,13 @@ export default function MicroHighlandCowsPage() {
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <Link
-                href="/calves"
+                href="/calves/"
                 className="px-8 py-3.5 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors shadow-sm"
               >
                 View Micro Calves
               </Link>
               <Link
-                href="/process"
+                href="/process/"
                 className="px-8 py-3.5 border border-[#1C3B2B] text-[#1C3B2B] font-medium rounded-sm hover:bg-[#1C3B2B]/5 transition-colors"
               >
                 Adoption Guide
@@ -196,7 +196,7 @@ export default function MicroHighlandCowsPage() {
               <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-2">Available Micro &amp; Compact Calves</h2>
               <p className="text-sm text-[#1E293B]/70">DNA-verified, halter-trained calves ready for adoption</p>
             </div>
-            <Link href="/calves" className="text-sm font-bold text-[#C2673F] hover:text-[#A85532] flex items-center gap-1">
+            <Link href="/calves/" className="text-sm font-bold text-[#C2673F] hover:text-[#A85532] flex items-center gap-1">
               View All <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -206,7 +206,7 @@ export default function MicroHighlandCowsPage() {
               const slug = getCalfSlug(calf.name);
               return (
                 <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/10 group">
-                  <Link href={`/calves/${slug}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
+                  <Link href={`/calves/${slug}/`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                     <Image
                       src={calf.images[0]}
                       alt={`${calf.name} - Micro Miniature Highland Calf Australia`}
@@ -219,7 +219,7 @@ export default function MicroHighlandCowsPage() {
                     </span>
                   </Link>
                   <div className="p-6">
-                    <Link href={`/calves/${slug}`}>
+                    <Link href={`/calves/${slug}/`}>
                       <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-2 group-hover:text-[#C2673F] transition-colors">
                         {calf.name}
                       </h3>
@@ -227,7 +227,7 @@ export default function MicroHighlandCowsPage() {
                     <p className="text-sm text-[#1E293B]/60 mb-4">{calf.coat} {calf.sex} • Projected {calf.height}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-[#1E293B]/10">
                       <span className="font-serif text-xl font-bold text-[#1C3B2B]">${calf.price.toLocaleString()} AUD</span>
-                      <Link href={`/calves/${slug}`} className="text-sm font-bold text-[#C2673F] hover:text-[#A85532]">
+                      <Link href={`/calves/${slug}/`} className="text-sm font-bold text-[#C2673F] hover:text-[#A85532]">
                         View Details &rarr;
                       </Link>
                     </div>

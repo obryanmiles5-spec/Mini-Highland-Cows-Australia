@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import { BLOG_POSTS } from '@/data/blogs';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
@@ -20,9 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${post.title} | Miniature Highland Cows`,
     description: post.excerpt,
     alternates: {
-      canonical: `https://minihighlandcows.store/blog/${slug}`,
+      canonical: `https://minihighlandcows.store/blog/${slug}/`,
     },
     openGraph: {
+      title: `${post.title} | Miniature Highland Cows`,
+      description: post.excerpt,
+      url: `https://minihighlandcows.store/blog/${slug}/`,
       images: post.image ? [
         {
           url: post.image,
@@ -48,7 +50,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://minihighlandcows.store/blog/${post.slug}`
+      "@id": `https://minihighlandcows.store/blog/${post.slug}/`
     },
     "headline": post.title,
     "description": post.excerpt,
@@ -109,7 +111,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-3xl mx-auto px-4">
-        <Link href="/blog" className="inline-flex items-center text-sm font-medium text-[#C2673F] hover:text-[#1C3B2B] transition-colors mb-8">
+        <Link href="/blog/" className="inline-flex items-center text-sm font-medium text-[#C2673F] hover:text-[#1C3B2B] transition-colors mb-8">
           <span className="mr-2">←</span> Back to Blog
         </Link>
         
@@ -145,7 +147,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-6">Related Articles</h3>
               <div className="space-y-4">
                 {BLOG_POSTS.filter(p => p.slug !== post.slug).slice(0, 3).map(related => (
-                  <Link href={`/blog/${related.slug}`} key={related.slug} className="block group">
+                  <Link href={`/blog/${related.slug}/`} key={related.slug} className="block group">
                     <h4 className="font-serif text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">{related.title}</h4>
                     <p className="text-sm text-[#1E293B]/70 line-clamp-2">{related.excerpt}</p>
                   </Link>
@@ -157,7 +159,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <p className="text-[#1E293B]/80 mb-6 text-sm">
                 We specialize in breeding premium, DNA-verified, and halter-trained miniature highland cattle.
               </p>
-              <Link href="/calves" className="inline-block w-full text-center px-8 py-4 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A95531] transition-colors">
+              <Link href="/calves/" className="inline-block w-full text-center px-8 py-4 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A95531] transition-colors">
                 View Available Calves
               </Link>
             </div>

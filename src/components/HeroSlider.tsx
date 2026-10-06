@@ -47,13 +47,13 @@ export default function HeroSlider() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
-            href="/calves" 
+            href="/calves/" 
             className="px-8 py-4 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A85532] transition-colors shadow-sm"
           >
             View Available Calves
           </Link>
           <Link 
-            href="/process" 
+            href="/process/" 
             className="px-8 py-4 bg-white/15 backdrop-blur-md text-white font-medium rounded-sm border border-white/30 hover:bg-white/25 transition-colors shadow-sm"
           >
             Learn Our Process

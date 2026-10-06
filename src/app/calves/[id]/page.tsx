@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import { CALVES_DATA, getCalfByIdOrSlug, getCalfSlug } from '@/data/calves';
 
 import { Metadata } from 'next';
@@ -180,7 +179,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
       
 
       <div className="max-w-7xl mx-auto px-4">
-        <Link href="/calves" className="inline-flex items-center gap-2 text-[#1E293B]/70 hover:text-[#1C3B2B] transition-colors mb-8 text-sm font-medium">
+        <Link href="/calves/" className="inline-flex items-center gap-2 text-[#1E293B]/70 hover:text-[#1C3B2B] transition-colors mb-8 text-sm font-medium">
           <ArrowLeft className="w-4 h-4" /> Back to all calves
         </Link>
         
@@ -277,7 +276,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                     Secure Payments via <span className="font-bold text-[#1C3B2B]">Pay ID, Bank Transfer, Credit Card & Crypto (USDT, BTC)</span>. Free delivery to QLD 4725.
                   </div>
                   
-                  <Link href="/reserve" className="block w-full py-4 text-center bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors">
+                  <Link href="/reserve/" className="block w-full py-4 text-center bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors">
                     Inquire About {calf.name}
                   </Link>
                 </div>
@@ -290,17 +289,20 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
         <div className="mt-16 mb-16">
           <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-8 text-center">Related Calves</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {CALVES_DATA.filter(c => c.id !== calf.id).slice(0, 3).map((related) => (
-              <Link href={`/calves/${related.id}`} key={related.id} className="group bg-white rounded-sm shadow-sm border border-[#1E293B]/5 overflow-hidden block hover:border-[#1C3B2B]/20 transition-colors">
-                <div className="aspect-[4/3] relative bg-[#F4EFE6]">
-                  <Image src={related.images[0]} alt={related.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500"  referrerPolicy="no-referrer" />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-serif text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">{related.name}</h3>
-                  <p className="text-sm text-[#1E293B]/70">{related.sex} • {related.coat}</p>
-                </div>
-              </Link>
-            ))}
+            {CALVES_DATA.filter(c => c.id !== calf.id).slice(0, 3).map((related) => {
+              const relSlug = getCalfSlug(related.name);
+              return (
+                <Link href={`/calves/${relSlug}/`} key={related.id} className="group bg-white rounded-sm shadow-sm border border-[#1E293B]/5 overflow-hidden block hover:border-[#1C3B2B]/20 transition-colors">
+                  <div className="aspect-[4/3] relative bg-[#F4EFE6]">
+                    <Image src={related.images[0]} alt={related.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500"  referrerPolicy="no-referrer" />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-serif text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">{related.name}</h3>
+                    <p className="text-sm text-[#1E293B]/70">{related.sex} • {related.coat}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
         

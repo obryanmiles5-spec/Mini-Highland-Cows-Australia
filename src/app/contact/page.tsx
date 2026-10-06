@@ -5,12 +5,12 @@ export const metadata = {
   title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders',
   description: 'Get in touch with Dunblane Highlands in Queensland. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
   alternates: {
-    canonical: 'https://minihighlandcows.store/contact',
+    canonical: 'https://minihighlandcows.store/contact/',
   },
   openGraph: {
     title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders',
     description: 'Get in touch with Dunblane Highlands in Queensland. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
-    url: 'https://minihighlandcows.store/contact',
+    url: 'https://minihighlandcows.store/contact/',
     siteName: 'Dunblane Highlands',
     images: [
       {

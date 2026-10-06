@@ -6,12 +6,12 @@ export const metadata = {
   title: 'Reserve a Miniature Highland Calf | Dunblane Highlands',
   description: 'Secure your miniature highland calf with a formal reservation. Fill out our adoption form to start the process of bringing home your new fluffy companion.',
   alternates: {
-    canonical: 'https://minihighlandcows.store/reserve',
+    canonical: 'https://minihighlandcows.store/reserve/',
   },
   openGraph: {
     title: 'Reserve a Miniature Highland Calf | Dunblane Highlands',
     description: 'Secure your miniature highland calf with a formal reservation. Fill out our adoption form to start the process of bringing home your new fluffy companion.',
-    url: 'https://minihighlandcows.store/reserve',
+    url: 'https://minihighlandcows.store/reserve/',
     siteName: 'Dunblane Highlands',
     images: [
       {

@@ -46,7 +46,7 @@ export default function Navbar() {
           <Link href="/" className="hover:text-[#C2673F] transition-colors">
             Home
           </Link>
-          <Link href="/calves" className="hover:text-[#C2673F] transition-colors">
+          <Link href="/calves/" className="hover:text-[#C2673F] transition-colors">
             Available Calves
           </Link>
 
@@ -66,55 +66,76 @@ export default function Navbar() {
               }`}
             >
               <Link
-                href="/micro-highland-cows"
+                href="/fluffy-mini-cows/"
+                onClick={() => setBreedDropdown(false)}
+                className="block px-4 py-2 hover:bg-[#F4EFE6] text-xs font-semibold text-[#1C3B2B]"
+              >
+                Fluffy Mini Cows
+              </Link>
+              <Link
+                href="/micro-highland-cows/"
                 onClick={() => setBreedDropdown(false)}
                 className="block px-4 py-2 hover:bg-[#F4EFE6] text-xs font-semibold text-[#1C3B2B]"
               >
                 Micro Highland Cows (&le;36&quot;)
               </Link>
               <Link
-                href="/teacup-highland-cows"
+                href="/teacup-highland-cows/"
                 onClick={() => setBreedDropdown(false)}
                 className="block px-4 py-2 hover:bg-[#F4EFE6] text-xs font-semibold text-[#1C3B2B]"
               >
                 Teacup / Pocket Calves
               </Link>
               <Link
-                href="/miniature-highland-cattle"
+                href="/miniature-highland-cattle/"
                 onClick={() => setBreedDropdown(false)}
                 className="block px-4 py-2 hover:bg-[#F4EFE6] text-xs font-semibold text-[#1C3B2B]"
               >
                 Breed Guide &amp; Standards
               </Link>
+              <Link
+                href="/artificial-insemination-cattle/"
+                onClick={() => setBreedDropdown(false)}
+                className="block px-4 py-2 hover:bg-[#F4EFE6] text-xs font-semibold text-[#1C3B2B]"
+              >
+                Cattle AI &amp; Semen Straws
+              </Link>
+              <Link
+                href="/mini-highland-cows-for-sale/"
+                onClick={() => setBreedDropdown(false)}
+                className="block px-4 py-2 hover:bg-[#F4EFE6] text-xs font-semibold text-[#1C3B2B]"
+              >
+                Cows For Sale Near Me
+              </Link>
             </div>
           </div>
 
-          <Link href="/prices" className="hover:text-[#C2673F] transition-colors">
+          <Link href="/prices/" className="hover:text-[#C2673F] transition-colors">
             Prices
           </Link>
-          <Link href="/delivery" className="hover:text-[#C2673F] transition-colors">
+          <Link href="/delivery/" className="hover:text-[#C2673F] transition-colors">
             Delivery
           </Link>
-          <Link href="/process" className="hover:text-[#C2673F] transition-colors">
+          <Link href="/process/" className="hover:text-[#C2673F] transition-colors">
             Adoption
           </Link>
-          <Link href="/sold" className="hover:text-[#C2673F] transition-colors">
+          <Link href="/sold/" className="hover:text-[#C2673F] transition-colors">
             Sold
           </Link>
-          <Link href="/blog" className="hover:text-[#C2673F] transition-colors">
+          <Link href="/blog/" className="hover:text-[#C2673F] transition-colors">
             Blog
           </Link>
-          <Link href="/faq" className="hover:text-[#C2673F] transition-colors">
+          <Link href="/faq/" className="hover:text-[#C2673F] transition-colors">
             FAQ
           </Link>
-          <Link href="/about" className="hover:text-[#C2673F] transition-colors">
+          <Link href="/about/" className="hover:text-[#C2673F] transition-colors">
             About
           </Link>
-          <Link href="/contact" className="hover:text-[#C2673F] transition-colors">
+          <Link href="/contact/" className="hover:text-[#C2673F] transition-colors">
             Contact
           </Link>
           <Link
-            href="/reserve"
+            href="/reserve/"
             className="px-4 py-2 bg-[#1C3B2B] text-white rounded-sm hover:bg-[#152C20] transition-colors shadow-sm"
           >
             Reserve Now
@@ -143,7 +164,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/calves"
+              href="/calves/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm hover:bg-[#F4EFE6] text-[#1C3B2B]"
             >
@@ -151,92 +172,113 @@ export default function Navbar() {
             </Link>
             <div className="pl-3 py-1 border-l-2 border-[#C2673F] space-y-1 my-1">
               <Link
-                href="/micro-highland-cows"
+                href="/fluffy-mini-cows/"
+                onClick={() => setIsOpen(false)}
+                className="block py-1.5 px-3 text-xs text-[#1E293B]/80 hover:text-[#C2673F]"
+              >
+                &bull; Fluffy Mini Cows
+              </Link>
+              <Link
+                href="/micro-highland-cows/"
                 onClick={() => setIsOpen(false)}
                 className="block py-1.5 px-3 text-xs text-[#1E293B]/80 hover:text-[#C2673F]"
               >
                 &bull; Micro Highland Cows (&le;36&quot;)
               </Link>
               <Link
-                href="/teacup-highland-cows"
+                href="/teacup-highland-cows/"
                 onClick={() => setIsOpen(false)}
                 className="block py-1.5 px-3 text-xs text-[#1E293B]/80 hover:text-[#C2673F]"
               >
                 &bull; Teacup / Pocket Highland Cows
               </Link>
               <Link
-                href="/miniature-highland-cattle"
+                href="/miniature-highland-cattle/"
                 onClick={() => setIsOpen(false)}
                 className="block py-1.5 px-3 text-xs text-[#1E293B]/80 hover:text-[#C2673F]"
               >
                 &bull; Breed Guide &amp; Standards
               </Link>
+              <Link
+                href="/artificial-insemination-cattle/"
+                onClick={() => setIsOpen(false)}
+                className="block py-1.5 px-3 text-xs text-[#1E293B]/80 hover:text-[#C2673F]"
+              >
+                &bull; Cattle AI &amp; Semen Straws
+              </Link>
+              <Link
+                href="/mini-highland-cows-for-sale/"
+                onClick={() => setIsOpen(false)}
+                className="block py-1.5 px-3 text-xs text-[#1E293B]/80 hover:text-[#C2673F]"
+              >
+                &bull; Cows For Sale Near Me
+              </Link>
             </div>
             <Link
-              href="/prices"
+              href="/prices/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm hover:bg-[#F4EFE6] text-[#1C3B2B]"
             >
               Price Guide
             </Link>
             <Link
-              href="/delivery"
+              href="/delivery/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm hover:bg-[#F4EFE6] text-[#1C3B2B]"
             >
               Delivery &amp; Freight
             </Link>
             <Link
-              href="/process"
+              href="/process/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm hover:bg-[#F4EFE6] text-[#1C3B2B]"
             >
               Adoption / Purchase Process
             </Link>
             <Link
-              href="/sold"
+              href="/sold/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm hover:bg-[#F4EFE6] text-[#1C3B2B]"
             >
               Sold Gallery
             </Link>
             <Link
-              href="/blog"
+              href="/blog/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm hover:bg-[#F4EFE6] text-[#1C3B2B]"
             >
               Educational Blog
             </Link>
             <Link
-              href="/faq"
+              href="/faq/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm hover:bg-[#F4EFE6] text-[#1C3B2B]"
             >
               FAQ
             </Link>
             <Link
-              href="/about"
+              href="/about/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm hover:bg-[#F4EFE6] text-[#1C3B2B]"
             >
               About Dunblane
             </Link>
             <Link
-              href="/contact"
+              href="/contact/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm hover:bg-[#F4EFE6] text-[#1C3B2B]"
             >
               Contact Us
             </Link>
             <Link
-              href="/urls"
+              href="/urls/"
               onClick={() => setIsOpen(false)}
               className="py-2 px-3 rounded-sm bg-[#F4EFE6] text-[#C2673F] text-xs font-bold"
             >
               Search Console URLs Directory
             </Link>
             <Link
-              href="/reserve"
+              href="/reserve/"
               onClick={() => setIsOpen(false)}
               className="py-3 px-4 text-center bg-[#1C3B2B] text-white rounded-sm font-bold shadow-sm"
             >

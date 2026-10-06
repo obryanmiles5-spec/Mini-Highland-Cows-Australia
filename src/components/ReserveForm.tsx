@@ -104,7 +104,7 @@ export default function ReserveForm() {
           {loading ? 'Submitting...' : 'Submit Reservation Request'}
         </button>
         <p className="text-center text-sm text-[#1E293B]/50 mt-4">
-          By submitting this form, you agree to our <Link href="/process" className="underline hover:text-[#C2673F]">Adoption & Sales terms</Link>.
+          By submitting this form, you agree to our <Link href="/process/" className="underline hover:text-[#C2673F]">Adoption & Sales terms</Link>.
         </p>
       </div>
     </form>

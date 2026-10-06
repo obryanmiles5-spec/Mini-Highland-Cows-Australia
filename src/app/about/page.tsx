@@ -4,12 +4,12 @@ export const metadata = {
   title: 'About Dunblane Highlands | Miniature Highland Cow Breeder Australia',
   description: 'Learn about Dunblane Highlands, a premier breeder of DNA-verified, halter-trained micro miniature and teacup highland cattle in Queensland, Australia.',
   alternates: {
-    canonical: 'https://minihighlandcows.store/about',
+    canonical: 'https://minihighlandcows.store/about/',
   },
   openGraph: {
     title: 'About Dunblane Highlands | Miniature Highland Cow Breeder Australia',
     description: 'Learn about Dunblane Highlands, a premier breeder of DNA-verified, halter-trained micro miniature and teacup highland cattle in Queensland, Australia.',
-    url: 'https://minihighlandcows.store/about',
+    url: 'https://minihighlandcows.store/about/',
     siteName: 'Dunblane Highlands',
     images: [
       {

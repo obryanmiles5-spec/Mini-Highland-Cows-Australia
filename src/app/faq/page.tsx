@@ -6,12 +6,12 @@ export const metadata = {
   title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
   description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
   alternates: {
-    canonical: 'https://minihighlandcows.store/faq',
+    canonical: 'https://minihighlandcows.store/faq/',
   },
   openGraph: {
     title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
     description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
-    url: 'https://minihighlandcows.store/faq',
+    url: 'https://minihighlandcows.store/faq/',
     siteName: 'Dunblane Highlands',
     images: [
       {
@@ -151,7 +151,7 @@ export default function FAQPage() {
           <p className="text-[#1E293B]/80 mb-8">
             Browse our currently available DNA-verified miniature highland calves for sale across Australia.
           </p>
-          <Link href="/calves" className="inline-flex items-center px-8 py-4 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A95531] transition-colors">
+          <Link href="/calves/" className="inline-flex items-center px-8 py-4 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A95531] transition-colors">
             View Available Calves
           </Link>
         </div>

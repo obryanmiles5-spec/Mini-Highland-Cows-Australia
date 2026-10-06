@@ -6,12 +6,12 @@ export const metadata = {
   title: 'Sold Miniature Highland Calves | Dunblane Highlands',
   description: 'View our gallery of past sold miniature and micro highland calves that have found their forever homes across Australia.',
   alternates: {
-    canonical: 'https://minihighlandcows.store/sold',
+    canonical: 'https://minihighlandcows.store/sold/',
   },
   openGraph: {
     title: 'Sold Miniature Highland Calves | Dunblane Highlands',
     description: 'View our gallery of past sold miniature and micro highland calves that have found their forever homes across Australia.',
-    url: 'https://minihighlandcows.store/sold',
+    url: 'https://minihighlandcows.store/sold/',
     siteName: 'Dunblane Highlands',
     images: [
       {

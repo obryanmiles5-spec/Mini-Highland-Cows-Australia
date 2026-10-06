@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
-import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -28,6 +27,17 @@ export const metadata: Metadata = {
   description: "Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.",
   verification: {
     google: 'vWD42gGRYaftq6Ac4pjAznZgYM2nEjnJuMgItsVmh3o',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   icons: {
     icon: '/favicon.ico',
@@ -76,6 +86,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="en" className={`scroll-smooth ${plusJakartaSans.variable} ${playfairDisplay.variable}`}>
       <head>
         <meta name="google-site-verification" content="vWD42gGRYaftq6Ac4pjAznZgYM2nEjnJuMgItsVmh3o" />
+        <script src="//code.jivosite.com/widget/LaWF9kIHFI" async></script>
       </head>
       <body suppressHydrationWarning className="antialiased bg-[#FDFBF7] text-[#1E293B] font-sans font-bold selection:bg-[#C2673F] selection:text-white flex flex-col min-h-screen">
         <header className="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md flex flex-col">
@@ -128,25 +139,28 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
             <div>
               <h4 className="font-serif text-base font-bold mb-4 text-[#D4A373]">Our Cattle</h4>
               <ul className="space-y-2 text-sm text-[#FDFBF7]/80">
-                <li><Link href="/calves" className="hover:text-[#D4A373] transition-colors">Available Calves</Link></li>
-                <li><Link href="/micro-highland-cows" className="hover:text-[#D4A373] transition-colors">Micro Highland Cows</Link></li>
-                <li><Link href="/teacup-highland-cows" className="hover:text-[#D4A373] transition-colors">Teacup / Pocket Cows</Link></li>
-                <li><Link href="/miniature-highland-cattle" className="hover:text-[#D4A373] transition-colors">Breed Standards Guide</Link></li>
-                <li><Link href="/prices" className="hover:text-[#D4A373] transition-colors">Price &amp; Cost Guide</Link></li>
-                <li><Link href="/sold" className="hover:text-[#D4A373] transition-colors">Sold Calves Gallery</Link></li>
+                <li><Link href="/calves/" className="hover:text-[#D4A373] transition-colors">Available Calves</Link></li>
+                <li><Link href="/fluffy-mini-cows/" className="hover:text-[#D4A373] transition-colors">Fluffy Mini Cows</Link></li>
+                <li><Link href="/micro-highland-cows/" className="hover:text-[#D4A373] transition-colors">Micro Highland Cows</Link></li>
+                <li><Link href="/teacup-highland-cows/" className="hover:text-[#D4A373] transition-colors">Teacup / Pocket Cows</Link></li>
+                <li><Link href="/miniature-highland-cattle/" className="hover:text-[#D4A373] transition-colors">Breed Standards Guide</Link></li>
+                <li><Link href="/artificial-insemination-cattle/" className="hover:text-[#D4A373] transition-colors">Cattle AI &amp; Semen Straws</Link></li>
+                <li><Link href="/mini-highland-cows-for-sale/" className="hover:text-[#D4A373] transition-colors">Cows For Sale Near Me</Link></li>
+                <li><Link href="/prices/" className="hover:text-[#D4A373] transition-colors">Price &amp; Cost Guide</Link></li>
+                <li><Link href="/sold/" className="hover:text-[#D4A373] transition-colors">Sold Calves Gallery</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-serif text-base font-bold mb-4 text-[#D4A373]">Adoption &amp; Care</h4>
               <ul className="space-y-2 text-sm text-[#FDFBF7]/80">
-                <li><Link href="/process" className="hover:text-[#D4A373] transition-colors">Adoption Process</Link></li>
-                <li><Link href="/delivery" className="hover:text-[#D4A373] transition-colors">Delivery &amp; Freight</Link></li>
-                <li><Link href="/reserve" className="hover:text-[#D4A373] transition-colors">Reserve a Calf</Link></li>
-                <li><Link href="/blog" className="hover:text-[#D4A373] transition-colors">Educational Blog</Link></li>
-                <li><Link href="/faq" className="hover:text-[#D4A373] transition-colors">FAQ</Link></li>
-                <li><Link href="/about" className="hover:text-[#D4A373] transition-colors">About Our Farm</Link></li>
-                <li><Link href="/contact" className="hover:text-[#D4A373] transition-colors">Contact Us</Link></li>
+                <li><Link href="/process/" className="hover:text-[#D4A373] transition-colors">Adoption Process</Link></li>
+                <li><Link href="/delivery/" className="hover:text-[#D4A373] transition-colors">Delivery &amp; Freight</Link></li>
+                <li><Link href="/reserve/" className="hover:text-[#D4A373] transition-colors">Reserve a Calf</Link></li>
+                <li><Link href="/blog/" className="hover:text-[#D4A373] transition-colors">Educational Blog</Link></li>
+                <li><Link href="/faq/" className="hover:text-[#D4A373] transition-colors">FAQ</Link></li>
+                <li><Link href="/about/" className="hover:text-[#D4A373] transition-colors">About Our Farm</Link></li>
+                <li><Link href="/contact/" className="hover:text-[#D4A373] transition-colors">Contact Us</Link></li>
               </ul>
             </div>
 
@@ -167,27 +181,14 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           <div className="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-[#FDFBF7]/10 flex flex-col md:flex-row justify-between items-center text-[#FDFBF7]/60 text-xs gap-4">
             <p>&copy; {new Date().getFullYear()} Dunblane Pastoral Holdings Pty Ltd. All rights reserved.</p>
             <div className="flex flex-wrap gap-6 items-center">
-              <Link href="/privacy" className="hover:text-[#D4A373] transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-[#D4A373] transition-colors">Terms of Service</Link>
-              <Link href="/urls" className="text-[#D4A373] hover:underline font-semibold flex items-center gap-1">
+              <Link href="/privacy/" className="hover:text-[#D4A373] transition-colors">Privacy Policy</Link>
+              <Link href="/terms/" className="hover:text-[#D4A373] transition-colors">Terms of Service</Link>
+              <Link href="/urls/" className="text-[#D4A373] hover:underline font-semibold flex items-center gap-1">
                 Google Search Console URL Directory &rarr;
               </Link>
             </div>
           </div>
         </footer>
-        <Script id="tawk-to" strategy="afterInteractive">
-          {`
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/69e1beeedbff4b1c36f8ae51/1jmct3lia';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-          `}
-        </Script>
       </body>
     </html>
   );

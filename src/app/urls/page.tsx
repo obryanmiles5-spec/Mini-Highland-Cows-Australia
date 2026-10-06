@@ -30,6 +30,12 @@ const STATIC_PAGES: PageEntry[] = [
   },
   {
     category: 'Breeds & Guide',
+    name: 'Fluffy Mini Cows',
+    path: '/fluffy-mini-cows/',
+    description: 'Guide on fluffy miniature highland cattle, coat genetics, and cute acreage calves.',
+  },
+  {
+    category: 'Breeds & Guide',
     name: 'Micro Highland Cows',
     path: '/micro-highland-cows/',
     description: 'Dedicated page for micro miniature cattle maturing under 36 inches.',
@@ -45,6 +51,18 @@ const STATIC_PAGES: PageEntry[] = [
     name: 'Miniature Highland Cattle Breed Guide',
     path: '/miniature-highland-cattle/',
     description: 'Complete guide on Scottish miniature highland cattle standards and acreage care.',
+  },
+  {
+    category: 'Breeds & Guide',
+    name: 'Artificial Insemination in Cattle (Bovine AI)',
+    path: '/artificial-insemination-cattle/',
+    description: 'Bovine AI procedures, semen straws, breeding costs, and bull genetics guide.',
+  },
+  {
+    category: 'Main',
+    name: 'Mini Highland Cows for Sale Near Me',
+    path: '/mini-highland-cows-for-sale/',
+    description: 'Regional purchasing directory, Australian livestock transport, and buyer checklist.',
   },
   {
     category: 'Main',

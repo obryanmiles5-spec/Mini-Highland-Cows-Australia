@@ -74,13 +74,13 @@ export default function DeliveryPage() {
           </p>
           <div className="flex justify-center gap-4">
             <Link
-              href="/calves"
+              href="/calves/"
               className="px-8 py-3.5 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors shadow-sm"
             >
               Browse Available Calves
             </Link>
             <Link
-              href="/contact"
+              href="/contact/"
               className="px-8 py-3.5 border border-[#1C3B2B] text-[#1C3B2B] font-medium rounded-sm hover:bg-[#1C3B2B]/5 transition-colors"
             >
               Get a Freight Quote
@@ -155,10 +155,10 @@ export default function DeliveryPage() {
             Provide your Property Identification Code (PIC) or post code, and our logistics team will calculate the most cost-effective and stress-free route for your calf.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/contact" className="px-8 py-3.5 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A85532] transition-colors">
+            <Link href="/contact/" className="px-8 py-3.5 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A85532] transition-colors">
               Contact Logistics Team
             </Link>
-            <Link href="/process" className="px-8 py-3.5 border border-[#FDFBF7]/30 text-white font-medium rounded-sm hover:bg-white/10 transition-colors">
+            <Link href="/process/" className="px-8 py-3.5 border border-[#FDFBF7]/30 text-white font-medium rounded-sm hover:bg-white/10 transition-colors">
               Read Adoption Process
             </Link>
           </div>

@@ -86,13 +86,13 @@ export default function TeacupHighlandCowsPage() {
           </p>
           <div className="flex justify-center gap-4">
             <Link
-              href="/calves"
+              href="/calves/"
               className="px-8 py-3.5 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors shadow-sm"
             >
               Browse Pocket Calves
             </Link>
             <Link
-              href="/reserve"
+              href="/reserve/"
               className="px-8 py-3.5 border border-[#1C3B2B] text-[#1C3B2B] font-medium rounded-sm hover:bg-[#1C3B2B]/5 transition-colors"
             >
               Reserve a Calf
@@ -140,7 +140,7 @@ export default function TeacupHighlandCowsPage() {
               <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-2">Available Small-Frame Calves</h2>
               <p className="text-sm text-[#1E293B]/70">Registered, DNA parentage-verified and ready for immediate deposit</p>
             </div>
-            <Link href="/calves" className="text-sm font-bold text-[#C2673F] hover:text-[#A85532] flex items-center gap-1">
+            <Link href="/calves/" className="text-sm font-bold text-[#C2673F] hover:text-[#A85532] flex items-center gap-1">
               View All Calves <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -150,7 +150,7 @@ export default function TeacupHighlandCowsPage() {
               const slug = getCalfSlug(calf.name);
               return (
                 <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/10 group">
-                  <Link href={`/calves/${slug}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
+                  <Link href={`/calves/${slug}/`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                     <Image
                       src={calf.images[0]}
                       alt={`${calf.name} - Teacup Miniature Highland Calf`}
@@ -163,7 +163,7 @@ export default function TeacupHighlandCowsPage() {
                     </span>
                   </Link>
                   <div className="p-6">
-                    <Link href={`/calves/${slug}`}>
+                    <Link href={`/calves/${slug}/`}>
                       <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-2 group-hover:text-[#C2673F] transition-colors">
                         {calf.name}
                       </h3>
@@ -171,7 +171,7 @@ export default function TeacupHighlandCowsPage() {
                     <p className="text-sm text-[#1E293B]/60 mb-4">{calf.coat} {calf.sex} • {calf.height} projected</p>
                     <div className="flex items-center justify-between pt-4 border-t border-[#1E293B]/10">
                       <span className="font-serif text-xl font-bold text-[#1C3B2B]">${calf.price.toLocaleString()} AUD</span>
-                      <Link href={`/calves/${slug}`} className="text-sm font-bold text-[#C2673F] hover:text-[#A85532]">
+                      <Link href={`/calves/${slug}/`} className="text-sm font-bold text-[#C2673F] hover:text-[#A85532]">
                         Details &rarr;
                       </Link>
                     </div>
@@ -189,10 +189,10 @@ export default function TeacupHighlandCowsPage() {
             Due to high demand and limited calving windows, our smallest pocket calves are often reserved prior to weaning. Contact us to be notified of upcoming litters and calving schedules.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/contact" className="px-8 py-3.5 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A85532] transition-colors">
+            <Link href="/contact/" className="px-8 py-3.5 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A85532] transition-colors">
               Contact Breeders
             </Link>
-            <Link href="/faq" className="px-8 py-3.5 border border-[#FDFBF7]/30 text-white font-medium rounded-sm hover:bg-white/10 transition-colors">
+            <Link href="/faq/" className="px-8 py-3.5 border border-[#FDFBF7]/30 text-white font-medium rounded-sm hover:bg-white/10 transition-colors">
               Read Common Questions
             </Link>
           </div>
