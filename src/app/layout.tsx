@@ -86,7 +86,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="en" className={`scroll-smooth ${plusJakartaSans.variable} ${playfairDisplay.variable}`}>
       <head>
         <meta name="google-site-verification" content="vWD42gGRYaftq6Ac4pjAznZgYM2nEjnJuMgItsVmh3o" />
-        <script src="//code.jivosite.com/widget/LaWF9kIHFI" async></script>
+        <script src="//code.jivosite.com/widget/vejv3NHseX" async></script>
       </head>
       <body suppressHydrationWarning className="antialiased bg-[#FDFBF7] text-[#1E293B] font-sans font-bold selection:bg-[#C2673F] selection:text-white flex flex-col min-h-screen">
         <header className="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md flex flex-col">
