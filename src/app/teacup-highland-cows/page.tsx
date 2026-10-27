@@ -5,31 +5,35 @@ import { CALVES_DATA, getCalfSlug } from '@/data/calves';
 import { Heart, Sparkles, Check, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export const metadata = {
-  title: 'Teacup Highland Cows Australia | Pocket Miniature Calves',
-  description: 'Looking for teacup miniature highland cows in Australia? Dunblane Highlands provides ethically bred, ultra-compact pocket highland calves with healthy genetics.',
+  title: 'Teacup Highland Cows USA | Pocket Miniature Calves',
+  description: 'Looking for teacup miniature highland cows in the USA? Dunblane Highlands provides ethically bred, ultra-compact pocket highland calves with healthy genetics.',
   alternates: {
     canonical: 'https://minihighlandcows.store/teacup-highland-cows/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/teacup-highland-cows/',
+      'x-default': 'https://minihighlandcows.store/teacup-highland-cows/',
+    },
   },
   openGraph: {
-    title: 'Teacup Highland Cows Australia | Pocket Miniature Calves',
-    description: 'Looking for teacup miniature highland cows in Australia? Dunblane Highlands provides ethically bred, ultra-compact pocket highland calves.',
+    title: 'Teacup Highland Cows USA | Pocket Miniature Calves',
+    description: 'Looking for teacup miniature highland cows in the USA? Dunblane Highlands provides ethically bred, ultra-compact pocket highland calves.',
     url: 'https://minihighlandcows.store/teacup-highland-cows/',
-    siteName: 'Dunblane Highlands',
+    siteName: 'Dunblane Highlands USA',
     images: [
       {
         url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Teacup Highland Cows Australia - Dunblane Highlands',
+        alt: 'Teacup Highland Cows USA - Dunblane Highlands',
       },
     ],
-    locale: 'en_AU',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Teacup Highland Cows Australia | Pocket Miniature Calves',
-    description: 'Discover ultra-compact teacup highland cows in Australia. Ethically bred and halter trained.',
+    title: 'Teacup Highland Cows USA | Pocket Miniature Calves',
+    description: 'Discover ultra-compact teacup highland cows in the USA. Ethically bred and halter trained.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
@@ -42,15 +46,15 @@ export default function TeacupHighlandCowsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "Teacup Miniature Highland Cows Australia",
-    "description": "Ethically bred pocket and teacup miniature Scottish Highland cattle in Australia, DNA parentage verified with complete halter training.",
+    "name": "Teacup Miniature Highland Cows USA",
+    "description": "Ethically bred pocket and teacup miniature Scottish Highland cattle in the United States, DNA parentage verified with complete halter training.",
     "brand": {
       "@type": "Brand",
-      "name": "Dunblane Highlands"
+      "name": "Dunblane Highlands USA"
     },
     "offers": {
       "@type": "AggregateOffer",
-      "priceCurrency": "AUD",
+      "priceCurrency": "USD",
       "lowPrice": "6000",
       "highPrice": "10000",
       "offerCount": teacupCalves.length
@@ -74,78 +78,69 @@ export default function TeacupHighlandCowsPage() {
         {/* Hero */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#C2673F]/10 text-[#C2673F] text-xs font-bold rounded-full uppercase tracking-wider mb-4">
-            <Sparkles className="w-3.5 h-3.5" /> Ultra-Compact Heritage Genetics
+            <Sparkles className="w-3.5 h-3.5" /> Ultra-Compact Heritage Genetics USA
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1C3B2B] leading-tight mb-6">
-            Teacup Highland Cows in Australia
+            Teacup Highland Cows in the USA
           </h1>
           <p className="text-lg text-[#1E293B]/80 leading-relaxed max-w-2xl mx-auto mb-8">
             &ldquo;Teacup&rdquo; and &ldquo;pocket&rdquo; Highland cows are popular terms used for the smallest tier of miniature Highland cattle, 
             maturing at approximately 30 to 34 inches. At Dunblane Highlands, our emphasis is on healthy proportion, docility, 
-            luxurious double coats, and verified sound genetics.
+            luxurious double coats, and verified sound genetics without dwarfism.
           </p>
           <div className="flex justify-center gap-4">
             <Link
               href="/calves/"
               className="px-8 py-3.5 bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors shadow-sm"
             >
-              Browse Pocket Calves
+              Browse Available Calves
             </Link>
             <Link
-              href="/reserve/"
+              href="/prices/"
               className="px-8 py-3.5 border border-[#1C3B2B] text-[#1C3B2B] font-medium rounded-sm hover:bg-[#1C3B2B]/5 transition-colors"
             >
-              Reserve a Calf
+              View Price Guide ($USD)
             </Link>
           </div>
         </div>
 
-        {/* Facts & Genetics Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-sm shadow-sm border border-[#1E293B]/10">
-            <div className="w-12 h-12 rounded-sm bg-[#F4EFE6] flex items-center justify-center text-[#1C3B2B] mb-6">
-              <ShieldCheck className="w-6 h-6 text-[#C2673F]" />
+        {/* Key Realities Block */}
+        <div className="bg-white rounded-sm border border-[#1E293B]/10 p-8 md:p-12 mb-16 shadow-xs">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="font-serif text-xl font-bold text-[#1C3B2B] mb-2">Ethical Breeding First</h3>
+              <p className="text-sm text-[#1E293B]/70 leading-relaxed">
+                We do not select for abnormal dwarfism genes (Chondrodysplasia). Our calves are genetically tested non-carriers, ensuring normal proportions, sound legs, and a full, healthy lifespan.
+              </p>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-3">Ethical Breeding</h3>
-            <p className="text-sm text-[#1E293B]/70 leading-relaxed">
-              We do not utilize severe inbreeding or dwarfism genes (chondrodysplasia positive). Our pocket calves are bred for longevity, robust lung capacity, and natural small-frame stature.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-sm shadow-sm border border-[#1E293B]/10">
-            <div className="w-12 h-12 rounded-sm bg-[#F4EFE6] flex items-center justify-center text-[#1C3B2B] mb-6">
-              <Heart className="w-6 h-6 text-[#C2673F]" />
+            <div>
+              <h3 className="font-serif text-xl font-bold text-[#1C3B2B] mb-2">Real Mature Size</h3>
+              <p className="text-sm text-[#1E293B]/70 leading-relaxed">
+                No cattle fit into a coffee cup. A mature &ldquo;teacup&rdquo; or pocket Highland will stand roughly waist-height (30–34 inches) and weigh between 350 and 550 pounds.
+              </p>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-3">Halter Trained &amp; Gentle</h3>
-            <p className="text-sm text-[#1E293B]/70 leading-relaxed">
-              Every calf is bottle-supplemented and daily halter trained from weaning. They enjoy hand-feeding, brushing sessions, and make affectionate companions for families and children.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-sm shadow-sm border border-[#1E293B]/10">
-            <div className="w-12 h-12 rounded-sm bg-[#F4EFE6] flex items-center justify-center text-[#1C3B2B] mb-6">
-              <Sparkles className="w-6 h-6 text-[#C2673F]" />
+            <div>
+              <h3 className="font-serif text-xl font-bold text-[#1C3B2B] mb-2">Herd Animal Needs</h3>
+              <p className="text-sm text-[#1E293B]/70 leading-relaxed">
+                Even pocket-sized Highlands are herd animals. They require at least one bovine companion (or compatible livestock like sheep or goats) and cannot be kept indoors as house pets.
+              </p>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-3">Famous Fluffy Double Coats</h3>
-            <p className="text-sm text-[#1E293B]/70 leading-relaxed">
-              Featuring heavy forelocks (the iconic Scottish &ldquo;dossan&rdquo;) and dense woolly undercoats. Available in rare Silver Dun, Pure White, Blonde Yellow, and classic Red.
-            </p>
           </div>
         </div>
 
-        {/* Calves list */}
+        {/* Available Pocket Calves Showcase */}
         <div className="mb-16">
           <div className="flex justify-between items-end mb-8">
             <div>
-              <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-2">Available Small-Frame Calves</h2>
-              <p className="text-sm text-[#1E293B]/70">Registered, DNA parentage-verified and ready for immediate deposit</p>
+              <span className="text-xs font-bold text-[#C2673F] uppercase tracking-wider block mb-1">Live Inventory</span>
+              <h2 className="font-serif text-3xl font-bold text-[#1C3B2B]">Featured Ultra-Compact Calves</h2>
             </div>
             <Link href="/calves/" className="text-sm font-bold text-[#C2673F] hover:text-[#A85532] flex items-center gap-1">
               View All Calves <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teacupCalves.map((calf) => {
               const slug = getCalfSlug(calf.name);
               return (
@@ -170,7 +165,7 @@ export default function TeacupHighlandCowsPage() {
                     </Link>
                     <p className="text-sm text-[#1E293B]/60 mb-4">{calf.coat} {calf.sex} • {calf.height} projected</p>
                     <div className="flex items-center justify-between pt-4 border-t border-[#1E293B]/10">
-                      <span className="font-serif text-xl font-bold text-[#1C3B2B]">${calf.price.toLocaleString()} AUD</span>
+                      <span className="font-serif text-xl font-bold text-[#1C3B2B]">${calf.price.toLocaleString()} USD</span>
                       <Link href={`/calves/${slug}/`} className="text-sm font-bold text-[#C2673F] hover:text-[#A85532]">
                         Details &rarr;
                       </Link>

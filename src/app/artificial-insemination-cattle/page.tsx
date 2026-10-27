@@ -4,55 +4,59 @@ import Image from 'next/image';
 import { CheckCircle2, DollarSign, Dna, ShieldCheck, ChevronRight, HelpCircle, Phone, ArrowRight, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Artificial Insemination in Cattle (Bovine AI) | Dunblane Australia',
-  description: 'Comprehensive guide to bovine artificial insemination (AI) in cattle, livestock breeding procedures, AI bull semen straws, and cow insemination costs in Australia.',
+  title: 'Artificial Insemination in Cattle (Bovine AI) | Dunblane Highlands USA',
+  description: 'Authoritative guide to bovine artificial insemination (AI) in cattle, livestock breeding procedures, AI bull semen straws, and cow insemination costs in the USA.',
   alternates: {
     canonical: 'https://minihighlandcows.store/artificial-insemination-cattle/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/artificial-insemination-cattle/',
+      'x-default': 'https://minihighlandcows.store/artificial-insemination-cattle/',
+    },
   },
   openGraph: {
-    title: 'Artificial Insemination in Cattle (Bovine AI) & Breeding Costs | Dunblane',
-    description: 'Expert guide to cattle artificial insemination, bovine AI procedures, AI bull semen straws, and cow insemination costs in Australia.',
+    title: 'Artificial Insemination in Cattle (Bovine AI) & Breeding Costs | Dunblane USA',
+    description: 'Expert guide to cattle artificial insemination, bovine AI procedures, AI bull semen straws, and cow insemination costs in the United States.',
     url: 'https://minihighlandcows.store/artificial-insemination-cattle/',
-    siteName: 'Dunblane Highlands',
+    siteName: 'Dunblane Highlands USA',
     images: [
       {
         url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Artificial Insemination in Cattle - Dunblane Highlands Australia',
+        alt: 'Artificial Insemination in Cattle - Dunblane Highlands USA',
       },
     ],
-    locale: 'en_AU',
+    locale: 'en_US',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Artificial Insemination in Cattle (Bovine AI) | Dunblane Australia',
-    description: 'Expert guide to cattle artificial insemination, bovine AI procedures, AI bull semen straws, and cow insemination costs.',
+    title: 'Artificial Insemination in Cattle (Bovine AI) | Dunblane Highlands USA',
+    description: 'Expert guide to cattle artificial insemination, bovine AI procedures, AI bull semen straws, and cow insemination costs in the USA.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
 const FAQS = [
   {
-    q: "How much does artificial insemination cost for cows in Australia?",
-    a: "In Australia, the cost of artificial insemination (AI) for cows typically ranges from $75 to $220 AUD per cow per cycle. This total includes the semen straw ($35 to $120 AUD depending on bull pedigree and breed rarity), estrus synchronization medications such as CIDR and prostaglandin ($25 to $45 AUD), and the professional AI technician or veterinary callout fee ($35 to $75 AUD per head when servicing multiple cows). In the United States, bovine AI costs average $45 to $150 USD per cow."
+    q: "How much does artificial insemination cost for cows in the USA?",
+    a: "In the United States, the cost of artificial insemination (AI) for cows typically ranges from $65 to $180 USD per cow per cycle. This total includes the cryopreserved semen straw ($25 to $80 USD depending on bull pedigree and breed rarity), estrus synchronization medications such as CIDR and prostaglandin ($18 to $35 USD), and the professional AI technician or veterinary service fee ($25 to $65 USD per head when servicing multiple cows)."
   },
   {
     q: "What is the bovine artificial insemination procedure?",
-    a: "The bovine artificial insemination procedure involves four core stages: 1) Estrus detection or fixed-time AI (FTAI) synchronization using progesterone CIDRs and GnRH; 2) Semen preparation by thawing frozen semen straws in a 35°C–37°C water bath for exactly 30 to 45 seconds; 3) Loading the pre-warmed AI catheter gun with a sanitary sheath; and 4) Transrectal cervical manipulation, where the technician guides the gun through the cow's cervix via rectal palpation to deposit semen precisely into the uterine body."
+    a: "The bovine artificial insemination procedure involves four core stages: 1) Estrus detection or fixed-time AI (FTAI) synchronization using progesterone CIDRs and GnRH; 2) Semen preparation by thawing frozen semen straws in a 35°C–37°C (95°F–98°F) water bath for exactly 30 to 45 seconds; 3) Loading the pre-warmed AI catheter gun with a sterile sheath; and 4) Transrectal cervical manipulation, where the technician guides the gun through the cow's cervix via rectal palpation to deposit semen precisely into the uterine body."
   },
   {
     q: "Can miniature highland cows be bred using artificial insemination?",
     a: "Yes. Miniature highland cattle can be successfully bred using bovine artificial insemination. However, because miniature highland heifers and cows possess smaller pelvic canals and shorter cervical tracts than commercial dairy or beef cows, artificial breeding must be conducted by an experienced livestock technician using appropriate mini-breed catheters and calibrated semen dosages to avoid cervical trauma."
   },
   {
-    q: "How does artificial breeding compare to keeping an AI bull on-farm?",
-    a: "Artificial breeding of cattle eliminates the high annual feed, fencing, and safety risks of managing a live herd bull (which costs $1,500 to $3,000+ AUD annually to maintain). AI grants smallholders and registered studs direct access to champion, genetically verified Scottish Highland and miniature herd sires worldwide for a fraction of the cost while completely preventing venereal diseases like Trichomoniasis and Campylobacteriosis."
+    q: "How does artificial breeding compare to keeping a herd bull on-farm?",
+    a: "Artificial breeding of cattle eliminates the high annual feed, fencing, and safety risks of managing a live herd bull (which costs $1,500 to $2,500+ USD annually to feed and maintain). AI grants homesteaders and registered breeders direct access to champion, genetically verified Scottish Highland and miniature herd sires nationwide for a fraction of the cost while completely preventing venereal diseases like Trichomoniasis and Campylobacteriosis."
   },
   {
     q: "What is the conception rate for cow artificial insemination?",
-    a: "Average first-service conception rates for bovine artificial insemination range between 55% and 70% in well-managed herds. Utilizing timed artificial insemination (FTAI) protocols with high-motility straws from proven AI bulls and ensuring low stress during insemination consistently yields conception rates over 65%."
+    a: "Average first-service conception rates for bovine artificial insemination range between 55% and 70% in well-managed herds. Utilizing timed artificial insemination (FTAI) protocols with high-motility straws from proven AI bulls and ensuring calm, low-stress handling during insemination consistently yields conception rates over 65%."
   }
 ];
 
@@ -64,15 +68,15 @@ export default function ArtificialInseminationCattlePage() {
         "@type": "Article",
         "@id": "https://minihighlandcows.store/artificial-insemination-cattle/#article",
         "headline": "Artificial Insemination in Cattle (Bovine AI): Breeding Guide & Cost Breakdown",
-        "description": "Complete authoritative guide on artificial breeding of animals, cattle artificial insemination procedures, AI bull semen straws, and cow insemination costs in Australia.",
-        "inLanguage": "en-AU",
+        "description": "Complete authoritative guide on artificial breeding of animals, cattle artificial insemination procedures, AI bull semen straws, and cow insemination costs in the USA.",
+        "inLanguage": "en-US",
         "author": {
           "@type": "Organization",
-          "name": "Dunblane Pastoral Holdings Pty Ltd"
+          "name": "Dunblane Highlands Ranch LLC"
         },
         "publisher": {
           "@type": "Organization",
-          "name": "Dunblane Highlands",
+          "name": "Dunblane Highlands USA",
           "logo": {
             "@type": "ImageObject",
             "url": "https://minihighlandcows.store/favicon.ico"
@@ -98,17 +102,17 @@ export default function ArtificialInseminationCattlePage() {
         "name": "Bovine Artificial Insemination & Genetics Program",
         "provider": {
           "@type": "Organization",
-          "name": "Dunblane Highlands"
+          "name": "Dunblane Highlands USA"
         },
         "areaServed": {
           "@type": "Country",
-          "name": "Australia"
+          "name": "United States"
         },
         "serviceType": "Livestock Artificial Insemination & Bovine Breeding",
         "offers": {
           "@type": "Offer",
-          "priceCurrency": "AUD",
-          "price": "75.00",
+          "priceCurrency": "USD",
+          "price": "55.00",
           "priceValidUntil": "2026-12-31"
         }
       }
@@ -135,15 +139,15 @@ export default function ArtificialInseminationCattlePage() {
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="text-xs uppercase tracking-widest text-[#C2673F] font-bold block mb-3">
-            Bovine Artificial Breeding &amp; Livestock Genetics
+            Bovine Artificial Breeding &amp; Livestock Genetics USA
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1C3B2B] leading-tight mb-6">
             Artificial Insemination in Cattle (Bovine AI Guide &amp; Costs)
           </h1>
           <p className="text-lg text-[#1E293B]/80 leading-relaxed max-w-2xl mx-auto mb-8">
-            Everything livestock owners, hobby farmers, and miniature cattle studs need to know about 
+            Everything livestock owners, homesteaders, and miniature cattle breeders need to know about 
             <strong> cow artificial insemination</strong>, <strong>artificial breeding of cattle</strong>, 
-            veterinary procedures, semen straws, and accurate 2026 costs in Australia.
+            veterinary procedures, semen straws, and accurate 2026 costs in the United States.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -169,20 +173,20 @@ export default function ArtificialInseminationCattlePage() {
           <p className="text-base sm:text-lg leading-relaxed font-serif">
             <strong>Artificial insemination in cattle (bovine AI)</strong> refers to the assisted reproductive technology 
             where cryopreserved semen harvested from elite, genetically verified AI bulls is manually deposited into a female cow’s 
-            uterine body during estrus using a sterile catheter. In Australia, artificial breeding costs <strong>$75 to $220 AUD per cow</strong>, 
-            providing smallholders direct access to championship genetics, disease prevention, and calving ease without housing a live herd sire.
+            uterine body during estrus using a sterile catheter. In the United States, artificial breeding costs <strong>$65 to $180 USD per cow</strong>, 
+            providing homesteaders and smallholders direct access to championship genetics, disease prevention, and calving ease without housing a live herd sire.
           </p>
         </div>
 
         {/* Core Breakdown 1: AI Cost Table */}
         <div className="bg-white p-8 sm:p-12 rounded-sm shadow-sm border border-[#1E293B]/10 mb-16">
           <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-4">
-            How Much Does Artificial Insemination Cost for Cows? (2026 Price Breakdown)
+            How Much Does Artificial Insemination Cost for Cows? (2026 US Price Breakdown)
           </h2>
           <p className="text-sm text-[#1E293B]/70 mb-8 max-w-3xl leading-relaxed">
             Prospective cattle breeders frequently ask: <em>&ldquo;How much is artificial insemination for a cow?&rdquo;</em> 
             or <em>&ldquo;What is the cost of artificial insemination in cattle?&rdquo;</em> The table below outlines real-world 
-            commercial and registered stud expenses across Australia and international benchmarks.
+            commercial and registered stud expenses across the United States.
           </p>
 
           <div className="overflow-x-auto">
@@ -190,7 +194,6 @@ export default function ArtificialInseminationCattlePage() {
               <thead>
                 <tr className="bg-[#1C3B2B] text-[#FDFBF7] text-xs uppercase tracking-wider">
                   <th className="p-4 rounded-tl-sm">Cost Component</th>
-                  <th className="p-4">Estimated Range (AUD)</th>
                   <th className="p-4">Estimated Range (USD)</th>
                   <th className="p-4 rounded-tr-sm">Details &amp; Inclusions</th>
                 </tr>
@@ -198,31 +201,26 @@ export default function ArtificialInseminationCattlePage() {
               <tbody className="divide-y divide-[#1E293B]/10 text-[#1E293B]/80">
                 <tr className="hover:bg-[#FDFBF7] transition-colors">
                   <td className="p-4 font-bold text-[#1C3B2B]">Semen Straw (AI Bull)</td>
-                  <td className="p-4">$35 – $120 AUD</td>
-                  <td className="p-4">$25 – $80 USD</td>
+                  <td className="p-4 font-serif font-bold text-[#C2673F]">$25 – $80 USD</td>
                   <td className="p-4 text-xs">High-motility cryopreserved straw from registered, DNA-tested Highland or Mini sire.</td>
                 </tr>
                 <tr className="hover:bg-[#FDFBF7] transition-colors">
                   <td className="p-4 font-bold text-[#1C3B2B]">Estrus Synchronization Drugs</td>
-                  <td className="p-4">$25 – $45 AUD</td>
-                  <td className="p-4">$18 – $35 USD</td>
+                  <td className="p-4 font-serif">$18 – $35 USD</td>
                   <td className="p-4 text-xs">CIDR insert (progesterone), Prostaglandin (PGF2α), and GnRH hormone protocol.</td>
                 </tr>
                 <tr className="hover:bg-[#FDFBF7] transition-colors">
-                  <td className="p-4 font-bold text-[#1C3B2B]">AI Technician / Vet Callout</td>
-                  <td className="p-4">$35 – $75 AUD</td>
-                  <td className="p-4">$25 – $55 USD</td>
+                  <td className="p-4 font-bold text-[#1C3B2B]">AI Technician / Large Animal Vet</td>
+                  <td className="p-4 font-serif">$25 – $55 USD</td>
                   <td className="p-4 text-xs">Professional catheter insertion and cervical deposit per cow (volume discounts apply).</td>
                 </tr>
                 <tr className="hover:bg-[#FDFBF7] transition-colors">
                   <td className="p-4 font-bold text-[#1C3B2B]">Liquid Nitrogen Storage Tank</td>
-                  <td className="p-4">$30 – $60 AUD/yr</td>
-                  <td className="p-4">$20 – $45 USD/yr</td>
-                  <td className="p-4 text-xs">Tank rental/dry shipper fee or local genetics center liquid nitrogen topping.</td>
+                  <td className="p-4 font-serif">$20 – $45 USD/yr</td>
+                  <td className="p-4 text-xs">Dry shipper rental fee or local genetics center liquid nitrogen topping.</td>
                 </tr>
                 <tr className="bg-[#F4EFE6] font-bold text-[#1C3B2B]">
                   <td className="p-4">Total Cost Per Cow (Single AI Cycle)</td>
-                  <td className="p-4 text-[#C2673F] text-base font-serif">$95 – $240 AUD</td>
                   <td className="p-4 text-[#C2673F] text-base font-serif">$68 – $170 USD</td>
                   <td className="p-4 text-xs font-normal">Complete cycle cost. Typical first-service conception rate: 60%–70%.</td>
                 </tr>
@@ -298,7 +296,7 @@ export default function ArtificialInseminationCattlePage() {
                   <Award className="w-4 h-4 text-[#C2673F]" /> Access to World-Class AI Bull Genetics
                 </h4>
                 <p className="text-xs text-[#1E293B]/70">
-                  Hobby farms and small acreage owners cannot justify purchasing a $10,000 champion herd sire. Artificial insemination delivers proven Scottish and Australian sire genetics with known birth weights, high milk EBVs, and Chondrodysplasia-negative status.
+                  Homesteaders and small acreage owners cannot justify purchasing a $10,000 champion herd sire. Artificial insemination delivers proven Scottish Highland sire genetics with known birth weights, high milk EPDs, and Chondrodysplasia-negative status.
                 </p>
               </div>
 
@@ -329,21 +327,21 @@ export default function ArtificialInseminationCattlePage() {
             <div>
               <span className="text-xs font-bold text-[#C2673F] uppercase tracking-wider block mb-2">Genetics Program</span>
               <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-4">
-                Dunblane Miniature Highland AI Bull Genetics
+                Dunblane Miniature Highland AI Bull Genetics (USA)
               </h2>
               <p className="text-sm text-[#1E293B]/80 leading-relaxed mb-4">
                 At Dunblane Highlands, our breeding herd sires are selected under stringent veterinary criteria. 
-                All AI bull straws are processed in certified Australian biosecurity facilities with guaranteed post-thaw progressive motility exceeding 50%.
+                All AI bull straws are processed in certified biosecurity facilities with guaranteed post-thaw progressive motility exceeding 50%.
               </p>
               <ul className="space-y-2.5 text-xs text-[#1E293B]/80 mb-6">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#1C3B2B]" /> 100% DNA parentage verified &amp; registered with Australian Highland Cattle Society (AHCS)
+                  <CheckCircle2 className="w-4 h-4 text-[#1C3B2B]" /> 100% DNA parentage verified &amp; registered with American Highland Cattle Association (AHCA) &amp; IMCBR
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#1C3B2B]" /> Non-carriers of the Chondrodysplasia dwarfism gene (100% Chondro-Free)
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#1C3B2B]" /> Tested negative for Pestivirus (BVDV PI), Johnes Disease (J-BAS 7+), and Tick Fever
+                  <CheckCircle2 className="w-4 h-4 text-[#1C3B2B]" /> Tested negative for BVDV-PI, Johne&apos;s Disease, and Anaplasmosis
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#1C3B2B]" /> Available for nationwide courier delivery in dry-shipper liquid nitrogen dewars
@@ -393,7 +391,7 @@ export default function ArtificialInseminationCattlePage() {
               Artificial Insemination in Cattle FAQ
             </h2>
             <p className="text-sm text-[#1E293B]/70">
-              Direct answers to real search queries from Australian cattle owners and breeders.
+              Direct answers to real search queries from American cattle owners, homesteaders, and breeders.
             </p>
           </div>
 
@@ -416,7 +414,7 @@ export default function ArtificialInseminationCattlePage() {
         <div className="bg-[#1C3B2B] text-white p-8 sm:p-12 rounded-sm text-center">
           <h2 className="font-serif text-3xl font-bold mb-4">Ready to Upgrade Your Cattle Genetics?</h2>
           <p className="text-sm text-[#FDFBF7]/80 max-w-xl mx-auto mb-8">
-            Explore our available miniature highland calves, genetics consultation, and nationwide livestock transport across Australia.
+            Explore our available miniature highland calves, genetics consultation, and nationwide livestock transport across the United States.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -429,7 +427,7 @@ export default function ArtificialInseminationCattlePage() {
               href="/contact/"
               className="px-8 py-3.5 border border-white text-white text-sm font-semibold rounded-sm hover:bg-white/10 transition-colors"
             >
-              Contact Our Farm Team
+              Contact Our Ranch Team
             </Link>
           </div>
         </div>

@@ -3,31 +3,35 @@ import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
-  description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
+  title: 'Miniature Highland Cow FAQs | Top Questions Answered (USA)',
+  description: 'Answers to the top questions about miniature highland cows: size, cost in the USA, care, land requirements, and whether micro teacup mini cows are real.',
   alternates: {
     canonical: 'https://minihighlandcows.store/faq/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/faq/',
+      'x-default': 'https://minihighlandcows.store/faq/',
+    },
   },
   openGraph: {
-    title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
-    description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
+    title: 'Miniature Highland Cow FAQs | Top Questions Answered (USA)',
+    description: 'Answers to the top questions about miniature highland cows: size, cost in the USA, care, land requirements, and whether micro teacup mini cows are real.',
     url: 'https://minihighlandcows.store/faq/',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
+        alt: 'Miniature Highland Cow FAQs | Top Questions Answered (USA)',
       },
     ],
-    locale: 'en_AU',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cow FAQs | Top Questions Answered (Australia)',
-    description: 'Answers to the top questions about miniature highland cows: size, cost in Australia, care, land requirements, and whether micro teacup mini cows are real.',
+    title: 'Miniature Highland Cow FAQs | Top Questions Answered (USA)',
+    description: 'Answers to the top questions about miniature highland cows: size, cost in the USA, care, land requirements, and whether micro teacup mini cows are real.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
@@ -42,8 +46,8 @@ const FAQS = [
     answer: "Many people ask 'can I have a mini cow in my backyard?' The reality is, to properly care for miniature cattle, you need at least 1 to 2 acres of good quality pasture for a pair. How much space a mini cow needs heavily depends on the quality of the soil, rainfall, and pasture in your area. Importantly, cows are herd animals—you cannot adopt just one mini cow. You must have a companion, meaning you need room for at least two miniature cows or other suitable livestock (like alpacas or sheep)."
   },
   {
-    question: "How much does a miniature cow cost in Australia?",
-    answer: "When wondering 'how much are mini cows' or 'how much is a mini fluffy cow', prices typically range from $4,000 to over $10,000 AUD. The price heavily depends on several factors: the calf's sex (heifers are generally more expensive than steers), coat color (silver/dun and white are often highly sought after), and genetic size (micro miniatures under 36 inches command a premium). The miniature cow price reflects the extensive costs to breed healthy, DNA-verified, halter-trained miniature cows."
+    question: "How much does a miniature cow cost in the USA?",
+    answer: "When wondering 'how much are mini cows' or 'how much is a mini fluffy cow', prices across the United States typically range from $4,000 to over $10,000+ USD. The price heavily depends on several factors: the calf's sex (heifers are generally more expensive than steers), coat color (silver/dun and white are often highly sought after), and genetic size (micro miniatures under 36 inches command a premium). The miniature cow price reflects the extensive costs to breed healthy, DNA-verified, halter-trained miniature cows."
   },
   {
     question: "Are miniature cows good pets?",
@@ -62,8 +66,8 @@ const FAQS = [
     answer: "While 'teacup' is often a marketing term rather than a scientific classification, micro miniature cows definitely exist. These are animals that mature under 36 inches. We breed healthy micro mini highland cows by carefully selecting smaller genetics over generations. We strictly avoid the lethal Chondrodysplasia (dwarfism) gene, ensuring our little cows are healthy, proportionate, and live long, pain-free lives."
   },
   {
-    question: "Where can you buy a mini cow?",
-    answer: "You should always look for registered, reputable breeders who offer DNA parentage verification and health guarantees. We offer miniature cows for sale to approved homes across Australia. We are based in Queensland, but we frequently arrange safe, climate-controlled transport for our mini calves to NSW, VIC, SA, and beyond."
+    question: "Where can you buy a mini cow in the USA?",
+    answer: "You should always look for registered, reputable breeders who offer DNA parentage verification and health guarantees. We offer miniature cows for sale to approved homes across the United States. We are based in Canton, Texas, but we frequently arrange safe, climate-controlled livestock transport for our mini calves to Texas, Ohio, Missouri, Oklahoma, Florida, North Carolina, and nationwide."
   },
   {
     question: "How long does a miniature highland cow live?",
@@ -79,13 +83,14 @@ export default function FAQPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "inLanguage": "en-US",
     "mainEntity": FAQS.map((faq, idx) => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
         "@type": "Answer",
         "text": faq.answer,
-        "url": `https://minihighlandcows.store/faq#faq-${idx}`
+        "url": `https://minihighlandcows.store/faq/#faq-${idx}`
       }
     }))
   };
@@ -105,7 +110,7 @@ export default function FAQPage() {
         "@type": "ListItem",
         "position": 2,
         "name": "FAQ",
-        "item": "https://minihighlandcows.store/faq"
+        "item": "https://minihighlandcows.store/faq/"
       }
     ]
   };
@@ -126,7 +131,7 @@ export default function FAQPage() {
             Miniature Highland Cow FAQs
           </h1>
           <p className="text-[#1E293B]/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            Everything you need to know about adopting, raising, and caring for miniature highland cattle in Australia. We&apos;ve compiled the top search questions to help you understand our fluffy mini cows.
+            Everything you need to know about adopting, raising, and caring for miniature highland cattle in the United States. We&apos;ve compiled the top search questions to help you understand our fluffy mini cows.
           </p>
         </div>
         
@@ -149,7 +154,7 @@ export default function FAQPage() {
         <div className="mt-16 text-center">
           <h2 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-4">Ready to adopt your own?</h2>
           <p className="text-[#1E293B]/80 mb-8">
-            Browse our currently available DNA-verified miniature highland calves for sale across Australia.
+            Browse our currently available DNA-verified miniature highland calves for sale across the United States.
           </p>
           <Link href="/calves/" className="inline-flex items-center px-8 py-4 bg-[#C2673F] text-white font-medium rounded-sm hover:bg-[#A95531] transition-colors">
             View Available Calves

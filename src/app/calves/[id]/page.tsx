@@ -9,21 +9,27 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   
   const slug = getCalfSlug(calf.name);
   return {
-    title: `${calf.name} - Miniature Highland ${calf.sex} For Sale Australia | Dunblane`,
+    title: `${calf.name} - Miniature Highland ${calf.sex} For Sale USA | Dunblane Highlands`,
     description: calf.desc.substring(0, 160) + (calf.desc.length > 160 ? '...' : ''),
     alternates: {
       canonical: `https://minihighlandcows.store/calves/${slug}/`,
+      languages: {
+        'en-US': `https://minihighlandcows.store/calves/${slug}/`,
+        'x-default': `https://minihighlandcows.store/calves/${slug}/`,
+      },
     },
     openGraph: {
-      title: `${calf.name} - Miniature Highland ${calf.sex} For Sale Australia | Dunblane`,
+      title: `${calf.name} - Miniature Highland ${calf.sex} For Sale USA | Dunblane Highlands`,
       description: calf.desc.substring(0, 160),
       url: `https://minihighlandcows.store/calves/${slug}/`,
+      siteName: 'Dunblane Highlands USA',
+      locale: 'en_US',
       images: [
         {
           url: calf.images[0],
           width: 800,
           height: 600,
-          alt: `${calf.name} - Miniature Highland ${calf.sex}`,
+          alt: `${calf.name} - Miniature Highland ${calf.sex} USA`,
         }
       ]
     }
@@ -42,39 +48,39 @@ const FAQS = [
   },
   {
     question: "How much land do you need for a miniature cow?",
-    answer: "Many people ask 'can I have a mini cow in my backyard?' The truth is, to properly care for a mini cow, you need at least 1 to 2 acres. How much space does a mini cow need depends on pasture quality, but as herd animals, you must adopt a mini cow with a companion, meaning you need room for at least two fluffy mini cows."
+    answer: "Many people ask 'can I have a mini cow on my homestead?' The truth is, to properly care for a mini cow, you need at least 1 to 2 acres of good pasture with supplemental hay. Because cattle are herd animals, you must adopt with a companion, meaning you need room for at least two fluffy mini cows."
   },
   {
-    question: "How much does a miniature cow cost in Australia?",
-    answer: "When wondering 'how much are mini cows' or 'how much is a mini fluffy cow', prices range from $4,000 to $10,000+ AUD depending on if it's a micro miniature highland cow, its sex, and color. The miniature cow price reflects the cost to breed healthy, DNA-verified, fluffy miniature cows for sale."
+    question: "How much does a miniature cow cost in the USA?",
+    answer: "When wondering 'how much are mini cows' or 'how much is a mini fluffy cow', prices in the United States range from $4,000 to $10,000+ USD depending on if it's a micro miniature highland cow, its sex, and color. The miniature cow price reflects the cost to breed healthy, DNA-verified, halter-trained miniature cows."
   },
   {
     question: "Are miniature cows good pets?",
-    answer: "Yes, mini cows make excellent pets! Are mini cows good pets? Absolutely. Because they are docile, halter-trained, and friendly, miniature highland cows are great for small acreage. Many people love them for mini cow cuddles and photoshoots."
+    answer: "Yes, mini cows make excellent pets! Because they are docile, halter-trained, and friendly, miniature highland cows are great for family acreage and homesteads. Many people love them for brushing, pasture walks, and family photoshoots."
   },
   {
     question: "Can you milk mini highland cows?",
-    answer: "Yes, you can milk miniature highland cows! Do miniature highland cows produce milk? Yes, they do. While not a commercial dairy cow, a mini cow can produce 1 to 2 gallons of rich milk daily, perfect for a family wanting a family milk cow."
+    answer: "Yes, you can milk miniature highland cows! While not a high-volume commercial dairy cow, a mini cow can produce 1 to 2 gallons of rich, creamy milk daily, perfect for a family wanting a homestead milk cow."
   },
   {
     question: "Do miniature cows stay small?",
-    answer: "Yes, true miniature highland cattle genetics mean that do mini cows stay mini? Yes. Unlike standard cattle, they are genetically predisposed to be small cow breeds. A full grown miniature cow will retain its compact, cute size."
+    answer: "Yes, true miniature highland cattle genetics mean they do stay small. Unlike standard cattle, they are genetically selected to be compact cow breeds. A full grown miniature cow will retain its compact, cute size throughout its life."
   },
   {
     question: "Are teacup mini cows real?",
-    answer: "Are teacup cows real or is there such thing as a mini cow? Yes, they exist, but 'teacup' is often a marketing term for micro miniature cows. We breed healthy micro mini highland cows without lethal dwarfism genes, ensuring our little cows for sale are healthy and proportionate."
+    answer: "Yes, they exist, but 'teacup' is often an informal marketing term for micro miniature cows. We breed healthy micro mini highland cows without lethal dwarfism genes, ensuring our little calves for sale are healthy and proportionate."
   },
   {
-    question: "Where can you buy a mini cow?",
-    answer: "If you're asking 'where can I buy a miniature cow' or 'where to buy mini highland cows', you should look for registered breeders. We offer miniature cows for sale QLD, miniature cows for sale NSW, and transport our mini calves for sale across Australia."
+    question: "Where can you buy a mini cow in the USA?",
+    answer: "If you're asking 'where can I buy a miniature cow' or 'where to buy mini highland cows', you should look for registered breeders. We offer miniature cows for sale in Texas, Ohio, Missouri, Florida, Oklahoma, and provide climate-controlled transport across all 48 continental states."
   },
   {
     question: "How long does a miniature highland cow live?",
-    answer: "With proper mini cow care, a miniature highland cow adult can live 15 to 20 years. They are hardy, resilient animals. The average lifespan of a mini highland cow is similar to standard cattle, provided they have good feed, shelter, and vet care."
+    answer: "With proper mini cow care, an adult miniature highland cow can live 15 to 20 years. They are hardy, resilient animals. The average lifespan of a mini highland cow is similar to standard cattle, provided they have good feed, clean water, shelter, and routine vet care."
   },
   {
     question: "What are miniature cows good for?",
-    answer: "What are mini cows used for? Aside from being adorable pets, miniature cattle are great for clearing brush, providing family milk, and producing high-quality miniature highland cow beef. They are sustainable, require less feed, and are gentle on the land."
+    answer: "Aside from being adorable pets, miniature cattle are great for clearing brush, producing rich family milk, providing high-fertility genetics, and fertilizing pastures. They require less feed and are gentler on fence lines than commercial cattle."
   }
 ];
 
@@ -107,23 +113,23 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
     "sku": calf.ear_tag || calf.id.toString(),
     "brand": {
       "@type": "Brand",
-      "name": "Dunblane Pastoral Holdings"
+      "name": "Dunblane Highlands USA"
     },
     "offers": {
       "@type": "Offer",
       "url": `https://minihighlandcows.store/calves/${slug}/`,
-      "priceCurrency": "AUD",
+      "priceCurrency": "USD",
       "price": calf.price.toString().replace(/[^0-9.]/g, ''),
       "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
       "itemCondition": "https://schema.org/NewCondition",
       "availability": calf.status === 'Available' ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
       "seller": {
         "@type": "Organization",
-        "name": "Dunblane Pastoral Holdings Pty Ltd"
+        "name": "Dunblane Highlands Ranch LLC"
       },
       "hasMerchantReturnPolicy": {
         "@type": "MerchantReturnPolicy",
-        "applicableCountry": "AU",
+        "applicableCountry": "US",
         "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
         "merchantReturnDays": 14,
         "returnMethod": "https://schema.org/ReturnByMail"
@@ -144,8 +150,6 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
     }))
   };
 
-
-  
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -173,10 +177,9 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
 
   return (
     <div className="bg-[#FDFBF7] min-h-screen py-16">
-
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      
 
       <div className="max-w-7xl mx-auto px-4">
         <Link href="/calves/" className="inline-flex items-center gap-2 text-[#1E293B]/70 hover:text-[#1C3B2B] transition-colors mb-8 text-sm font-medium">
@@ -194,7 +197,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                   fill
                   priority
                   className="object-cover"
-                 referrerPolicy="no-referrer" />
+                  referrerPolicy="no-referrer" />
                 {calf.status === 'Available' ? (
                   <span className="absolute top-4 right-4 bg-[#1C3B2B] text-[#FDFBF7] text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-10">
                     Available
@@ -213,7 +216,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                         alt={`${calf.name} gallery image ${i + 1}`}
                         fill
                         className="object-cover"
-                       referrerPolicy="no-referrer" />
+                        referrerPolicy="no-referrer" />
                     </div>
                   ))}
                 </div>
@@ -265,15 +268,15 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
                   <div className="flex items-end justify-between mb-4">
                     <div>
                       <span className="block text-[#1E293B]/50 uppercase tracking-wider text-[10px] font-bold mb-1">Total Price</span>
-                      <span className="font-serif text-3xl font-bold text-[#1C3B2B]">${calf.price.toLocaleString()}</span>
+                      <span className="font-serif text-3xl font-bold text-[#1C3B2B]">${calf.price.toLocaleString()} USD</span>
                     </div>
                     <div className="text-right">
                       <span className="block text-[#1E293B]/50 uppercase tracking-wider text-[10px] font-bold mb-1">Required Deposit</span>
-                      <span className="font-medium text-[#1E293B]">${calf.deposit.toLocaleString()}</span>
+                      <span className="font-medium text-[#1E293B]">${calf.deposit.toLocaleString()} USD</span>
                     </div>
                   </div>
                   <div className="text-xs text-[#1E293B]/70 mb-6 bg-[#1C3B2B]/5 p-3 rounded-sm border border-[#1C3B2B]/10">
-                    Secure Payments via <span className="font-bold text-[#1C3B2B]">Pay ID, Bank Transfer, Credit Card & Crypto (USDT, BTC)</span>. Free delivery to QLD 4725.
+                    Secure Payments via <span className="font-bold text-[#1C3B2B]">Bank Wire, ACH, Credit Card, Zelle &amp; Crypto (USDT, BTC)</span>. Free delivery within local county &amp; same city.
                   </div>
                   
                   <Link href="/reserve/" className="block w-full py-4 text-center bg-[#1C3B2B] text-white font-medium rounded-sm hover:bg-[#152C20] transition-colors">
@@ -294,7 +297,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
               return (
                 <Link href={`/calves/${relSlug}/`} key={related.id} className="group bg-white rounded-sm shadow-sm border border-[#1E293B]/5 overflow-hidden block hover:border-[#1C3B2B]/20 transition-colors">
                   <div className="aspect-[4/3] relative bg-[#F4EFE6]">
-                    <Image src={related.images[0]} alt={related.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500"  referrerPolicy="no-referrer" />
+                    <Image src={related.images[0]} alt={related.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
                   </div>
                   <div className="p-4">
                     <h3 className="font-serif text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">{related.name}</h3>
@@ -310,7 +313,7 @@ export default async function CalfDetailsPage({ params }: { params: Promise<{ id
         <div className="mt-16 max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-4">Frequently Asked Questions</h2>
-            <p className="text-[#1E293B]/70">Common questions about caring for miniature highlands.</p>
+            <p className="text-[#1E293B]/70">Common questions about caring for miniature highlands in the USA.</p>
           </div>
           <div className="space-y-4">
             {FAQS.map((faq, idx) => (

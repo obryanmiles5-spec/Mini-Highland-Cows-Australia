@@ -62,7 +62,7 @@ const STATIC_PAGES: PageEntry[] = [
     category: 'Main',
     name: 'Mini Highland Cows for Sale Near Me',
     path: '/mini-highland-cows-for-sale/',
-    description: 'Regional purchasing directory, Australian livestock transport, and buyer checklist.',
+    description: 'Regional purchasing directory, Nationwide US livestock transport corridors, and buyer checklist.',
   },
   {
     category: 'Main',
@@ -74,7 +74,7 @@ const STATIC_PAGES: PageEntry[] = [
     category: 'Main',
     name: 'Delivery & Transport',
     path: '/delivery/',
-    description: 'Australia-wide livestock freight guide, free local delivery, and interstate transport.',
+    description: 'Nationwide USA livestock freight guide, free local delivery in Canton TX, and interstate transport.',
   },
   {
     category: 'Main',
@@ -102,9 +102,9 @@ const STATIC_PAGES: PageEntry[] = [
   },
   {
     category: 'Main',
-    name: 'About Dunblane Pastoral',
+    name: 'About Dunblane Highlands Ranch LLC',
     path: '/about/',
-    description: 'Background, philosophy, and ABN credentials of our Queensland breeding farm.',
+    description: 'Background, philosophy, and breeding credentials of our Canton, Texas ranch.',
   },
   {
     category: 'Main',
@@ -142,7 +142,7 @@ export default function UrlsDirectoryPage() {
     category: 'Calves',
     name: `${calf.name} (${calf.sex})`,
     path: `/calves/${getCalfSlug(calf.name)}/`,
-    description: `${calf.coat} ${calf.sex} • Projected ${calf.height} • Status: ${calf.status} • $${calf.price.toLocaleString()} AUD`,
+    description: `${calf.coat} ${calf.sex} • Projected ${calf.height} • Status: ${calf.status} • $${calf.price.toLocaleString()} USD`,
   }));
 
   const blogPages: PageEntry[] = BLOG_POSTS.map((post) => ({

@@ -2,31 +2,35 @@ import ContactForm from '@/components/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export const metadata = {
-  title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders',
-  description: 'Get in touch with Dunblane Highlands in Queensland. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
+  title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders USA',
+  description: 'Get in touch with Dunblane Highlands in Canton, Texas. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
   alternates: {
     canonical: 'https://minihighlandcows.store/contact/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/contact/',
+      'x-default': 'https://minihighlandcows.store/contact/',
+    },
   },
   openGraph: {
-    title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders',
-    description: 'Get in touch with Dunblane Highlands in Queensland. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
+    title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders USA',
+    description: 'Get in touch with Dunblane Highlands in Canton, Texas. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
     url: 'https://minihighlandcows.store/contact/',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Miniature Highland Cows | Dunblane Pastoral',
+        alt: 'Miniature Highland Cows | Dunblane Highlands USA',
       },
     ],
-    locale: 'en_AU',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders',
-    description: 'Get in touch with Dunblane Highlands in Queensland. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
+    title: 'Contact Us | Dunblane Highlands Miniature Cow Breeders USA',
+    description: 'Get in touch with Dunblane Highlands in Canton, Texas. Contact us regarding our available miniature, micro, and teacup highland calves for sale.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
@@ -48,7 +52,7 @@ export default function ContactPage() {
         "@type": "ListItem",
         "position": 2,
         "name": "Contact",
-        "item": "https://minihighlandcows.store/contact"
+        "item": "https://minihighlandcows.store/contact/"
       }
     ]
   };
@@ -84,8 +88,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-[#1C3B2B] mb-1">Phone</h3>
-                  <p className="text-[#1E293B]/70">+61 468 187 340</p>
-                  <p className="text-sm text-[#1E293B]/50 mt-1">Direct calls and SMS. Mon-Fri from 9am to 5pm AEST.</p>
+                  <p className="text-[#1E293B]/70">+1 (512) 842-9840</p>
+                  <p className="text-sm text-[#1E293B]/50 mt-1">Direct calls and SMS. Mon-Fri from 9am to 6pm CST.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -93,9 +97,9 @@ export default function ContactPage() {
                   <MapPin className="w-6 h-6 text-[#C2673F]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#1C3B2B] mb-1">Farm Location</h3>
-                  <p className="text-[#1E293B]/70">QLD, Australia</p>
-                  <p className="text-sm text-[#1E293B]/50 mt-1">Farm visits are strictly by appointment only for biosecurity reasons.</p>
+                  <h3 className="font-bold text-[#1C3B2B] mb-1">Ranch Location</h3>
+                  <p className="text-[#1E293B]/70">Canton, TX 75103, USA</p>
+                  <p className="text-sm text-[#1E293B]/50 mt-1">Ranch visits are strictly by appointment only for biosecurity and herd safety.</p>
                 </div>
               </div>
             </div>

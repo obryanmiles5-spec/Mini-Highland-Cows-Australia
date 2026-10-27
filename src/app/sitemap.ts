@@ -5,19 +5,37 @@ import { BLOG_POSTS } from '@/data/blogs';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://minihighlandcows.store';
 
-  const calvesEntries: MetadataRoute.Sitemap = CALVES_DATA.map((calf) => ({
-    url: `${baseUrl}/calves/${getCalfSlug(calf.name)}/`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }));
+  const calvesEntries: MetadataRoute.Sitemap = CALVES_DATA.map((calf) => {
+    const url = `${baseUrl}/calves/${getCalfSlug(calf.name)}/`;
+    return {
+      url,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+      alternates: {
+        languages: {
+          'en-US': url,
+          'x-default': url,
+        },
+      },
+    };
+  });
 
-  const blogEntries: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}/`,
-    lastModified: new Date(post.date),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  const blogEntries: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => {
+    const url = `${baseUrl}/blog/${post.slug}/`;
+    return {
+      url,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+      alternates: {
+        languages: {
+          'en-US': url,
+          'x-default': url,
+        },
+      },
+    };
+  });
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 1.0 },
@@ -40,7 +58,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/privacy/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.5 },
     { url: `${baseUrl}/terms/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.5 },
     { url: `${baseUrl}/urls/`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 0.6 },
-  ];
+  ].map((page) => ({
+    ...page,
+    alternates: {
+      languages: {
+        'en-US': page.url,
+        'x-default': page.url,
+      },
+    },
+  }));
 
   return [...staticPages, ...calvesEntries, ...blogEntries];
 }

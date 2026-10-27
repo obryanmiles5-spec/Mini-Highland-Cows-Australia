@@ -20,11 +20,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: post.excerpt,
     alternates: {
       canonical: `https://minihighlandcows.store/blog/${slug}/`,
+      languages: {
+        'en-US': `https://minihighlandcows.store/blog/${slug}/`,
+        'x-default': `https://minihighlandcows.store/blog/${slug}/`,
+      },
     },
     openGraph: {
       title: `${post.title} | Miniature Highland Cows`,
       description: post.excerpt,
       url: `https://minihighlandcows.store/blog/${slug}/`,
+      locale: 'en_US',
       images: post.image ? [
         {
           url: post.image,
@@ -61,18 +66,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "dateModified": new Date(post.date).toISOString(),
     "author": {
       "@type": "Organization",
-      "name": "Dunblane Pastoral Holdings Pty Ltd",
-      "url": "https://minihighlandcows.store/about"
+      "name": "Dunblane Highlands Ranch LLC",
+      "url": "https://minihighlandcows.store/about/"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Dunblane Pastoral Holdings Pty Ltd",
+      "name": "Dunblane Highlands Ranch LLC",
       "logo": {
         "@type": "ImageObject",
         "url": "https://minihighlandcows.store/favicon.ico"
       }
     },
-    "inLanguage": "en-AU",
+    "inLanguage": "en-US",
     "isAccessibleForFree": "True",
     "articleSection": "Miniature Cattle Breeding",
     "wordCount": post.content.split(' ').length
@@ -93,13 +98,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://minihighlandcows.store/blog"
+        "item": "https://minihighlandcows.store/blog/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": post.title,
-        "item": `https://minihighlandcows.store/blog/${post.slug}`
+        "item": `https://minihighlandcows.store/blog/${post.slug}/`
       }
     ]
   };
@@ -117,7 +122,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         
         <header className="mb-12">
           <div className="text-sm font-medium text-[#1E293B]/60 mb-4">
-            {new Date(post.date).toLocaleDateString('en-AU', { month: 'long', day: 'numeric', year: 'numeric' })} • {post.readTime}
+            {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} • {post.readTime}
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1C3B2B] leading-tight">
             {post.title}

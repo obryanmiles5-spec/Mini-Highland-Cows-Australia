@@ -1,10 +1,14 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Privacy Policy | Dunblane Pastoral Holdings Pty Ltd',
-  description: 'Privacy policy and customer data protection procedures for Dunblane Pastoral Holdings Pty Ltd (ABN 81 131 156 922).',
+  title: 'Privacy Policy | Dunblane Highlands Ranch LLC',
+  description: 'Privacy policy and customer data protection procedures for Dunblane Highlands Ranch LLC (Canton, Texas, USA).',
   alternates: {
     canonical: 'https://minihighlandcows.store/privacy/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/privacy/',
+      'x-default': 'https://minihighlandcows.store/privacy/',
+    },
   },
 };
 
@@ -22,16 +26,16 @@ export default function PrivacyPage() {
         <div className="bg-white p-8 sm:p-12 rounded-sm shadow-sm border border-[#1E293B]/10">
           <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#1C3B2B] mb-2">Privacy Policy</h1>
           <p className="text-xs text-[#1E293B]/50 uppercase tracking-wider mb-8 font-semibold">
-            Last Updated: January 2026 • Dunblane Pastoral Holdings Pty Ltd (ABN 81 131 156 922)
+            Last Updated: 2026 • Dunblane Highlands Ranch LLC • Canton, TX 75103, USA
           </p>
 
           <div className="space-y-8 text-sm text-[#1E293B]/80 leading-relaxed">
             <section>
               <h2 className="font-serif text-xl font-bold text-[#1C3B2B] mb-3">1. Information We Collect</h2>
               <p>
-                Dunblane Pastoral Holdings Pty Ltd collects information necessary to process livestock inquiries, 
-                reservations, biosecurity registrations (NLIS / PIC transfers), and secure payments. This includes your name, 
-                contact telephone number, email address, physical delivery address, and Property Identification Code (PIC).
+                Dunblane Highlands Ranch LLC collects information necessary to process livestock inquiries, 
+                reservations, USDA interstate movement documentation (840 RFID and CVI health certificates), and secure payments. This includes your name, 
+                contact telephone number, email address, physical farm delivery address, and livestock premise information.
               </p>
             </section>
 
@@ -42,9 +46,9 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc pl-6 space-y-2 mt-2">
                 <li>Respond to inquiries regarding miniature highland cattle adoptions and purchases.</li>
-                <li>Process reservation deposits and balance transactions via Pay ID, Bank Transfer, Credit Card, or Crypto.</li>
-                <li>Complete mandatory statutory livestock movement paperwork including NLIS database transfers and National Vendor Declarations (NVD).</li>
-                <li>Coordinate safe, scheduled road freight to your property address.</li>
+                <li>Process reservation deposits and balance transactions via Zelle, ACH/Bank Wire, Credit Card, or Crypto.</li>
+                <li>Complete mandatory statutory livestock movement paperwork including USDA 840 RFID transfers and Certificates of Veterinary Inspection (CVI).</li>
+                <li>Coordinate safe, scheduled road freight to your property address across the United States.</li>
               </ul>
             </section>
 
@@ -62,10 +66,10 @@ export default function PrivacyPage() {
                 If you have questions about your personal data or wish to update your contact details, please contact:
               </p>
               <p className="mt-2 font-medium text-[#1C3B2B]">
-                Dunblane Pastoral Holdings Pty Ltd<br />
-                QLD 4725, Australia<br />
+                Dunblane Highlands Ranch LLC<br />
+                Canton, TX 75103, USA<br />
                 Email: info@minihighlandcows.store<br />
-                Phone: 0468 187 340
+                Phone: +1 (512) 842-9840
               </p>
             </section>
           </div>

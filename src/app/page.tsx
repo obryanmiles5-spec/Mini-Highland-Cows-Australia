@@ -8,34 +8,38 @@ import HeroSlider from '@/components/HeroSlider';
 
 
 export const metadata = {
-  title: 'Miniature Highland Cows for Sale Australia | Dunblane',
-  description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
+  title: 'Miniature Highland Cows for Sale USA | Dunblane Highlands',
+  description: 'Buy premium, DNA-verified, halter-trained miniature highland calves in the USA. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm or homestead.',
   alternates: {
     canonical: 'https://minihighlandcows.store/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/',
+      'x-default': 'https://minihighlandcows.store/',
+    },
   },
   verification: {
     google: 'vWD42gGRYaftq6Ac4pjAznZgYM2nEjnJuMgItsVmh3o',
   },
   openGraph: {
-    title: 'Miniature Highland Cows for Sale Australia | Dunblane',
-    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
+    title: 'Miniature Highland Cows for Sale USA | Dunblane Highlands',
+    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in the USA. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
     url: 'https://minihighlandcows.store/',
-    siteName: 'Dunblane Highlands',
+    siteName: 'Dunblane Highlands USA',
     images: [
       {
         url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Miniature Highland Cows for Sale Australia - Dunblane Highlands',
+        alt: 'Miniature Highland Cows for Sale USA - Dunblane Highlands',
       },
     ],
-    locale: 'en_AU',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows for Sale Australia | Dunblane',
-    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
+    title: 'Miniature Highland Cows for Sale USA | Dunblane Highlands',
+    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in the USA. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
@@ -50,44 +54,45 @@ export default function Home() {
         "@type": "WebSite",
         "@id": "https://minihighlandcows.store/#website",
         "url": "https://minihighlandcows.store/",
-        "name": "Dunblane Highlands",
-        "description": "Australia's premier breeder of DNA-verified miniature highland cows, micro miniatures, and teacup calves.",
-        "inLanguage": "en-AU"
+        "name": "Dunblane Highlands USA",
+        "description": "America's premier breeder of DNA-verified miniature highland cows, micro miniatures, and teacup calves.",
+        "inLanguage": "en-US"
       },
       {
         "@type": ["LocalBusiness", "AnimalShelter"],
         "@id": "https://minihighlandcows.store/#organization",
-        "name": "Dunblane Pastoral Holdings Pty Ltd",
-        "alternateName": "Dunblane Highlands Australia",
-        "description": "Premium breeder of miniature highland cows, micro miniature cattle, and fluffy mini cows in Australia.",
+        "name": "Dunblane Highlands Ranch LLC",
+        "alternateName": "Dunblane Highlands USA",
+        "description": "Premium breeder of miniature highland cows, micro miniature cattle, and fluffy mini cows in the United States.",
         "url": "https://minihighlandcows.store/",
         "logo": "https://minihighlandcows.store/favicon.ico",
         "image": "https://minihighlandcows.store/images/hero.jpg",
-        "telephone": "+61 468 187 340",
+        "telephone": "+1 (512) 842-9840",
         "email": "info@minihighlandcows.store",
         "priceRange": "$$$$",
-        "currenciesAccepted": "AUD",
-        "paymentAccepted": "Bank Transfer, PayID, Credit Card, Cryptocurrency",
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Bank Wire, ACH, Credit Card, Zelle, Cryptocurrency",
         "foundingDate": "2010",
         "address": {
           "@type": "PostalAddress",
-          "addressCountry": "AU",
-          "postalCode": "4725",
-          "addressRegion": "QLD"
+          "addressCountry": "US",
+          "postalCode": "75103",
+          "addressLocality": "Canton",
+          "addressRegion": "TX"
         },
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer support",
           "email": "info@minihighlandcows.store",
-          "telephone": "+61 468 187 340",
-          "availableLanguage": "en-AU"
+          "telephone": "+1 (512) 842-9840",
+          "availableLanguage": "en-US"
         },
         "sameAs": [
           "https://www.facebook.com/dunblanepastoral"
         ],
         "makesOffer": {
           "@type": "AggregateOffer",
-          "priceCurrency": "AUD",
+          "priceCurrency": "USD",
           "lowPrice": "4000",
           "highPrice": "10000",
           "offerCount": featuredCalves.length
@@ -131,7 +136,7 @@ export default function Home() {
               <h3 className="font-serif text-base sm:text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">
                 Mini Highland Cow Cost
               </h3>
-              <p className="text-xs text-[#1E293B]/60 mt-1">$4,000 – $10,000+ AUD matrix</p>
+              <p className="text-xs text-[#1E293B]/60 mt-1">$4,000 – $10,000+ USD matrix</p>
             </Link>
 
             <Link
@@ -149,7 +154,7 @@ export default function Home() {
               href="/mini-highland-cows-for-sale/"
               className="p-4 bg-[#FDFBF7] rounded-sm border border-[#1E293B]/5 hover:border-[#C2673F] transition-colors group"
             >
-              <span className="text-xs uppercase tracking-wider text-[#C2673F] font-bold block mb-1">Australia &amp; Worldwide</span>
+              <span className="text-xs uppercase tracking-wider text-[#C2673F] font-bold block mb-1">USA &amp; Nationwide</span>
               <h3 className="font-serif text-base sm:text-lg font-bold text-[#1C3B2B] group-hover:text-[#C2673F] transition-colors">
                 Cows For Sale Near Me
               </h3>
@@ -180,7 +185,7 @@ export default function Home() {
             <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group">
               <Link href={`/calves/${slug}/`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                 <Image src={calf.images[0]}
-                  alt={`${calf.name} - Miniature Highland Calf for Sale in Australia`}
+                  alt={`${calf.name} - Miniature Highland Calf for Sale in the USA`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer" />
@@ -203,7 +208,7 @@ export default function Home() {
                 <p className="text-sm text-[#1E293B]/60 mb-4">{calf.coat} {calf.sex} • {calf.height} projected</p>
                 
                 <div className="flex items-center justify-between mt-6 pt-6 border-t border-[#1E293B]/10">
-                  <span className="font-medium text-[#1C3B2B]">${calf.price.toLocaleString()}</span>
+                  <span className="font-medium text-[#1C3B2B]">${calf.price.toLocaleString()} USD</span>
                   <Link href={`/calves/${slug}/`} className="text-sm font-medium text-[#C2673F] hover:text-[#A85532]">
                     Details &rarr;
                   </Link>
@@ -232,12 +237,12 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <Leaf className="w-10 h-10 text-[#D4A373] mb-6" />
             <h3 className="font-serif text-2xl font-bold mb-4">Docile Temperament</h3>
-            <p className="text-white/80 font-light">Raised with daily human interaction. Our calves are halter trained and acclimatized to handling before leaving our property.</p>
+            <p className="text-white/80 font-light">Raised with daily human interaction. Our calves are halter trained and acclimatized to handling before leaving our ranch.</p>
           </div>
           <div className="flex flex-col items-center">
             <Leaf className="w-10 h-10 text-[#D4A373] mb-6" />
-            <h3 className="font-serif text-2xl font-bold mb-4">Australian Standard</h3>
-            <p className="text-white/80 font-light">All stock comes with complete NLIS ear tags, National Vendor Declarations, and full veterinary health certificates.</p>
+            <h3 className="font-serif text-2xl font-bold mb-4">USDA &amp; AHCA Standard</h3>
+            <p className="text-white/80 font-light">All stock comes with USDA 840 RFID tags, Certificate of Veterinary Inspection (CVI), and negative BVD-PI testing.</p>
           </div>
         </div>
       </section>
@@ -246,31 +251,31 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-xs font-bold text-[#C2673F] uppercase tracking-wider block mb-2">Australia&apos;s Premier Stud</span>
+            <span className="text-xs font-bold text-[#C2673F] uppercase tracking-wider block mb-2">America&apos;s Premier Ranch</span>
             <h2 className="font-serif text-4xl text-[#1C3B2B] font-bold mb-6">
-              Mini Highland Cow Breeder &amp; Australian Cattle Genetics
+              Mini Highland Cow Breeder &amp; American Cattle Genetics
             </h2>
             <p className="text-[#1E293B]/80 mb-6 leading-relaxed">
-              At Dunblane Highlands, we specialise in breeding the authentic <strong>mini highland cow</strong>. 
-              Based in Queensland, Australia, our focus is on producing structurally sound, docile, and genetically verified 
+              At Dunblane Highlands, we specialize in breeding the authentic <strong>mini highland cow</strong>. 
+              Based in Canton, Texas, our focus is on producing structurally sound, docile, and genetically verified 
               <strong> fluffy mini cows</strong>, <strong>micro miniature cattle</strong>, and registered herd sires. 
-              With over a decade of pedigree selection, we pride ourselves on genetic transparency, ethical farming practices, 
-              and matching halter-trained calves to lifestyle acreage families nationwide.
+              With over a decade of pedigree selection, we pride ourselves on genetic transparency, ethical ranching practices, 
+              and matching halter-trained calves to lifestyle acreage families across the United States.
             </p>
             <p className="text-[#1E293B]/80 mb-8 leading-relaxed">
               Whether you are researching <strong>mini highland cow cost</strong>, seeking foundation breeding stock via 
               <strong> bovine artificial insemination</strong> and semen straws, or looking for 
-              <strong> miniature highland cows for sale near me</strong>, our animals are 100% DNA parentage verified, 
-              Chondrodysplasia dwarfism free, and NLIS registered with safe, stress-free road delivery across QLD, NSW, VIC, SA, WA, and TAS.
+              <strong> miniature highland cows for sale near me</strong> (including Texas, Ohio, Missouri, Oklahoma, and Florida), our animals are 100% DNA parentage verified, 
+              Chondrodysplasia dwarfism free, and USDA certified with safe, climate-controlled road delivery across all 48 lower states.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <h4 className="font-bold text-[#1C3B2B] mb-2 border-l-2 border-[#C2673F] pl-3">Queensland HQ</h4>
-                <p className="text-sm text-[#1E293B]/70 pl-3">Raised on premium pasture with Australia-wide transport available.</p>
+                <h4 className="font-bold text-[#1C3B2B] mb-2 border-l-2 border-[#C2673F] pl-3">Texas Ranch HQ</h4>
+                <p className="text-sm text-[#1E293B]/70 pl-3">Raised on lush pasture with nationwide climate-controlled US livestock transport.</p>
               </div>
               <div>
-                <h4 className="font-bold text-[#1C3B2B] mb-2 border-l-2 border-[#C2673F] pl-3">NLIS Registered</h4>
-                <p className="text-sm text-[#1E293B]/70 pl-3">Complete traceability, health declarations, and veterinary certificates.</p>
+                <h4 className="font-bold text-[#1C3B2B] mb-2 border-l-2 border-[#C2673F] pl-3">USDA &amp; AHCA Verified</h4>
+                <p className="text-sm text-[#1E293B]/70 pl-3">Official 840 RFID tags, interstate CVIs, and complete veterinary clearances.</p>
               </div>
             </div>
           </div>
@@ -332,7 +337,7 @@ export default function Home() {
                 <div className="p-8 sm:w-3/5 flex flex-col justify-center">
                   <div className="flex items-center gap-2 text-xs text-[#1E293B]/50 uppercase tracking-wider font-medium mb-3">
                     <Calendar className="w-3 h-3" />
-                    {new Date(post.date).toLocaleDateString('en-AU', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                   </div>
                   <h3 className="font-serif text-xl font-bold text-[#1C3B2B] mb-3 leading-tight group-hover:text-[#C2673F] transition-colors">{post.title}</h3>
                   <p className="text-[#1E293B]/70 text-sm mb-6 line-clamp-3">{post.excerpt}</p>
@@ -351,7 +356,7 @@ export default function Home() {
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="font-serif text-4xl text-[#1C3B2B] font-bold mb-4">Ranch Gallery</h2>
           <p className="text-lg text-[#1E293B]/70 max-w-2xl mx-auto">
-            A glimpse into the daily life on our Queensland property, showcasing our beautiful highland herd and premium pastures.
+            A glimpse into the daily life on our Canton, Texas ranch, showcasing our beautiful highland herd and premium pastures.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

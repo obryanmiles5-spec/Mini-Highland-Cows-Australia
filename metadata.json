@@ -1,6 +1,6 @@
 {
   "name": "minihighlandcows.store",
-  "description": "Buy premium DNA-verified miniature highland calves in Australia from Dunblane Highlands.",
+  "description": "Buy premium DNA-verified miniature highland calves in the USA from Dunblane Highlands.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

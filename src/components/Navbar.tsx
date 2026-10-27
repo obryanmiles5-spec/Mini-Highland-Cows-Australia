@@ -37,7 +37,7 @@ export default function Navbar() {
           <CowLogo className="w-8 h-8 text-[#1C3B2B]" />
           <div>
             <span className="font-serif text-2xl font-bold text-[#1C3B2B] leading-none block">Dunblane</span>
-            <p className="text-[10px] tracking-widest text-[#C2673F] font-semibold uppercase mt-1">Highlands Australia</p>
+            <p className="text-[10px] tracking-widest text-[#C2673F] font-semibold uppercase mt-1">Highlands USA</p>
           </div>
         </Link>
 

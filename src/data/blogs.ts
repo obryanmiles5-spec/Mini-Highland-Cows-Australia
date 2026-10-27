@@ -12,14 +12,14 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'what-are-miniature-cows-everything-you-need-to-know',
     title: 'What Are Miniature Cows? Everything You Need to Know',
-    excerpt: 'Discover the world of miniature highland cows. Learn about their origins, why they stay small, and why they are the perfect addition to Australian hobby farms.',
-    content: `<p>Miniature highland cows have taken the internet—and Australian acreage properties—by storm. But what exactly are they, and how do they differ from standard cattle? In this comprehensive guide, we delve into everything you need to know about these fluffy, docile paddock pets.</p>
+    excerpt: 'Discover the world of miniature highland cows. Learn about their origins, why they stay small, and why they are the perfect addition to American homesteads and hobby farms.',
+    content: `<p>Miniature highland cows have taken the internet—and American homesteads and acreage properties—by storm. But what exactly are they, and how do they differ from standard cattle? In this comprehensive guide, we delve into everything you need to know about these fluffy, docile paddock pets.</p>
     <h2>The Origins of Miniature Highlands</h2>
-    <p>The Scottish Highland cow is an ancient breed known for its hardiness, intelligence, and iconic shaggy coat. Traditionally, these animals were bred to withstand the harsh, freezing winters of the Scottish Highlands. Today, ethical breeders in Australia have selectively bred these magnificent animals to produce a smaller, more manageable size without compromising their robust genetics.</p>
+    <p>The Scottish Highland cow is an ancient breed known for its hardiness, intelligence, and iconic shaggy coat. Traditionally, these animals were bred to withstand the harsh, freezing winters of the Scottish Highlands. Today, ethical breeders in the United States have selectively bred these magnificent animals to produce a smaller, more manageable size without compromising their robust genetics.</p>
     <h2>Genetics: Why Do They Stay Small?</h2>
     <p>A true miniature highland cow is not simply a 'runt'. They are genetically predisposed to remain small throughout their lives. By carefully selecting breeding stock over multiple generations, breeders can naturally reduce the frame size. It is critical to differentiate between naturally small genetics and dwarfism (Chondrodysplasia). Ethical breeders, like us at Dunblane Highlands, rigorously test for and eliminate the Chondro gene, ensuring our <strong>miniature cows for sale</strong> are 100% healthy and structurally sound.</p>
-    <h2>Perfect for the Australian Lifestyle</h2>
-    <p>Why are they so popular in Australia? For starters, their smaller size means they cause significantly less soil compaction and are gentler on fences. They require less feed than standard cattle, making them incredibly sustainable for smaller lifestyle blocks (1-5 acres). Furthermore, their docile and friendly temperament makes them fantastic family pets, often behaving more like oversized dogs than traditional livestock. If you are looking for an acreage companion that can also keep the grass down, a miniature highland is the perfect choice.</p>`,
+    <h2>Perfect for American Homesteads & Acreage</h2>
+    <p>Why are they so popular across the United States? For starters, their smaller size means they cause significantly less soil compaction and are gentler on fences. They require less feed than standard cattle, making them incredibly sustainable for smaller lifestyle blocks (1-5 acres). Furthermore, their docile and friendly temperament makes them fantastic family pets, often behaving more like oversized dogs than traditional livestock. If you are looking for an acreage companion that can also keep the grass down, a miniature highland is the perfect choice.</p>`,
     date: '2024-03-05',
     readTime: '4 min read',
     image: '/images/blog/blog1.jpg'
@@ -27,10 +27,10 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'how-much-land-do-you-need-for-a-mini-cow',
     title: 'How Much Land Do You Need for a Mini Cow?',
-    excerpt: 'Can I have a mini cow in my backyard? Find out exactly how much space does a mini cow need to thrive in Australia.',
+    excerpt: 'Can I have a mini cow in my backyard? Find out exactly how much space does a mini cow need to thrive on American acreage.',
     content: `<p>One of the most frequent questions we receive from prospective buyers is: <strong>"How much land do you need for a miniature cow?"</strong> While they are significantly smaller than commercial dairy or beef cattle, they still require adequate space to graze, roam, and express natural herd behaviors.</p>
     <h2>Understanding Space Requirements</h2>
-    <p>As a general rule of thumb, we recommend a minimum of 1 to 2 acres of good-quality, grazable pasture for a pair of miniature highland cows. <strong>How much space do mini cows need</strong> heavily depends on your location, soil quality, and rainfall. In lush, high-rainfall areas of Queensland or NSW, 1 acre might easily support two mini cows. In drier, more arid regions, you may need 3 to 5 acres and supplementary feeding (like hay or chaff) during the winter months.</p>
+    <p>As a general rule of thumb, we recommend a minimum of 1 to 2 acres of good-quality, grazable pasture for a pair of miniature highland cows. <strong>How much space do mini cows need</strong> heavily depends on your location, soil quality, and rainfall. In lush, high-rainfall pastures of the American South or Midwest, 1 acre might easily support two mini cows. In drier, more arid regions, you may need 3 to 5 acres and supplementary feeding (like hay or chaff) during the winter months.</p>
     <h2>Can I Have a Mini Cow in My Backyard?</h2>
     <p>Unless you live on a lifestyle property with agriculturally zoned land, the answer is usually no. Standard suburban backyards are too small and lack the necessary forage. Additionally, local council regulations generally prohibit livestock in residential zoning.</p>
     <h2>The Herd Mentality</h2>
@@ -40,19 +40,19 @@ export const BLOG_POSTS: BlogPost[] = [
     image: '/images/blog/blog2.jpg'
   },
   {
-    slug: 'miniature-cow-price-guide-australia',
-    title: 'Miniature Cow Price Guide: How Much Are Mini Cows?',
-    excerpt: 'How much does a miniature cow cost? A comprehensive guide to the price of mini highland cows, micro minis, and adoption fees in Australia.',
-    content: `<p>When researching acreage pets, the primary question on every buyer's mind is: <strong>"How much are mini cows?"</strong> The miniature cattle market in Australia has surged in popularity, and prices vary significantly based on genetics, size, and breeder reputation.</p>
+    slug: 'miniature-cow-price-guide-usa',
+    title: 'Miniature Cow Price Guide: How Much Are Mini Cows in the USA?',
+    excerpt: 'How much does a miniature cow cost? A comprehensive guide to the price of mini highland cows, micro minis, and adoption fees across the United States.',
+    content: `<p>When researching acreage pets, the primary question on every buyer's mind is: <strong>"How much are mini cows?"</strong> The miniature cattle market in the United States has surged in popularity, and prices vary significantly based on genetics, size, and breeder reputation.</p>
     <h2>The Average Cost of a Miniature Highland</h2>
-    <p>In Australia, the <strong>miniature cow price</strong> typically ranges from $4,000 to over $10,000 AUD. But what drives this wide price range? Let's break it down:</p>
+    <p>Across the United States, the <strong>miniature cow price</strong> typically ranges from $4,000 to over $10,000+ USD. But what drives this wide price range? Let's break it down:</p>
     <ul>
       <li><strong>Size Classification:</strong> The smaller the cow, the higher the premium. A true <strong>micro mini cow for sale</strong> (maturing under 36 inches) will command a much higher price than a mid-size miniature (42 inches).</li>
       <li><strong>Sex:</strong> Heifers (females) are generally more expensive than steers (castrated males) because of their breeding potential. If you simply want a paddock pet, a steer is a much more affordable and docile option.</li>
       <li><strong>Color:</strong> Classic red and black coats are beautiful, but rare colors like silver, dun, white, or yellow often attract premium pricing due to high demand.</li>
     </ul>
     <h2>What You Are Actually Paying For</h2>
-    <p>When asking <strong>"how much is a mini fluffy cow"</strong>, it is crucial to understand the costs of ethical breeding. A cheap calf on Gumtree might seem like a bargain, but it likely lacks genetic testing. At Dunblane Highlands, our prices reflect a decade of careful genetic selection. Every calf comes with DNA parentage verification, Chondrodysplasia negative testing, full vaccinations, NLIS tagging, and hundreds of hours of halter training. You are investing in a healthy, structurally sound, and perfectly docile companion animal.</p>`,
+    <p>When asking <strong>"how much is a mini fluffy cow"</strong>, it is crucial to understand the costs of ethical breeding. A cheap calf on unverified classified sites might seem like a bargain, but it likely lacks genetic testing. At Dunblane Highlands, our prices reflect a decade of careful genetic selection. Every calf comes with DNA parentage verification, Chondrodysplasia negative testing, full vaccinations, USDA 840 RFID tagging, and hundreds of hours of halter training. You are investing in a healthy, structurally sound, and perfectly docile companion animal.</p>`,
     date: '2024-03-15',
     readTime: '5 min read',
     image: '/images/blog/blog3.jpg'
@@ -60,8 +60,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'are-mini-cows-good-pets',
     title: 'Are Mini Cows Good Pets? The Ultimate Paddock Companion',
-    excerpt: 'Do miniature cows make good pets? Discover why these fluffy small cows are becoming the ultimate acreage companion animals across Australia.',
-    content: `<p>If you have recently moved to an acreage property and are looking for livestock, you might be asking: <strong>"Are mini cows good pets?"</strong> The short answer is a resounding yes! Miniature highland cows have rapidly become the most sought-after paddock pets in Australia, and for excellent reasons.</p>
+    excerpt: 'Do miniature cows make good pets? Discover why these fluffy small cows are becoming the ultimate acreage companion animals across the United States.',
+    content: `<p>If you have recently moved to an acreage property and are looking for livestock, you might be asking: <strong>"Are mini cows good pets?"</strong> The short answer is a resounding yes! Miniature highland cows have rapidly become the most sought-after paddock pets across America, and for excellent reasons.</p>
     <h2>Gentle Giants (In a Smaller Package)</h2>
     <p><strong>Are miniature cows good pets?</strong> Absolutely. Miniature highlands are renowned for their incredibly docile, curious, and intelligent temperaments. Unlike some skittish commercial cattle breeds, highlands naturally enjoy human interaction. They love to be brushed, scratched, and hand-fed. Many of our clients spend their weekends enjoying <strong>mini cow cuddles</strong> and taking stunning family photos with their fluffy companions.</p>
     <h2>Easier and Safer to Handle</h2>
@@ -118,14 +118,14 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'where-can-you-buy-miniature-cows',
-    title: 'Where Can You Buy Miniature Cows in Australia?',
-    excerpt: 'Where to buy mini highland cows. A comprehensive guide to finding reputable breeders with miniature cows for sale across Australia.',
+    title: 'Where Can You Buy Miniature Cows in the USA?',
+    excerpt: 'Where to buy mini highland cows. A comprehensive guide to finding reputable breeders with miniature cows for sale across the United States.',
     content: `<p>If you have decided that a fluffy paddock companion is right for you, the next crucial step is finding out: <strong>"Where can I buy a miniature cow?"</strong> The market is highly competitive, and unfortunately, it attracts scammers. Knowing where and how to buy is essential.</p>
     <h2>Identifying Reputable Breeders</h2>
     <p><strong>Where to buy mini cows?</strong> You should exclusively purchase from registered, ethical breeders who operate transparently. A reputable breeder will always offer DNA parentage verification, full veterinary health certificates, and guarantee their animals are free from the Chondrodysplasia dwarfism gene. At Dunblane Highlands, we pride ourselves on complete transparency. We invite prospective buyers to view our property, meet the herd, and see the exact conditions our calves are raised in.</p>
-    <h2>Australia-Wide Transport Logistics</h2>
-    <p>We are based in the beautiful rolling hills of Queensland, but our calves find homes all over the country. Whether you are searching for <strong>miniature cows for sale QLD</strong>, looking for <strong>mini cows for sale NSW</strong>, or even seeking <strong>miniature cows for sale Western Australia</strong>, geography is rarely an issue.</p>
-    <p>We partner with specialized, climate-controlled livestock transport companies that ensure your micro highland cow arrives safely and stress-free to your property. We handle all the complex logistics, including cross-border health declarations and NLIS (National Livestock Identification System) transfer paperwork, ensuring a seamless adoption process from our farm to yours.</p>`,
+    <h2>Nationwide USA Transport Logistics</h2>
+    <p>We are based in Canton, Texas (East Texas cattle country), but our calves find homes nationwide across the United States. Whether you are searching for <strong>mini highland cows for sale in Texas</strong>, looking for <strong>miniature cows for sale in Ohio or Missouri</strong>, or seeking <strong>mini highland cows in Florida, North Carolina, Oklahoma, or California</strong>, geography is rarely an issue.</p>
+    <p>We partner with specialized, climate-controlled livestock transport companies that ensure your micro highland cow arrives safely and stress-free to your property. We handle all the complex logistics, including interstate Certificate of Veterinary Inspection (CVI) and USDA 840 ear tag transfer documentation, ensuring a seamless adoption process from our farm to yours.</p>`,
     date: '2024-04-18',
     readTime: '4 min read',
     image: '/images/blog/blog8.jpg'
@@ -141,7 +141,7 @@ export const BLOG_POSTS: BlogPost[] = [
     <p>While they are naturally hardy, achieving that 20-year milestone requires dedicated <strong>mini cow care</strong>. To ensure a long life, you must provide:</p>
     <ul>
       <li><strong>Consistent Nutrition:</strong> Access to high-quality pasture, clean fresh water, and appropriate mineral licks (specifically formulated for your local soil deficiencies).</li>
-      <li><strong>Routine Veterinary Care:</strong> Annual vaccinations (such as 7-in-1), regular drenching for internal parasites, and proactive tick management, especially in northern Australian climates.</li>
+      <li><strong>Routine Veterinary Care:</strong> Annual vaccinations (such as 7-in-1), regular drenching for internal parasites, and proactive fly/tick management, especially in humid southern or warm summer US climates.</li>
       <li><strong>Hoof and Coat Maintenance:</strong> Regular hoof trimming to prevent lameness and brushing during shedding season to prevent matting and skin infections.</li>
     </ul>
     <h2>Ethical Breeding for Longevity</h2>

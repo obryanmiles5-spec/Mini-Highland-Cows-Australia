@@ -1,31 +1,35 @@
 import { CheckCircle2, FileText, Truck, ShieldCheck } from 'lucide-react';
 
 export const metadata = {
-  title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
-  description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
+  title: 'Adoption & Sales Process | Buying a Miniature Highland Cow USA',
+  description: 'Understand our step-by-step process for adopting a miniature highland calf in the USA, from property checks and deposits to USDA health guarantees and nationwide delivery.',
   alternates: {
     canonical: 'https://minihighlandcows.store/process/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/process/',
+      'x-default': 'https://minihighlandcows.store/process/',
+    },
   },
   openGraph: {
-    title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
-    description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
+    title: 'Adoption & Sales Process | Buying a Miniature Highland Cow USA',
+    description: 'Understand our step-by-step process for adopting a miniature highland calf in the USA, from property checks and deposits to USDA health guarantees and nationwide delivery.',
     url: 'https://minihighlandcows.store/process/',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Miniature Highland Cows | Dunblane Pastoral',
+        alt: 'Miniature Highland Cows | Dunblane Highlands USA',
       },
     ],
-    locale: 'en_AU',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Adoption & Sales Process | Buying a Miniature Highland Cow',
-    description: 'Understand our step-by-step process for adopting a miniature highland calf in Australia, from property checks and deposits to health guarantees and delivery.',
+    title: 'Adoption & Sales Process | Buying a Miniature Highland Cow USA',
+    description: 'Understand our step-by-step process for adopting a miniature highland calf in the USA, from property checks and deposits to USDA health guarantees and nationwide delivery.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
@@ -47,7 +51,7 @@ export default function ProcessPage() {
         "@type": "ListItem",
         "position": 2,
         "name": "Our Process",
-        "item": "https://minihighlandcows.store/process"
+        "item": "https://minihighlandcows.store/process/"
       }
     ]
   };
@@ -58,8 +62,8 @@ export default function ProcessPage() {
         <h1 className="font-serif text-5xl font-bold text-[#1C3B2B] mb-8 text-center">Adoption & Sales Process</h1>
         
         <p className="text-xl leading-relaxed text-[#1E293B]/80 font-light mb-16 text-center">
-          We want to ensure our miniature highlands go to safe, suitable, and loving homes. 
-          Our transparent, six-step sales process is meticulously designed to support you from your very first inquiry right through to delivery and ongoing care.
+          We want to ensure our miniature highlands go to safe, suitable, and loving American homes. 
+          Our transparent, six-step sales process is meticulously designed to support you from your very first inquiry right through to nationwide delivery and ongoing care.
         </p>
 
         <div className="space-y-12">
@@ -73,7 +77,7 @@ export default function ProcessPage() {
                 Inquiry & Property Check <CheckCircle2 className="w-5 h-5 text-[#C2673F]" />
               </h3>
               <p className="text-[#1E293B]/70 leading-relaxed mb-4">
-                The first step is reaching out to us regarding an available calf. To legally own cattle in Australia, we require all prospective buyers to hold a valid <strong>Property Identification Code (PIC)</strong> issued by your state government. We will discuss your acreage, fencing type, water sources, and herd requirements to ensure a miniature highland is the right fit for your property. Please note that Highlands are herd animals—they form strong bonds and cannot be kept alone. If you do not currently have cattle, you will need to purchase a pair or have suitable companion animals.
+                The first step is reaching out to us regarding an available calf. We discuss your acreage, fencing type, water sources, shade/shelter, and herd requirements to ensure a miniature highland is the right fit for your property. Please note that Highlands are herd animals—they form strong bonds and cannot be kept alone. If you do not currently have cattle, you will need to purchase a pair or have suitable companion animals (such as sheep, goats, or alpacas).
               </p>
             </div>
           </div>
@@ -88,7 +92,7 @@ export default function ProcessPage() {
                 Deposit & Reservation <FileText className="w-5 h-5 text-[#C2673F]" />
               </h3>
               <p className="text-[#1E293B]/70 leading-relaxed mb-4">
-                Once your property is approved and you have selected your calf, a non-refundable 20% deposit is required to secure the animal. Upon receipt of the deposit, we will issue a formal, legally binding sales contract detailing the animal&apos;s pedigree, health guarantees, agreed purchase price, and tentative handover date. The calf&apos;s status on our website will immediately be updated to &quot;Reserved&quot;.
+                Once your property is approved and you have selected your calf, a holding deposit ($500 to $1,000 USD) is required to secure the animal. Upon receipt of the deposit, we issue a formal, legally binding sales contract detailing the animal&apos;s pedigree, health guarantees, agreed purchase price in USD, and tentative handover date. The calf&apos;s status on our website will immediately be updated to &quot;Reserved&quot;.
               </p>
             </div>
           </div>
@@ -118,7 +122,7 @@ export default function ProcessPage() {
                 Health Check & Documentation <ShieldCheck className="w-5 h-5 text-[#C2673F]" />
               </h3>
               <p className="text-[#1E293B]/70 leading-relaxed mb-4">
-                Prior to leaving our farm, every calf undergoes a rigorous final veterinary health check. They are drenched for internal and external parasites, fully vaccinated (7-in-1), and their NLIS (National Livestock Identification System) tag is prepared for transfer. We will handle all the paperwork, preparing the National Vendor Declaration (NVD) and transferring the DNA parentage certificates and registration directly into your name.
+                Prior to leaving our Texas ranch, every calf undergoes a rigorous final veterinary inspection by a licensed large-animal veterinarian. They are drenched for internal and external parasites, vaccinated (Clostridial 7-in-1 / respiratory), and tagged with an official USDA 840 RFID button. For interstate buyers, an official Certificate of Veterinary Inspection (CVI) is issued with complete entry permit requirements met. Pedigree certificates and AHCA/IMCBR transfer papers are transferred directly into your name.
               </p>
             </div>
           </div>
@@ -133,7 +137,7 @@ export default function ProcessPage() {
                 Transport & Handover <Truck className="w-5 h-5 text-[#C2673F]" />
               </h3>
               <p className="text-[#1E293B]/70 leading-relaxed mb-4">
-                The remaining balance must be cleared prior to transport. We accept Pay ID, Bank Transfer, Credit Card, and Crypto (USDT, BTC). You can arrange to float the calf yourself from our Queensland property, or we can recommend trusted, climate-controlled livestock transport services that operate nationwide. We offer <strong>free delivery to the same city as our address (QLD 4725)</strong>. A customized feeding and care guide is provided upon handover.
+                The remaining purchase balance is due prior to transport or at scheduled handover. We accept Zelle, ACH/Bank Wire, Certified Cashier&apos;s Check, Credit Card, and Cryptocurrency (USDT, BTC). You may trailer the calf yourself from our Canton, Texas ranch, or we can coordinate trusted, climate-controlled commercial livestock transport operating nationwide across all 48 states. We offer <strong>free delivery within Van Zandt County / Canton, TX 75103</strong>. A customized feeding and care guide is provided upon handover.
               </p>
             </div>
           </div>
@@ -148,7 +152,7 @@ export default function ProcessPage() {
                 Lifetime Support
               </h3>
               <p className="text-[#1E293B]/70 leading-relaxed mb-4">
-                Our relationship doesn&apos;t end when the calf leaves our farm. We provide lifetime breeder support to all our buyers. Whether you have questions about pasture management, winter feeding schedules, or integrating the calf into your existing herd, we are just a phone call or email away. We love receiving updates and photos as your miniature highland grows!
+                Our relationship doesn&apos;t end when the calf leaves our ranch. We provide lifetime breeder support to all our buyers. Whether you have questions about pasture management, winter feeding schedules, or integrating the calf into your existing herd, we are just a phone call or email away. We love receiving updates and photos as your miniature highland grows!
               </p>
             </div>
           </div>

@@ -25,7 +25,7 @@ export default function HeroSlider() {
         {slides.map((slide, index) => (
           <Image key={index}
             src={slide}
-            alt={`Miniature Highland Cows for Sale Australia - Dunblane Highlands Pasture slide ${index + 1}`}
+            alt={`Miniature Highland Cows for Sale USA - Dunblane Highlands Pasture slide ${index + 1}`}
             fill
             className={`object-cover object-center transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
             priority={index === 0}
@@ -36,14 +36,14 @@ export default function HeroSlider() {
       
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-4 sm:mb-6 leading-tight [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
-          Miniature Highland Cows for Sale Australia
+          Miniature Highland Cows for Sale USA
         </h1>
         <h2 className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium mb-6 sm:mb-8 max-w-2xl mx-auto [text-shadow:_0_1px_8px_rgba(0,0,0,0.6)]">
-          Premium DNA Verified Micro, Teacup &amp; Mini Calves
+          Premium DNA-Verified Micro, Teacup &amp; Miniature Calves
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-10 max-w-2xl mx-auto font-light leading-relaxed [text-shadow:_0_1px_6px_rgba(0,0,0,0.5)]">
-          Discover docile, DNA-verified miniature highland calves bred for the Australian lifestyle. 
-          Queensland-based with Australia-wide delivery.
+          Discover docile, DNA-verified miniature highland calves bred for family homesteads and acreage living. 
+          Texas-based ranch with nationwide climate-controlled delivery across all 48 US states.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 

@@ -4,16 +4,21 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Miniature Highland Cow Blog & Guides | Dunblane Pastoral',
-  description: 'Learn everything about micro, teacup, and miniature highland cows. Guides on size, price, care, and adopting a mini highland cow in Australia.',
+  title: 'Miniature Highland Cow Blog & Guides | Dunblane Highlands USA',
+  description: 'Learn everything about micro, teacup, and miniature highland cows. Guides on size, price, care, and adopting a mini highland cow in the USA.',
   alternates: {
     canonical: 'https://minihighlandcows.store/blog/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/blog/',
+      'x-default': 'https://minihighlandcows.store/blog/',
+    },
   },
   openGraph: {
-    title: 'Miniature Highland Cow Blog & Guides | Dunblane Pastoral',
-    description: 'Learn everything about micro, teacup, and miniature highland cows. Guides on size, price, care, and adopting a mini highland cow in Australia.',
+    title: 'Miniature Highland Cow Blog & Guides | Dunblane Highlands USA',
+    description: 'Learn everything about micro, teacup, and miniature highland cows. Guides on size, price, care, and adopting a mini highland cow in the USA.',
     url: 'https://minihighlandcows.store/blog/',
     siteName: 'Dunblane Highlands',
+    locale: 'en_US',
   }
 };
 
@@ -22,14 +27,16 @@ export default function BlogIndex() {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Miniature Highland Cow Blog",
-    "description": "Guides and articles about miniature highland cows for sale, care, and breeding in Australia.",
+    "description": "Guides and articles about miniature highland cows for sale, care, and breeding in the United States.",
     "url": "https://minihighlandcows.store/blog/",
+    "inLanguage": "en-US",
     "blogPost": BLOG_POSTS.map(post => ({
       "@type": "BlogPosting",
       "headline": post.title,
       "url": `https://minihighlandcows.store/blog/${post.slug}/`,
       "datePublished": post.date,
-      "description": post.excerpt
+      "description": post.excerpt,
+      "inLanguage": "en-US"
     }))
   };
 
@@ -48,7 +55,7 @@ export default function BlogIndex() {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://minihighlandcows.store/blog"
+        "item": "https://minihighlandcows.store/blog/"
       }
     ]
   };
@@ -71,10 +78,10 @@ export default function BlogIndex() {
           </h1>
           <div className="prose prose-lg prose-[#1E293B] max-w-3xl">
             <p className="text-xl leading-relaxed text-[#1E293B]/80 font-light mb-6">
-              Welcome to the official Dunblane Highlands educational hub. Whether you are wondering how much land you need for a mini cow, what a micro teacup highland cow actually is, or how to prepare your paddocks for your new fluffy additions, you are in the right place.
+              Welcome to the official Dunblane Highlands educational hub. Whether you are wondering how much land you need for a mini cow, what a micro teacup highland cow actually is, or how to prepare your pastures for your new fluffy additions, you are in the right place.
             </p>
             <p className="text-lg leading-relaxed text-[#1E293B]/80 font-light">
-              Our comprehensive articles are written by experienced breeders specifically for the Australian climate and lifestyle. We dive deep into pasture management, winter feed strategies, handling techniques, and everything you need to know about raising healthy, happy, DNA-verified miniature highland cattle.
+              Our comprehensive articles are written by experienced American breeders specifically for US homesteaders and acreage owners. We dive deep into pasture management, winter feed strategies, handling techniques, and everything you need to know about raising healthy, happy, DNA-verified miniature highland cattle.
             </p>
           </div>
         </div>
@@ -94,7 +101,7 @@ export default function BlogIndex() {
               )}
               <div className="p-8 flex flex-col flex-grow">
                 <div className="text-sm font-medium text-[#C2673F] mb-3 uppercase tracking-wider">
-                  {new Date(post.date).toLocaleDateString('en-AU', { month: 'long', day: 'numeric', year: 'numeric' })} • {post.readTime}
+                  {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} • {post.readTime}
                 </div>
                 <h2 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-4 group-hover:text-[#C2673F] transition-colors leading-snug">
                   {post.title}

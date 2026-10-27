@@ -5,31 +5,35 @@ import { CALVES_DATA, getCalfSlug } from '@/data/calves';
 import { Heart, Sparkles, CheckCircle2, ChevronRight, ArrowRight, ShieldCheck, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Fluffy Mini Cows for Sale Australia | Cute Fluffy Miniature Cow Breed',
-  description: 'What breed is a fluffy mini cow? Discover fluffy mini cows, micro mini fluffy calves for sale, grooming tips, and 2026 prices in Australia at Dunblane Highlands.',
+  title: 'Fluffy Mini Cows for Sale USA | Cute Fluffy Miniature Cow Breed',
+  description: 'What breed is a fluffy mini cow? Discover fluffy mini cows, micro mini fluffy calves for sale, grooming tips, and 2026 prices in the USA at Dunblane Highlands.',
   alternates: {
     canonical: 'https://minihighlandcows.store/fluffy-mini-cows/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/fluffy-mini-cows/',
+      'x-default': 'https://minihighlandcows.store/fluffy-mini-cows/',
+    },
   },
   openGraph: {
-    title: 'Fluffy Mini Cows for Sale Australia | Cute Fluffy Miniature Cow Breed',
-    description: 'What breed is a fluffy mini cow? Discover fluffy mini cows, micro mini fluffy calves for sale, grooming tips, and 2026 prices in Australia.',
+    title: 'Fluffy Mini Cows for Sale USA | Cute Fluffy Miniature Cow Breed',
+    description: 'What breed is a fluffy mini cow? Discover fluffy mini cows, micro mini fluffy calves for sale, grooming tips, and 2026 prices in the USA.',
     url: 'https://minihighlandcows.store/fluffy-mini-cows/',
-    siteName: 'Dunblane Highlands',
+    siteName: 'Dunblane Highlands USA',
     images: [
       {
         url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Fluffy Mini Cows for Sale Australia - Dunblane Highlands',
+        alt: 'Fluffy Mini Cows for Sale USA - Dunblane Highlands',
       },
     ],
-    locale: 'en_AU',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fluffy Mini Cows for Sale Australia | Cute Miniature Cattle',
-    description: 'Everything about fluffy miniature cows: what breed they are, micro mini fluffy cow prices, and available calves for sale.',
+    title: 'Fluffy Mini Cows for Sale USA | Cute Miniature Cattle',
+    description: 'Everything about fluffy miniature cows: what breed they are, micro mini fluffy cow prices, and available calves for sale in the USA.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
@@ -37,23 +41,23 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "What breed is a fluffy mini cow?",
-    a: "The world-famous 'fluffy mini cow' is primarily the Scottish Miniature Highland cattle breed (or heritage Highland crossbreeds such as HighPark or White Galloway crosses). Their signature fluffy appearance comes from a specialized double coat: an oily, weather-resistant outer layer and a thick, downy undercoat originally evolved to protect against freezing Scottish winters."
+    a: "The world-famous 'fluffy mini cow' is primarily the Scottish Miniature Highland cattle breed (or heritage Highland crosses such as HighPark or White Galloway crosses). Their signature fluffy appearance comes from a specialized double coat: an oily, weather-resistant outer layer and a thick, downy undercoat originally evolved to protect against freezing Scottish winters."
   },
   {
-    q: "How much is a fluffy mini cow in Australia?",
-    a: "In Australia, a fluffy mini cow costs between $4,000 and $10,000+ AUD. Steers (castrated males) bred as fluffy paddock pets range from $4,000 to $6,500 AUD, while registered breeding heifers and rare micro mini fluffy cows (maturing under 36 inches) typically range from $7,000 to $12,000+ AUD depending on coat color rarity (such as silver, dun, or pure white) and verified genetics."
+    q: "How much is a fluffy mini cow in the United States?",
+    a: "In the United States, a fluffy mini cow costs between $4,000 and $10,000+ USD. Steers (castrated males) bred as fluffy pasture pets range from $4,000 to $6,500 USD, while registered breeding heifers and rare micro mini fluffy cows (maturing under 36 inches) typically range from $7,000 to $12,000+ USD depending on coat color rarity (such as silver, dun, or pure white) and verified genetics."
   },
   {
     q: "Do fluffy mini cows stay fluffy as adults?",
-    a: "Yes. Genuine miniature Scottish highland cows retain their double-layered shaggy hair coat throughout their entire lives. However, they naturally shed out their dense winter undercoat during spring and summer. In warm Australian climates like Queensland or New South Wales, regular brushing and shaded paddocks keep their coats looking clean, fluffy, and healthy."
+    a: "Yes. Genuine miniature Scottish highland cows retain their double-layered shaggy hair coat throughout their entire lives. However, they naturally shed out their dense winter undercoat during spring and summer. In warm American climates like Texas or Florida, regular brushing, clean ponds/stock tanks, and shaded pastures keep their coats looking clean, fluffy, and healthy."
   },
   {
     q: "What is a micro mini fluffy cow?",
-    a: "A micro mini fluffy cow is a naturally small miniature highland that matures at 36 inches or less at the hip at three years of age. Unlike standard cattle, micro miniatures are selectively bred from generations of proportionate, Chondrodysplasia-negative bloodlines to ensure they remain tiny, docile, and safe for families with small acreage."
+    a: "A micro mini fluffy cow is a naturally small miniature highland that matures at 36 inches or less at the hip at three years of age. Unlike standard cattle, micro miniatures are selectively bred from generations of proportionate, Chondrodysplasia-negative bloodlines to ensure they remain tiny, docile, and safe for homestead families with small acreage."
   },
   {
     q: "Are fluffy mini cows good pets for families?",
-    a: "Yes, fluffy miniature cows make exceptional lifestyle pets. Because Dunblane Highlands calves undergo hundreds of hours of early halter training, gentle grooming, and daily human desensitization, they are as gentle and affectionate as large dogs. They thrive on human affection, brushing, chin scratches, and paddock cuddles."
+    a: "Yes, fluffy miniature cows make exceptional homestead pets. Because Dunblane Highlands calves undergo hundreds of hours of early halter training, gentle grooming, and daily human desensitization, they are as gentle and affectionate as large dogs. They thrive on human interaction, brushing, chin scratches, and pasture cuddles."
   }
 ];
 
@@ -66,15 +70,15 @@ export default function FluffyMiniCowsPage() {
       {
         "@type": "Product",
         "@id": "https://minihighlandcows.store/fluffy-mini-cows/#product",
-        "name": "Fluffy Mini Highland Cows Australia",
-        "description": "Ethically bred, DNA-verified fluffy miniature highland calves and micro mini fluffy cattle for sale in Australia.",
+        "name": "Fluffy Mini Highland Cows USA",
+        "description": "Ethically bred, DNA-verified fluffy miniature highland calves and micro mini fluffy cattle for sale in the United States.",
         "brand": {
           "@type": "Brand",
-          "name": "Dunblane Highlands"
+          "name": "Dunblane Highlands USA"
         },
         "offers": {
           "@type": "AggregateOffer",
-          "priceCurrency": "AUD",
+          "priceCurrency": "USD",
           "lowPrice": "4000",
           "highPrice": "10000",
           "offerCount": fluffyCalves.length,
@@ -116,7 +120,7 @@ export default function FluffyMiniCowsPage() {
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="text-xs uppercase tracking-widest text-[#C2673F] font-bold block mb-3">
-            The Cutest Acreage Pets in Australia
+            The Cutest Homestead Pets in America
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1C3B2B] leading-tight mb-6">
             Fluffy Mini Cows (Miniature Highland Cattle Breed Guide &amp; Sales)
@@ -124,7 +128,7 @@ export default function FluffyMiniCowsPage() {
           <p className="text-lg text-[#1E293B]/80 leading-relaxed max-w-2xl mx-auto mb-8">
             Searching for a <strong>fluffy mini cow</strong> or wondering <strong>what breed is a fluffy mini cow</strong>? 
             Discover the facts behind the cutest miniature cows in the world, coat care routines, and DNA-verified calves 
-            available across Australia.
+            available across the United States.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -137,7 +141,7 @@ export default function FluffyMiniCowsPage() {
               href="/prices/"
               className="px-8 py-3.5 border border-[#1C3B2B] text-[#1C3B2B] font-medium rounded-sm hover:bg-[#1C3B2B]/5 transition-colors"
             >
-              View Price Guide ($AUD)
+              View Price Guide ($USD)
             </Link>
           </div>
         </div>
@@ -150,8 +154,8 @@ export default function FluffyMiniCowsPage() {
           <p className="text-base sm:text-lg leading-relaxed font-serif">
             A <strong>fluffy mini cow</strong> is the miniature Scottish Highland cattle breed (<em>Bos taurus</em>), 
             celebrated for its iconic double-layered shaggy fleece, gentle temperament, and compact height (36 to 42 inches). 
-            In Australia, fluffy miniature cows cost between <strong>$4,000 and $10,000+ AUD</strong>. They are genetically 
-            dwarfism-free (Chondro-negative) companion animals ideal for acreage properties (1–5 acres) seeking docile paddock pets.
+            In the United States, fluffy miniature cows cost between <strong>$4,000 and $10,000+ USD</strong>. They are genetically 
+            dwarfism-free (Chondro-negative) companion animals ideal for acreage properties (1–5 acres) seeking docile homestead pets.
           </p>
         </div>
 
@@ -159,25 +163,25 @@ export default function FluffyMiniCowsPage() {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-sm shadow-sm border border-[#1E293B]/10">
             <Sparkles className="w-8 h-8 text-[#C2673F] mb-4" />
-            <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-3">The Iconic Double Coat</h3>
+            <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-2">Double-Layered Fleece</h3>
             <p className="text-sm text-[#1E293B]/70 leading-relaxed">
-              Their cloud-like fluff consists of a long, oily outer guard coat that repels water and rain, paired with a soft, thermal undercoat that traps air and provides an ultra-plush texture.
+              Highland cattle boast a unique dual hair coat: a waterproof outer layer that can grow up to 13 inches, and an ultra-soft, dense undercoat that creates the irresistible fluffy texture.
             </p>
           </div>
 
           <div className="bg-white p-8 rounded-sm shadow-sm border border-[#1E293B]/10">
             <Heart className="w-8 h-8 text-[#C2673F] mb-4" />
-            <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-3">Affectionate &amp; Halter-Trained</h3>
+            <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-2">Gentle &amp; Cuddle-Ready</h3>
             <p className="text-sm text-[#1E293B]/70 leading-relaxed">
-              Unlike wild or flighty livestock, Dunblane Highlands calves are hand-reared and habituated to human touch, leading ropes, grooming brushes, and cuddles from day one.
+              Bred for temperament, miniature highlands are famously docile. They love being brushed, hand-fed treats, and spending peaceful afternoons with family members and children.
             </p>
           </div>
 
           <div className="bg-white p-8 rounded-sm shadow-sm border border-[#1E293B]/10">
             <ShieldCheck className="w-8 h-8 text-[#C2673F] mb-4" />
-            <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-3">100% Chondro-Free Genetics</h3>
+            <h3 className="font-serif text-2xl font-bold text-[#1C3B2B] mb-2">100% Chondro-Free</h3>
             <p className="text-sm text-[#1E293B]/70 leading-relaxed">
-              We strictly test all breeding parents against Chondrodysplasia (bulldog dwarfism gene), ensuring our fluffy miniature cows are structurally proportionate with sound joints and long lifespans.
+              We never cut corners with lethal dwarfism genes. All our mini fluffy cows are DNA-verified non-carriers of Chondrodysplasia, guaranteeing lifelong health and sound conformation.
             </p>
           </div>
         </div>
@@ -185,7 +189,7 @@ export default function FluffyMiniCowsPage() {
         {/* Pricing Comparison Table for Fluffy Mini Cows */}
         <div className="bg-white p-8 sm:p-12 rounded-sm shadow-sm border border-[#1E293B]/10 mb-16">
           <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-4">
-            Fluffy Mini Cow Price Range (2026 Australia Breakdown)
+            Fluffy Mini Cow Price Range (2026 US Breakdown)
           </h2>
           <p className="text-sm text-[#1E293B]/70 mb-8 max-w-3xl leading-relaxed">
             Wondering <em>&ldquo;how much do fluffy mini cows cost?&rdquo;</em> or <em>&ldquo;what is the fluffy mini cow price?&rdquo;</em> 
@@ -198,7 +202,7 @@ export default function FluffyMiniCowsPage() {
                 <tr className="bg-[#1C3B2B] text-[#FDFBF7] text-xs uppercase tracking-wider">
                   <th className="p-4 rounded-tl-sm">Fluffy Cow Category</th>
                   <th className="p-4">Mature Height</th>
-                  <th className="p-4">Price Range (AUD)</th>
+                  <th className="p-4">Price Range (USD)</th>
                   <th className="p-4">Best Suited For</th>
                   <th className="p-4 rounded-tr-sm">Inclusions</th>
                 </tr>
@@ -207,28 +211,28 @@ export default function FluffyMiniCowsPage() {
                 <tr className="hover:bg-[#FDFBF7] transition-colors">
                   <td className="p-4 font-bold text-[#1C3B2B]">Fluffy Miniature Steer (Pet)</td>
                   <td className="p-4">38&quot; – 42&quot;</td>
-                  <td className="p-4 text-[#C2673F] font-bold font-serif">$4,000 – $6,500 AUD</td>
-                  <td className="p-4 text-xs">Acreage lifestyle pets, grass management, paddock cuddles.</td>
-                  <td className="p-4 text-xs">Castrated, halter-trained, vaccinated, NLIS tagged.</td>
+                  <td className="p-4 text-[#C2673F] font-bold font-serif">$4,000 – $6,500 USD</td>
+                  <td className="p-4 text-xs">Homestead pets, brush management, paddock cuddles.</td>
+                  <td className="p-4 text-xs">Castrated, halter-trained, vaccinated, USDA 840 tagged.</td>
                 </tr>
                 <tr className="hover:bg-[#FDFBF7] transition-colors">
                   <td className="p-4 font-bold text-[#1C3B2B]">Fluffy Miniature Heifer (Breeding)</td>
                   <td className="p-4">38&quot; – 42&quot;</td>
-                  <td className="p-4 text-[#C2673F] font-bold font-serif">$6,500 – $10,000+ AUD</td>
+                  <td className="p-4 text-[#C2673F] font-bold font-serif">$6,500 – $10,000+ USD</td>
                   <td className="p-4 text-xs">Foundation breeding herds, family milkers, registered stud stock.</td>
-                  <td className="p-4 text-xs">DNA parentage verified, AHCS eligible, sound reproductive health.</td>
+                  <td className="p-4 text-xs">DNA parentage verified, AHCA/IMCBR eligible, sound reproductive health.</td>
                 </tr>
                 <tr className="hover:bg-[#FDFBF7] transition-colors">
                   <td className="p-4 font-bold text-[#1C3B2B]">Micro Mini Fluffy Cow</td>
                   <td className="p-4">&le; 36&quot;</td>
-                  <td className="p-4 text-[#C2673F] font-bold font-serif">$7,500 – $12,000+ AUD</td>
-                  <td className="p-4 text-xs">Ultra-compact acreage, petting farm stays, therapy animals.</td>
+                  <td className="p-4 text-[#C2673F] font-bold font-serif">$7,500 – $12,000+ USD</td>
+                  <td className="p-4 text-xs">Ultra-compact homesteads, petting zoos, therapy animals.</td>
                   <td className="p-4 text-xs">Rare genetics, guaranteed proportionate compact frame.</td>
                 </tr>
                 <tr className="bg-[#F4EFE6] font-bold text-[#1C3B2B]">
                   <td className="p-4">Holding Deposit to Reserve</td>
                   <td className="p-4">All Sizes</td>
-                  <td className="p-4 text-[#C2673F] font-bold font-serif">$500 – $1,000 AUD</td>
+                  <td className="p-4 text-[#C2673F] font-bold font-serif">$500 – $1,000 USD</td>
                   <td className="p-4 text-xs font-normal">Secures your chosen calf with weekly video updates until weaning.</td>
                   <td className="p-4 text-xs font-normal">Credited toward final balance upon pickup/delivery.</td>
                 </tr>
@@ -257,7 +261,7 @@ export default function FluffyMiniCowsPage() {
                   <Link href={`/calves/${slug}/`} className="aspect-[4/3] relative block overflow-hidden bg-[#F4EFE6]">
                     <Image
                       src={calf.images[0]}
-                      alt={`${calf.name} - Fluffy Miniature Highland Calf`}
+                      alt={`${calf.name} - Fluffy Miniature Highland Calf for Sale in the USA`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
@@ -272,7 +276,7 @@ export default function FluffyMiniCowsPage() {
                         <Link href={`/calves/${slug}/`}>{calf.name}</Link>
                       </h3>
                       <span className="text-base font-serif font-bold text-[#1C3B2B]">
-                        ${calf.price.toLocaleString()} AUD
+                        ${calf.price.toLocaleString()} USD
                       </span>
                     </div>
                     <p className="text-xs text-[#1E293B]/60 mb-4">{calf.coat} {calf.sex} • {calf.height} projected mature</p>
@@ -299,20 +303,20 @@ export default function FluffyMiniCowsPage() {
             <div>
               <span className="text-xs font-bold text-[#C2673F] uppercase tracking-wider block mb-2">Grooming &amp; Climate</span>
               <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-4">
-                How to Keep Your Mini Cow Fluffy in Australia
+                How to Keep Your Mini Cow Fluffy in the USA
               </h2>
               <p className="text-sm text-[#1E293B]/80 leading-relaxed mb-4">
-                Australian climates require proactive coat management to keep your highland looking fluffy, clean, and comfortable year-round.
+                American climates range from hot southern summers to freezing northern winters. Here is how to keep your highland looking fluffy, clean, and comfortable year-round:
               </p>
               <div className="space-y-3 text-xs text-[#1E293B]/80">
                 <div className="p-3 bg-white rounded-sm border border-[#1E293B]/5">
                   <strong>Regular Brushing:</strong> Use a Scotch comb or wide slicker brush 2–3 times a week to remove burrs, dirt, and stimulate natural skin oils.
                 </div>
                 <div className="p-3 bg-white rounded-sm border border-[#1E293B]/5">
-                  <strong>Summer Shade &amp; Water:</strong> Provide generous tree canopies or shade sails and clean water troughs so cattle can cool off during peak Australian heat.
+                  <strong>Summer Shade &amp; Water:</strong> Provide generous tree canopies or shade barns and clean water troughs so cattle can cool off during summer heat.
                 </div>
                 <div className="p-3 bg-white rounded-sm border border-[#1E293B]/5">
-                  <strong>Spring Molting:</strong> Expect heavy seasonal shedding in September–November as they drop their thermal winter undercoat. Frequent brushing speeds this transition.
+                  <strong>Spring Molting:</strong> Expect seasonal shedding as they drop their heavy winter undercoat. Daily brushing speeds this transition and keeps fleece healthy.
                 </div>
               </div>
             </div>
@@ -371,20 +375,20 @@ export default function FluffyMiniCowsPage() {
         <div className="bg-[#1C3B2B] text-white p-8 sm:p-12 rounded-sm text-center">
           <h2 className="font-serif text-3xl font-bold mb-4">Ready to Meet Your Fluffy Calf?</h2>
           <p className="text-sm text-[#FDFBF7]/80 max-w-xl mx-auto mb-8">
-            All calves are DNA-verified, vaccinated, halter-trained, and eligible for safe road transport across Australia.
+            All calves are DNA-verified, vaccinated, halter-trained, and eligible for safe road transport across the United States.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/calves/"
               className="px-8 py-3.5 bg-[#C2673F] text-white text-sm font-semibold rounded-sm hover:bg-[#A85532] transition-colors"
             >
-              View Available Calves
+              Browse Available Calves
             </Link>
             <Link
-              href="/reserve/"
+              href="/contact/"
               className="px-8 py-3.5 border border-white text-white text-sm font-semibold rounded-sm hover:bg-white/10 transition-colors"
             >
-              Reserve With Deposit
+              Contact Our Ranch Team
             </Link>
           </div>
         </div>

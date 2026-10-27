@@ -77,7 +77,7 @@ export async function POST(request: Request) {
             <p style="margin: 0; white-space: pre-wrap;">${data.message ? data.message.replace(/\n/g, '<br>') : 'No message provided.'}</p>
           </div>
           <p style="margin-top: 24px; font-size: 12px; color: #64748b;">
-            Submitted via Dunblane Highlands website on ${new Date().toLocaleString('en-AU', { timeZone: 'Australia/Brisbane' })} AEST
+            Submitted via Dunblane Highlands website on ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })} CST
           </p>
         </div>
       `,

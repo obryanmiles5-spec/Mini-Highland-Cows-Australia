@@ -21,10 +21,17 @@ export const viewport = { themeColor: '#1C3B2B', width: 'device-width', initialS
 export const metadata: Metadata = {
   metadataBase: new URL('https://minihighlandcows.store'),
   title: {
-    default: 'Miniature Highland Cows for Sale Australia | Dunblane',
-    template: '%s | Dunblane Highlands Australia',
+    default: 'Miniature Highland Cows for Sale USA | Dunblane Highlands',
+    template: '%s | Dunblane Highlands USA',
   },
-  description: "Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.",
+  description: "Buy premium, DNA-verified, halter-trained miniature highland calves for sale in the USA. Discover fluffy mini cows, micro miniatures, and teacup highlands with nationwide delivery.",
+  alternates: {
+    canonical: 'https://minihighlandcows.store/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/',
+      'x-default': 'https://minihighlandcows.store/',
+    },
+  },
   verification: {
     google: 'vWD42gGRYaftq6Ac4pjAznZgYM2nEjnJuMgItsVmh3o',
   },
@@ -46,22 +53,22 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miniature Highland Cows for Sale Australia | Dunblane',
-    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
+    title: 'Miniature Highland Cows for Sale USA | Dunblane Highlands',
+    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in the USA. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
   openGraph: {
     type: 'website',
-    locale: 'en_AU',
-    siteName: 'Dunblane Highlands',
-    title: 'Miniature Highland Cows for Sale Australia | Dunblane',
-    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in Australia. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
+    locale: 'en_US',
+    siteName: 'Dunblane Highlands USA',
+    title: 'Miniature Highland Cows for Sale USA | Dunblane Highlands',
+    description: 'Buy premium, DNA verified, halter-trained miniature highland calves in the USA. Discover fluffy mini cows, micro miniatures, and teacup highlands for your farm.',
     images: [
       {
         url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Miniature Highland Cows for Sale Australia - Dunblane Highlands',
+        alt: 'Miniature Highland Cows for Sale USA - Dunblane Highlands',
       }
     ]
   }
@@ -83,7 +90,7 @@ const CowLogo = ({ className }: { className?: string }) => (
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={`scroll-smooth ${plusJakartaSans.variable} ${playfairDisplay.variable}`}>
+    <html lang="en-US" className={`scroll-smooth ${plusJakartaSans.variable} ${playfairDisplay.variable}`}>
       <head>
         <meta name="google-site-verification" content="vWD42gGRYaftq6Ac4pjAznZgYM2nEjnJuMgItsVmh3o" />
         <script src="//code.jivosite.com/widget/vejv3NHseX" async></script>
@@ -96,15 +103,15 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                 <div key={i} className="flex items-center whitespace-nowrap shrink-0">
                   {[...Array(4)].map((_, j) => (
                     <div key={j} className="flex items-center shrink-0">
-                      <span className="px-4 sm:px-8">Entity name: Dunblane Pastoral Holdings Pty Ltd</span>
+                      <span className="px-4 sm:px-8">Dunblane Highlands Ranch LLC</span>
                       <span className="text-[#C2673F]">•</span>
-                      <span className="px-4 sm:px-8">ABN 81 131 156 922</span>
+                      <span className="px-4 sm:px-8">AHCA &amp; IMCBR Registered Breeder</span>
                       <span className="text-[#C2673F]">•</span>
-                      <span className="px-4 sm:px-8">Main business location: QLD 4725</span>
+                      <span className="px-4 sm:px-8">USDA Interstate Certified &amp; DNA Verified</span>
                       <span className="text-[#C2673F]">•</span>
-                      <span className="px-4 sm:px-8">Secure Payments via Pay ID, Bank Transfer, Credit Card & Crypto (USDT, BTC)</span>
+                      <span className="px-4 sm:px-8">Nationwide Climate-Controlled US Livestock Transport</span>
                       <span className="text-[#C2673F]">•</span>
-                      <span className="px-4 sm:px-8">Free delivery to same city as address</span>
+                      <span className="px-4 sm:px-8">Free delivery within local county &amp; same city</span>
                       <span className="text-[#C2673F] mr-4 sm:mr-8">•</span>
                     </div>
                   ))}
@@ -124,15 +131,15 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <CowLogo className="w-7 h-7 text-[#D4A373]" />
-                <h3 className="font-serif text-xl font-bold">Dunblane Highlands</h3>
+                <h3 className="font-serif text-xl font-bold">Dunblane Highlands USA</h3>
               </div>
               <p className="text-[#FDFBF7]/80 leading-relaxed text-sm mb-4">
-                Preserving the heritage of Scottish Highland cattle in the Australian landscape. Registered, docile, DNA-verified micro and teacup miniature calves bred with sound conformation.
+                Preserving the heritage of Scottish Highland cattle in the American pastoral landscape. Registered, docile, DNA-verified micro and teacup miniature calves bred with sound conformation and gentle temperaments.
               </p>
               <div className="text-xs text-[#D4A373] space-y-1">
-                <p>Entity: Dunblane Pastoral Holdings Pty Ltd</p>
-                <p>ABN: 81 131 156 922 • PIC: 3ABCD123</p>
-                <p>NLIS Registered Breeder Australia</p>
+                <p>Entity: Dunblane Highlands Ranch LLC</p>
+                <p>Registry: AHCA &amp; IMCBR Member Breeder</p>
+                <p>USDA Interstate Health Certified • 840 RFID Tagged</p>
               </div>
             </div>
 
@@ -168,24 +175,20 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               <h4 className="font-serif text-base font-bold mb-4 text-[#D4A373]">Contact &amp; Hours</h4>
               <ul className="space-y-2 text-[#FDFBF7]/80 text-sm">
                 <li>info@minihighlandcows.store</li>
-                <li>0468 187 340</li>
-                <li>Central Queensland, 4725</li>
-                <li className="text-[#D4A373] font-semibold text-xs pt-1">Free delivery to same city as address</li>
-                <li className="pt-2 text-xs">Farm Visits by Appointment</li>
-                <li className="text-xs">Mon-Sat: 8:00 AM - 5:00 PM</li>
-                <li className="pt-2 text-xs"><strong>Secure Payments:</strong><br/>Pay ID, Bank Transfer, Card &amp; Crypto</li>
+                <li>+1 (512) 842-9840</li>
+                <li>Canton, TX 75103, USA</li>
+                <li className="text-[#D4A373] font-semibold text-xs pt-1">Free delivery within same city / county</li>
+                <li className="pt-2 text-xs">Ranch Visits by Appointment</li>
+                <li className="text-xs">Mon-Sat: 8:00 AM - 5:00 PM CST</li>
               </ul>
             </div>
           </div>
 
           <div className="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-[#FDFBF7]/10 flex flex-col md:flex-row justify-between items-center text-[#FDFBF7]/60 text-xs gap-4">
-            <p>&copy; {new Date().getFullYear()} Dunblane Pastoral Holdings Pty Ltd. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Dunblane Highlands Ranch LLC. All rights reserved.</p>
             <div className="flex flex-wrap gap-6 items-center">
               <Link href="/privacy/" className="hover:text-[#D4A373] transition-colors">Privacy Policy</Link>
               <Link href="/terms/" className="hover:text-[#D4A373] transition-colors">Terms of Service</Link>
-              <Link href="/urls/" className="text-[#D4A373] hover:underline font-semibold flex items-center gap-1">
-                Google Search Console URL Directory &rarr;
-              </Link>
             </div>
           </div>
         </footer>

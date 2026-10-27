@@ -3,30 +3,34 @@ import Link from 'next/link';
 import { CALVES_DATA } from '@/data/calves';
 
 export const metadata = {
-  title: 'Reserve a Miniature Highland Calf | Dunblane Highlands',
+  title: 'Reserve a Miniature Highland Calf | Dunblane Highlands USA',
   description: 'Secure your miniature highland calf with a formal reservation. Fill out our adoption form to start the process of bringing home your new fluffy companion.',
   alternates: {
     canonical: 'https://minihighlandcows.store/reserve/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/reserve/',
+      'x-default': 'https://minihighlandcows.store/reserve/',
+    },
   },
   openGraph: {
-    title: 'Reserve a Miniature Highland Calf | Dunblane Highlands',
+    title: 'Reserve a Miniature Highland Calf | Dunblane Highlands USA',
     description: 'Secure your miniature highland calf with a formal reservation. Fill out our adoption form to start the process of bringing home your new fluffy companion.',
     url: 'https://minihighlandcows.store/reserve/',
     siteName: 'Dunblane Highlands',
     images: [
       {
-        url: 'https://minihighlandcows.store/images/hero.jpg', // Placeholder for OG image
+        url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Miniature Highland Cows | Dunblane Pastoral',
+        alt: 'Miniature Highland Cows | Dunblane Highlands USA',
       },
     ],
-    locale: 'en_AU',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Reserve a Miniature Highland Calf | Dunblane Highlands',
+    title: 'Reserve a Miniature Highland Calf | Dunblane Highlands USA',
     description: 'Secure your miniature highland calf with a formal reservation. Fill out our adoption form to start the process of bringing home your new fluffy companion.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
@@ -49,7 +53,7 @@ export default function ReservePage() {
         "@type": "ListItem",
         "position": 2,
         "name": "Reserve",
-        "item": "https://minihighlandcows.store/reserve"
+        "item": "https://minihighlandcows.store/reserve/"
       }
     ]
   };

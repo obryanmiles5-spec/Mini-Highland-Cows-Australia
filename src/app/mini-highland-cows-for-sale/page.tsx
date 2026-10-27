@@ -5,64 +5,86 @@ import { CALVES_DATA, getCalfSlug } from '@/data/calves';
 import { MapPin, Truck, ShieldCheck, CheckCircle2, ChevronRight, ArrowRight, HelpCircle, Globe, BadgeCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Mini Highland Cows for Sale Near Me | Australia & Worldwide Sales',
-  description: 'Looking for miniature highland cows for sale near me? Browse available mini, micro, and teacup highland calves with Australia-wide delivery & global genetics export.',
+  title: 'Mini Highland Cows for Sale Near Me | Nationwide USA Cattle Delivery',
+  description: 'Looking for miniature highland cows for sale near me? Browse available mini, micro, and teacup highland calves with nationwide climate-controlled delivery across Texas, Ohio, Missouri, Florida, and all 48 US states.',
   alternates: {
     canonical: 'https://minihighlandcows.store/mini-highland-cows-for-sale/',
+    languages: {
+      'en-US': 'https://minihighlandcows.store/mini-highland-cows-for-sale/',
+      'x-default': 'https://minihighlandcows.store/mini-highland-cows-for-sale/',
+    },
   },
   openGraph: {
-    title: 'Mini Highland Cows for Sale Near Me | Australia & Worldwide Sales',
-    description: 'Looking for miniature highland cows for sale near me? Browse available mini, micro, and teacup highland calves with Australia-wide delivery.',
+    title: 'Mini Highland Cows for Sale Near Me | Nationwide USA Cattle Delivery',
+    description: 'Looking for miniature highland cows for sale near me? Browse available mini, micro, and teacup highland calves with nationwide climate-controlled delivery across all 48 US states.',
     url: 'https://minihighlandcows.store/mini-highland-cows-for-sale/',
-    siteName: 'Dunblane Highlands',
+    siteName: 'Dunblane Highlands USA',
     images: [
       {
         url: 'https://minihighlandcows.store/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Miniature Highland Cows for Sale - Dunblane Highlands',
+        alt: 'Miniature Highland Cows for Sale in the USA - Dunblane Highlands',
       },
     ],
-    locale: 'en_AU',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mini Highland Cows for Sale Near Me | Dunblane Australia',
-    description: 'Find miniature highland cows for sale near you. Halter-trained, DNA-tested, vaccinated calves with Australia-wide transport.',
+    title: 'Mini Highland Cows for Sale Near Me | Nationwide USA Cattle Delivery',
+    description: 'Find miniature highland cows for sale near you. Halter-trained, DNA-tested, USDA certified calves with nationwide US transport.',
     images: ['https://minihighlandcows.store/images/hero.jpg'],
   },
 };
 
-const AUSTRALIAN_REGIONS = [
-  { name: 'Queensland (QLD)', desc: 'Farm pickup in Central Queensland or direct road delivery to Brisbane, Gold Coast, Sunshine Coast, Toowoomba, and Rockhampton.' },
-  { name: 'New South Wales (NSW)', desc: 'Weekly livestock freight routes to Sydney, Hunter Valley, Byron Bay, Southern Highlands, Dubbo, and Tamworth.' },
-  { name: 'Victoria (VIC)', desc: 'Climate-controlled carrier transport to Melbourne, Yarra Valley, Mornington Peninsula, Ballarat, and Bendigo.' },
-  { name: 'South Australia (SA)', desc: 'Direct transit to Adelaide Hills, Barossa Valley, Fleurieu Peninsula, and regional lifestyle properties.' },
-  { name: 'Western Australia (WA)', desc: 'Scheduled quarantine-cleared interstate transport to Perth, Margaret River, and regional South West WA.' },
-  { name: 'Tasmania (TAS)', desc: 'Bass Strait certified livestock sea transport to Hobart, Launceston, and Devonport with full Tasmanian biosecurity clearance.' }
+const US_REGIONS = [
+  { 
+    name: 'Texas & Southwest (TX, OK, NM, AZ)', 
+    desc: 'Ranch pickup in Canton, Texas or direct climate-controlled livestock freight to Dallas-Fort Worth, Houston, Austin, San Antonio, Oklahoma City, Tulsa, Phoenix, and Albuquerque.' 
+  },
+  { 
+    name: 'Midwest & Heartland (OH, MO, IA, IN, IL, MI, WI, MN, KS, NE)', 
+    desc: 'Weekly livestock transport routes across the I-70, I-80, and I-90 corridors serving Ohio (Columbus, Cleveland, Cincinnati), Missouri (Kansas City, Springfield, St. Louis), Iowa, Indiana, Illinois, and Wisconsin.' 
+  },
+  { 
+    name: 'Southeast & Gulf Coast (FL, GA, NC, SC, TN, KY, AL, MS, LA, AR, VA)', 
+    desc: 'Door-to-farm deliveries to Florida (Ocala, Tampa, Orlando, Jacksonville), Georgia (Atlanta, Savannah), North Carolina (Raleigh, Charlotte, Asheville), Tennessee (Nashville, Knoxville), Kentucky, and Alabama.' 
+  },
+  { 
+    name: 'Mid-Atlantic & Northeast (PA, NY, MD, WV, ME, VT, NH)', 
+    desc: 'Scheduled direct transport to Pennsylvania (Lancaster, Pittsburgh, Allentown), New York (Hudson Valley, Finger Lakes), Maryland, West Virginia, and New England homestead properties.' 
+  },
+  { 
+    name: 'Rocky Mountains & Northern Plains (CO, WY, MT, ID, UT, ND, SD)', 
+    desc: 'Specialized bedded carrier routes serving Colorado (Denver, Colorado Springs, Fort Collins), Utah (Salt Lake City, Provo), Idaho (Boise, Idaho Falls), Montana, and Wyoming ranches.' 
+  },
+  { 
+    name: 'West Coast (CA, WA, OR)', 
+    desc: 'Interstate veterinary-cleared livestock transit down the I-5 corridor serving California (Sacramento, Central Valley, Northern CA), Washington (Seattle, Spokane, Yakima), and Oregon (Portland, Eugene, Bend).' 
+  }
 ];
 
 const FAQS = [
   {
     q: "How can I find miniature highland cows for sale near me?",
-    a: "To find legitimate miniature highland cows for sale near you, seek registered cattle breeders who provide transparent farm visits, National Livestock Identification System (NLIS) ear tags, and DNA parentage proof. Dunblane Highlands ships halter-trained calves nationwide across Australia with door-to-farm transport and assists international clients with embryo and semen export protocols."
+    a: "To find legitimate miniature highland cows for sale near you, seek registered cattle breeders who provide transparent ranch visits, official USDA 840 RFID ear tags, Certificate of Veterinary Inspection (CVI), and DNA parentage verification. Dunblane Highlands ships halter-trained calves nationwide across all 48 continental states with door-to-farm transport and full interstate health paperwork."
   },
   {
-    q: "Can I buy miniature highland cows if I live outside Australia (e.g. United States)?",
-    a: "Yes. While live cattle exports are subject to strict Department of Agriculture biosecurity quarantine, Dunblane Highlands regularly assists international buyers across North America (including Texas, Ohio, Florida, California, and Missouri) and Europe via cryopreserved AI bull semen straws and certified embryo transfers, allowing international breeders to introduce authentic Australian and Scottish heritage genetics into their local herds."
+    q: "What states do you ship mini highland cows to?",
+    a: "We deliver across all 48 contiguous United States. Our most frequent delivery destinations include Texas, Ohio, Missouri, Florida, North Carolina, Oklahoma, Tennessee, Kentucky, Pennsylvania, Indiana, Illinois, Georgia, California, and Washington. Every calf travels in specialized, climate-controlled, rubber-matted livestock trailers with regular water and hay layovers."
   },
   {
-    q: "What paperwork and property codes do I need to buy a mini cow in Australia?",
-    a: "In Australia, all cattle buyers must hold an active Property Identification Code (PIC) from their local state Department of Primary Industries or Local Land Services. Dunblane Highlands completes the National Vendor Declaration (NVD) and transfers the NLIS RFID database registration directly to your PIC upon delivery."
+    q: "What paperwork do I need to buy a miniature cow in the United States?",
+    a: "Purchasing a miniature highland cow in the US requires an interstate Certificate of Veterinary Inspection (CVI) signed by an accredited veterinarian within 30 days of travel, an official USDA 840 RFID ear tag, and negative BVD-PI testing. Many states also recommend obtaining a free Premises Identification Number (PIN) from your state Department of Agriculture. We handle all health inspections and interstate transit permits for you."
   },
   {
-    q: "How are miniature highland cows transported safely?",
-    a: "Our calves are transported via professional, registered livestock couriers in climate-controlled, bedded floats with scheduled water, hay, and rest stops. Every calf is veterinary-checked before loading and insured during transit. Local delivery to your town or same city is included free with adoption."
+    q: "How are miniature highland cows transported safely across the USA?",
+    a: "Calves travel with vetted, professional livestock haulers experienced with miniature cattle. Floats are sanitized, bedded with deep wood shavings, climate-controlled, and equipped with monitored cameras. Scheduled water, electrolyte, and premium grass hay stops occur every 4 to 6 hours. Local delivery within the same county or city is complimentary."
   },
   {
-    q: "How much does it cost to buy a miniature highland cow?",
-    a: "In Australia, prices range from $4,000 to $6,500 AUD for castrated pet steers, and $6,500 to $10,000+ AUD for registered breeding heifers and micro miniatures. Every calf is halter-trained, vaccinated (5-in-1), wormed, and verified Chondro-free."
+    q: "How much does it cost to buy a miniature highland cow in the USA?",
+    a: "In the United States, miniature highland cow prices typically range from $4,000 to $6,500 USD for castrated pet steers, and $6,500 to $10,000+ USD for registered foundation heifers, rare colors (white, dun, silver), and micro miniatures (under 36 inches). Every calf is halter-trained, vaccinated, dewormed, and DNA verified Chondrodysplasia-free."
   }
 ];
 
@@ -75,16 +97,18 @@ export default function MiniHighlandCowsForSalePage() {
       {
         "@type": "WholesaleStore",
         "@id": "https://minihighlandcows.store/mini-highland-cows-for-sale/#store",
-        "name": "Dunblane Highlands Cattle Sales",
-        "description": "Australia's leading breeder offering miniature highland cows for sale, micro cattle, and national livestock transport.",
+        "name": "Dunblane Highlands Ranch Cattle Sales",
+        "description": "America's premier breeder offering miniature highland cows for sale, micro cattle, and nationwide US livestock transport.",
         "url": "https://minihighlandcows.store/mini-highland-cows-for-sale/",
-        "telephone": "+61 468 187 340",
+        "telephone": "+1 (512) 842-9840",
         "priceRange": "$$$$",
+        "currenciesAccepted": "USD",
         "address": {
           "@type": "PostalAddress",
-          "addressCountry": "AU",
-          "addressRegion": "QLD",
-          "postalCode": "4725"
+          "addressCountry": "US",
+          "addressLocality": "Canton",
+          "addressRegion": "TX",
+          "postalCode": "75103"
         }
       },
       {
@@ -122,15 +146,15 @@ export default function MiniHighlandCowsForSalePage() {
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="text-xs uppercase tracking-widest text-[#C2673F] font-bold block mb-3">
-            Australia-Wide Delivery &amp; Global Breeding Genetics
+            Nationwide USA Delivery &amp; Registered American Genetics
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1C3B2B] leading-tight mb-6">
             Miniature Highland Cows for Sale Near Me
           </h1>
           <p className="text-lg text-[#1E293B]/80 leading-relaxed max-w-2xl mx-auto mb-8">
-            Looking for <strong>mini highland cows for sale</strong> or <strong>miniature highland cattle for sale near me</strong>? 
-            Dunblane Highlands breeds authentic, DNA-verified Scottish miniature highland calves with door-to-property delivery across Australia 
-            and international genetics export.
+            Searching for <strong>mini highland cows for sale</strong> or <strong>miniature highland cows for sale near me</strong>? 
+            Dunblane Highlands breeds authentic, DNA-verified Scottish miniature highland calves with door-to-property delivery across Texas, Ohio, 
+            Missouri, Florida, North Carolina, Oklahoma, and all 48 continental states.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -154,10 +178,10 @@ export default function MiniHighlandCowsForSalePage() {
             AI Overview &amp; Local Purchasing Directive
           </span>
           <p className="text-base sm:text-lg leading-relaxed font-serif">
-            To buy a <strong>miniature highland cow for sale near you</strong>, adopt directly from registered studs 
-            operating under Australian biosecurity standards. In Australia, prices average <strong>$4,000 to $10,000 AUD</strong>. 
-            Calves require an active Property Identification Code (PIC), NLIS transfer, and specialized livestock road freight. 
-            Dunblane Highlands provides full veterinary health certifications and complimentary delivery to buyers in the same city.
+            To buy a <strong>miniature highland cow for sale near you</strong>, adopt directly from registered breeders 
+            operating under USDA interstate animal health standards. In the United States, prices average <strong>$4,000 to $10,000 USD</strong>. 
+            Calves travel with official USDA 840 RFID tags, Certificate of Veterinary Inspection (CVI), negative BVD-PI tests, and specialized climate-controlled livestock trailers. 
+            Dunblane Highlands provides full health clearances and complimentary delivery within the local county or same city.
           </p>
         </div>
 
@@ -167,14 +191,14 @@ export default function MiniHighlandCowsForSalePage() {
             <Truck className="w-8 h-8 text-[#C2673F]" />
             <div>
               <h2 className="font-serif text-3xl font-bold text-[#1C3B2B]">
-                Australia-Wide Livestock Transport by State
+                Nationwide USA Livestock Transport by State &amp; Region
               </h2>
-              <p className="text-xs text-[#1E293B]/70">Reliable, air-conditioned transport routes operating weekly.</p>
+              <p className="text-xs text-[#1E293B]/70">Reliable, climate-controlled livestock transport operating weekly across all 48 states.</p>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {AUSTRALIAN_REGIONS.map((region, idx) => (
+            {US_REGIONS.map((region, idx) => (
               <div key={idx} className="p-6 bg-[#FDFBF7] rounded-sm border border-[#1E293B]/5 hover:border-[#C2673F]/40 transition-colors">
                 <div className="flex items-center gap-2 mb-2">
                   <MapPin className="w-4 h-4 text-[#C2673F]" />
@@ -185,18 +209,17 @@ export default function MiniHighlandCowsForSalePage() {
             ))}
           </div>
 
-          {/* International Buyers Note */}
+          {/* Artificial Breeding Note */}
           <div className="mt-8 p-6 bg-[#F4EFE6] rounded-sm border border-[#1E293B]/10">
             <div className="flex items-start gap-4">
               <Globe className="w-6 h-6 text-[#1C3B2B] shrink-0 mt-1" />
               <div>
                 <h4 className="font-serif text-lg font-bold text-[#1C3B2B] mb-1">
-                  International &amp; US Inquiries (Texas, Ohio, Florida, California &amp; Beyond)
+                  Bovine Artificial Insemination &amp; Genetics Program Across the USA
                 </h4>
                 <p className="text-xs text-[#1E293B]/80 leading-relaxed mb-3">
-                  Thousands of international buyers search daily for mini cows for sale in Texas, Ohio, Missouri, Florida, and other US states. 
-                  While live animal shipping requires extensive quarantine, Dunblane Highlands collaborates with licensed genetics exporters 
-                  to supply cryopreserved semen straws from our champion miniature bulls and embryo genetics worldwide.
+                  In addition to live calves for sale in Texas, Ohio, Missouri, and beyond, Dunblane Highlands ships cryopreserved semen straws from our 
+                  champion AI bulls in liquid nitrogen vapor shippers nationwide. Introduce elite Scottish Highland genetics into your homestead herd safely and affordably.
                 </p>
                 <Link href="/artificial-insemination-cattle/" className="text-xs font-bold text-[#C2673F] hover:underline flex items-center gap-1">
                   Explore Bovine AI &amp; Semen Straws &rarr;
@@ -226,7 +249,7 @@ export default function MiniHighlandCowsForSalePage() {
                   <Link href={`/calves/${slug}/`} className="aspect-[4/3] relative block overflow-hidden bg-[#F4EFE6]">
                     <Image
                       src={calf.images[0]}
-                      alt={`${calf.name} - Miniature Highland Cow for Sale`}
+                      alt={`${calf.name} - Miniature Highland Cow for Sale in the USA`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
@@ -241,7 +264,7 @@ export default function MiniHighlandCowsForSalePage() {
                         <Link href={`/calves/${slug}/`}>{calf.name}</Link>
                       </h3>
                       <span className="text-base font-serif font-bold text-[#1C3B2B]">
-                        ${calf.price.toLocaleString()} AUD
+                        ${calf.price.toLocaleString()} USD
                       </span>
                     </div>
                     <p className="text-xs text-[#1E293B]/60 mb-4">{calf.coat} {calf.sex} • {calf.height} mature height</p>
@@ -262,32 +285,32 @@ export default function MiniHighlandCowsForSalePage() {
           </div>
         </div>
 
-        {/* Buyer Checklist for Australian Acreage */}
+        {/* Buyer Checklist for American Homesteaders */}
         <div className="bg-white p-8 sm:p-12 rounded-sm shadow-sm border border-[#1E293B]/10 mb-16">
           <h2 className="font-serif text-3xl font-bold text-[#1C3B2B] mb-6">
-            Adoption Checklist for First-Time Cattle Buyers
+            Adoption Checklist for American Acreage &amp; Homestead Buyers
           </h2>
           <div className="grid md:grid-cols-2 gap-8 text-sm text-[#1E293B]/80 leading-relaxed">
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#1C3B2B] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-[#1C3B2B]">1. Obtain Your PIC (Property Identification Code)</h4>
-                  <p className="text-xs text-[#1E293B]/70">Required by Australian law for any property housing livestock. Simple to apply online with your local state department.</p>
+                  <h4 className="font-bold text-[#1C3B2B]">1. Interstate CVI &amp; State Premises ID</h4>
+                  <p className="text-xs text-[#1E293B]/70">We provide the USDA Certificate of Veterinary Inspection (CVI). Many states offer a free Premises ID number for easy traceability.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#1C3B2B] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-[#1C3B2B]">2. Fencing &amp; Paddock Preparation</h4>
-                  <p className="text-xs text-[#1E293B]/70">Standard ring-lock, 4-strand barb, or electric fencing is sufficient. Highlands are very gentle on fence lines.</p>
+                  <h4 className="font-bold text-[#1C3B2B]">2. Fencing &amp; Pasture Preparation</h4>
+                  <p className="text-xs text-[#1E293B]/70">Standard woven field fence, 4-strand barbed wire, or electric fencing is suitable. Miniature highlands are naturally gentle on fencing.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#1C3B2B] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-[#1C3B2B]">3. Shelter &amp; Fresh Water Trough</h4>
-                  <p className="text-xs text-[#1E293B]/70">Ensure cattle have clean, continuous water access and natural tree canopy or three-sided shed shelter.</p>
+                  <p className="text-xs text-[#1E293B]/70">Ensure cattle have clean, continuous water access (with tank heaters in northern winters) and natural tree canopy or a three-sided run-in shed.</p>
                 </div>
               </div>
             </div>
@@ -297,21 +320,21 @@ export default function MiniHighlandCowsForSalePage() {
                 <CheckCircle2 className="w-5 h-5 text-[#1C3B2B] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-[#1C3B2B]">4. Adopt in Pairs or Plan for Companions</h4>
-                  <p className="text-xs text-[#1E293B]/70">Cattle are social herd animals and must not be housed alone. Keep at least two cattle, or pair with sheep, goats, or alpacas.</p>
+                  <p className="text-xs text-[#1E293B]/70">Cattle are social herd animals and must not be housed alone. Keep at least two cattle, or pair with sheep, goats, or equines.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#1C3B2B] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-[#1C3B2B]">5. Halter &amp; Grooming Brush Kit</h4>
-                  <p className="text-xs text-[#1E293B]/70">Dunblane calves arrive already lead-broken and eager to be brushed. Spending 10 minutes a day brushing builds lifetime trust.</p>
+                  <p className="text-xs text-[#1E293B]/70">Dunblane calves arrive already lead-trained and accustomed to being brushed. Spending 10 minutes a day brushing builds lifetime trust.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#1C3B2B] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-[#1C3B2B]">6. Veterinary Relationship</h4>
-                  <p className="text-xs text-[#1E293B]/70">Establish a contact with a local large animal or mixed veterinary clinic for routine 5-in-1 boosters and drenching advice.</p>
+                  <h4 className="font-bold text-[#1C3B2B]">6. Large Animal Veterinarian Relationship</h4>
+                  <p className="text-xs text-[#1E293B]/70">Establish contact with a local large animal veterinary clinic for routine bovine 7-in-1 / 8-in-1 boosters, annual deworming, and health checks.</p>
                 </div>
               </div>
             </div>
@@ -326,7 +349,7 @@ export default function MiniHighlandCowsForSalePage() {
               Miniature Highland Cattle Sales FAQ
             </h2>
             <p className="text-sm text-[#1E293B]/70">
-              Clear guidance on finding, reserving, and transporting your miniature calf safely.
+              Clear guidance on finding, reserving, and transporting your miniature calf safely across the United States.
             </p>
           </div>
 
@@ -349,7 +372,7 @@ export default function MiniHighlandCowsForSalePage() {
         <div className="bg-[#1C3B2B] text-white p-8 sm:p-12 rounded-sm text-center">
           <h2 className="font-serif text-3xl font-bold mb-4">Start Your Adoption Journey Today</h2>
           <p className="text-sm text-[#FDFBF7]/80 max-w-xl mx-auto mb-8">
-            Speak directly with our farm team to arrange a property visit or reserve your calf online.
+            Speak directly with our ranch team to arrange a ranch visit in Texas or reserve your calf online with nationwide delivery.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
