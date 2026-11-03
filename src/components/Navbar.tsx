@@ -271,13 +271,6 @@ export default function Navbar() {
               Contact Us
             </Link>
             <Link
-              href="/urls/"
-              onClick={() => setIsOpen(false)}
-              className="py-2 px-3 rounded-sm bg-[#F4EFE6] text-[#C2673F] text-xs font-bold"
-            >
-              Search Console URLs Directory
-            </Link>
-            <Link
               href="/reserve/"
               onClick={() => setIsOpen(false)}
               className="py-3 px-4 text-center bg-[#1C3B2B] text-white rounded-sm font-bold shadow-sm"

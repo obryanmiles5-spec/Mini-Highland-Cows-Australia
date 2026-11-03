@@ -1,4 +1,4 @@
-import { next } from '@vercel/functions';
+import { NextResponse } from 'next/server';
 
 export const config = { matcher: '/:path*' };
 
@@ -15,7 +15,7 @@ export default async function middleware(request: Request) {
     }
   }
   
-  return next();
+  return NextResponse.next();
 }
 
 function prefersMarkdownOverHtml(accept: string) {

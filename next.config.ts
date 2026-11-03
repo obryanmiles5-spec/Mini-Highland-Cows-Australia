@@ -17,15 +17,35 @@ const nextConfig: NextConfig = {
     ],
     formats: ['image/avif', 'image/webp'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/products',
+        destination: '/calves/',
+        permanent: true,
+      },
+      {
+        source: '/products/',
+        destination: '/calves/',
+        permanent: true,
+      },
+      {
+        source: '/products/:id',
+        destination: '/calves/:id/',
+        permanent: true,
+      },
+      {
+        source: '/products/:id/',
+        destination: '/calves/:id/',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
-          },
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',

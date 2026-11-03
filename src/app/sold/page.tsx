@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CALVES_DATA } from '@/data/calves';
+import { CALVES_DATA, getCalfSlug } from '@/data/calves';
 import Link from 'next/link';
 
 export const metadata = {
@@ -78,9 +78,11 @@ export default function SoldPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {soldCalves.map((calf) => (
+            {soldCalves.map((calf) => {
+              const slug = getCalfSlug(calf.name);
+              return (
               <div key={calf.id} className="bg-white rounded-sm overflow-hidden shadow-sm border border-[#1E293B]/5 group opacity-80 hover:opacity-100 transition-opacity">
-                <Link href={`/calves/${calf.id}`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
+                <Link href={`/calves/${slug}/`} className="aspect-[4/3] relative overflow-hidden bg-[#F4EFE6] block">
                   <Image src="/blank.png"
                     alt={calf.name}
                     fill
@@ -119,7 +121,8 @@ export default function SoldPage() {
                   </p>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>
